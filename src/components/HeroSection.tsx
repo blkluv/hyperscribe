@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Zap, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, Zap, Target, TrendingUp, Code, Rocket, LineChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-          {/* Enhanced Content */}
+          {/* Left content */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,135 +79,190 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           
-          {/* Enhanced Hero Visual - Replacing the placeholder with a more engaging design */}
+          {/* New Enhanced Hero Visual - 3D floating elements design */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-1/2 relative h-[500px]"
           >
-            <div className="relative rounded-2xl p-1 bg-gradient-to-br from-blue-500/20 to-purple-600/20 shadow-xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10 backdrop-blur-sm"></div>
-              
-              {/* Main content area */}
-              <div className="relative glass-panel p-8 rounded-xl overflow-hidden backdrop-blur-md border border-white/20">
-                {/* Dashboard mockup */}
-                <div className="bg-white/95 dark:bg-gray-900/95 rounded-lg shadow-lg overflow-hidden">
-                  {/* Header with tabs */}
-                  <div className="bg-gray-50 dark:bg-gray-800 p-4 border-b border-gray-200 dark:border-gray-700 flex items-center">
-                    <div className="flex space-x-1 mr-4">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="flex space-x-2">
-                      <div className="px-3 py-1 bg-blue-600 text-white text-xs rounded-md">Dashboard</div>
-                      <div className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md">Analytics</div>
-                      <div className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md">Content</div>
-                    </div>
+            {/* Main circular backdrop */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-full opacity-70"></div>
+            
+            {/* Animated floating blocks */}
+            <motion.div 
+              initial={{ y: 0 }}
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute left-[20%] top-[20%] w-48 h-48"
+            >
+              <div className="glass-panel h-full w-full rounded-2xl shadow-xl border border-white/20 backdrop-blur-sm p-6 flex flex-col justify-between transform rotate-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-2 rounded-lg bg-blue-100">
+                    <LineChart className="h-6 w-6 text-blue-600" />
                   </div>
-                  
-                  {/* Content area */}
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold mb-4 flex items-center">
-                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Content Performance</span>
-                      <span className="ml-2 px-2 py-0.5 text-xs bg-green-100 text-green-800 rounded-full">+24%</span>
-                    </h3>
-                    
-                    {/* Content metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                        <div className="flex items-center mb-2">
-                          <Zap className="h-4 w-4 text-blue-500 mr-2" />
-                          <span className="text-xs text-gray-500">Engagement</span>
-                        </div>
-                        <p className="text-xl font-bold">87%</p>
-                      </div>
-                      <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                        <div className="flex items-center mb-2">
-                          <Target className="h-4 w-4 text-purple-500 mr-2" />
-                          <span className="text-xs text-gray-500">Conversions</span>
-                        </div>
-                        <p className="text-xl font-bold">32%</p>
-                      </div>
-                      <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                        <div className="flex items-center mb-2">
-                          <TrendingUp className="h-4 w-4 text-green-500 mr-2" />
-                          <span className="text-xs text-gray-500">Growth</span>
-                        </div>
-                        <p className="text-xl font-bold">+18%</p>
-                      </div>
-                    </div>
-                    
-                    {/* Content chart visualization */}
-                    <div className="h-32 bg-gray-50 dark:bg-gray-800 rounded-lg mb-4 overflow-hidden relative">
-                      <div className="absolute bottom-0 inset-x-0 h-32 flex items-end">
-                        <div className="w-1/6 h-40% bg-blue-500 opacity-80 mx-1 rounded-t"></div>
-                        <div className="w-1/6 h-70% bg-blue-500 opacity-80 mx-1 rounded-t"></div>
-                        <div className="w-1/6 h-50% bg-blue-500 opacity-80 mx-1 rounded-t"></div>
-                        <div className="w-1/6 h-90% bg-purple-500 opacity-80 mx-1 rounded-t"></div>
-                        <div className="w-1/6 h-60% bg-purple-500 opacity-80 mx-1 rounded-t"></div>
-                        <div className="w-1/6 h-80% bg-purple-500 opacity-80 mx-1 rounded-t"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Content performance table */}
-                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                      <div className="text-xs text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 grid grid-cols-3 p-2">
-                        <div>Channel</div>
-                        <div>Performance</div>
-                        <div>ROI</div>
-                      </div>
-                      <div className="text-xs grid grid-cols-3 p-2 border-b border-gray-200 dark:border-gray-700">
-                        <div>Blog Posts</div>
-                        <div className="text-green-600">High</div>
-                        <div>324%</div>
-                      </div>
-                      <div className="text-xs grid grid-cols-3 p-2">
-                        <div>Social Media</div>
-                        <div className="text-blue-600">Medium</div>
-                        <div>215%</div>
-                      </div>
-                    </div>
+                  <h3 className="font-semibold text-lg">Growth Analytics</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="bg-blue-500 h-full rounded-full" style={{ width: '78%' }}></div>
+                  </div>
+                  <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="bg-purple-500 h-full rounded-full" style={{ width: '65%' }}></div>
+                  </div>
+                  <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="bg-green-500 h-full rounded-full" style={{ width: '92%' }}></div>
                   </div>
                 </div>
               </div>
-              
-              {/* Floating elements */}
-              <motion.div 
-                initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
-                className="absolute -right-4 top-12 glass-panel py-3 px-4 rounded-lg shadow-lg border border-white/30 backdrop-blur-md"
-              >
+            </motion.div>
+            
+            <motion.div 
+              initial={{ y: 0 }}
+              animate={{ y: [15, -5, 15] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute right-[15%] top-[10%] w-56 h-44"
+            >
+              <div className="glass-panel h-full w-full rounded-2xl shadow-xl border border-white/20 backdrop-blur-sm p-5 flex flex-col justify-between transform -rotate-3">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-green-500/20 p-2 rounded-full">
-                    <Zap className="h-5 w-5 text-green-600" />
+                  <div className="p-2 rounded-lg bg-purple-100">
+                    <Code className="h-6 w-6 text-purple-600" />
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-600 dark:text-gray-300">New Leads</p>
-                    <p className="text-sm font-semibold">+18 Today</p>
+                  <h3 className="font-semibold text-lg">AI Content</h3>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Performance</span>
+                    <span className="text-sm font-semibold text-green-600">+42%</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Engagement</span>
+                    <span className="text-sm font-semibold text-blue-600">87%</span>
                   </div>
                 </div>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.1 }}
-                className="absolute -left-4 bottom-20 glass-panel py-3 px-4 rounded-lg shadow-lg border border-white/30 backdrop-blur-md"
-              >
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ y: 0 }}
+              animate={{ y: [5, -15, 5] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute left-[10%] bottom-[15%] w-52 h-40"
+            >
+              <div className="glass-panel h-full w-full rounded-2xl shadow-xl border border-white/20 backdrop-blur-sm p-5 flex flex-col justify-between transform rotate-12">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-purple-500/20 p-2 rounded-full">
-                    <Target className="h-5 w-5 text-purple-600" />
+                  <div className="p-2 rounded-lg bg-green-100">
+                    <Rocket className="h-6 w-6 text-green-600" />
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-600 dark:text-gray-300">Conversion Rate</p>
-                    <p className="text-sm font-semibold text-purple-600">32.5%</p>
+                  <h3 className="font-semibold text-lg">Launch Strategy</h3>
+                </div>
+                <div className="mt-3">
+                  <div className="flex items-center gap-2">
+                    <div className="h-8 w-2 rounded-full bg-green-500"></div>
+                    <div className="h-8 w-2 rounded-full bg-green-400"></div>
+                    <div className="h-8 w-2 rounded-full bg-green-300"></div>
+                    <div className="h-8 w-2 rounded-full bg-green-400"></div>
+                    <div className="h-8 w-2 rounded-full bg-green-500"></div>
+                    <div className="h-8 w-2 rounded-full bg-green-600"></div>
+                    <div className="h-8 w-2 rounded-full bg-green-700"></div>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ y: 0 }}
+              animate={{ y: [-8, 12, -8] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+              className="absolute right-[20%] bottom-[20%] w-48 h-36"
+            >
+              <div className="glass-panel h-full w-full rounded-2xl shadow-xl border border-white/20 backdrop-blur-sm p-4 flex flex-col justify-between transform -rotate-6">
+                <div className="flex items-center space-x-2">
+                  <div className="p-2 rounded-lg bg-blue-100">
+                    <Target className="h-5 w-5 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold">Conversion Rate</h3>
+                </div>
+                <div className="flex items-center justify-center mt-2">
+                  <div className="relative h-16 w-16 flex items-center justify-center">
+                    <svg className="h-full w-full" viewBox="0 0 36 36">
+                      <path
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="#E6E6E6"
+                        strokeWidth="3"
+                        strokeDasharray="100, 100"
+                      />
+                      <path
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="#4361EE"
+                        strokeWidth="3"
+                        strokeDasharray="32, 100"
+                      />
+                    </svg>
+                    <div className="absolute text-lg font-bold">32%</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Connecting lines */}
+            <svg className="absolute inset-0 w-full h-full" style={{ zIndex: -1 }}>
+              <motion.path 
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 2, delay: 1.5 }}
+                d="M160,140 C190,180 290,155 295,120" 
+                stroke="rgba(147, 51, 234, 0.3)" 
+                strokeWidth="1.5" 
+                fill="none" 
+                strokeDasharray="5,5"
+              />
+              <motion.path 
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 2, delay: 1.8 }}
+                d="M160,135 C200,195 320,280 380,260" 
+                stroke="rgba(59, 130, 246, 0.3)" 
+                strokeWidth="1.5" 
+                fill="none" 
+                strokeDasharray="5,5"
+              />
+              <motion.path 
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 2, delay: 2.1 }}
+                d="M300,120 C330,160 350,200 380,260" 
+                stroke="rgba(16, 185, 129, 0.3)" 
+                strokeWidth="1.5" 
+                fill="none" 
+                strokeDasharray="5,5"
+              />
+            </svg>
+            
+            {/* Floating particles */}
+            {[...Array(15)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute rounded-full bg-blue-500/20 backdrop-blur-md"
+                style={{
+                  width: Math.random() * 12 + 4,
+                  height: Math.random() * 12 + 4,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  y: [Math.random() * 20, Math.random() * -20, Math.random() * 20],
+                  opacity: [0.5, 0.8, 0.5]
+                }}
+                transition={{
+                  duration: Math.random() * 5 + 5,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
           </motion.div>
         </div>
       </div>
