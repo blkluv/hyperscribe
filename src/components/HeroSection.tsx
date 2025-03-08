@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Zap, Target, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
@@ -79,76 +79,131 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           
-          {/* Enhanced Hero Image */}
+          {/* Enhanced Hero Visual - Replacing the placeholder with a more engaging design */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             className="w-full lg:w-1/2"
           >
-            <div className="glass-panel p-8 relative overflow-hidden lg:ml-auto rounded-2xl shadow-xl border border-white/30 backdrop-blur-md">
-              <div className="aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center shadow-inner">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
+            <div className="relative rounded-2xl p-1 bg-gradient-to-br from-blue-500/20 to-purple-600/20 shadow-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10 backdrop-blur-sm"></div>
+              
+              {/* Main content area */}
+              <div className="relative glass-panel p-8 rounded-xl overflow-hidden backdrop-blur-md border border-white/20">
+                {/* Dashboard mockup */}
+                <div className="bg-white/95 dark:bg-gray-900/95 rounded-lg shadow-lg overflow-hidden">
+                  {/* Header with tabs */}
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 border-b border-gray-200 dark:border-gray-700 flex items-center">
+                    <div className="flex space-x-1 mr-4">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div className="flex space-x-2">
+                      <div className="px-3 py-1 bg-blue-600 text-white text-xs rounded-md">Dashboard</div>
+                      <div className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md">Analytics</div>
+                      <div className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-md">Content</div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">Intelligent Content</h3>
-                  <p className="text-muted-foreground">Creating compelling SaaS content that drives conversions</p>
+                  
+                  {/* Content area */}
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold mb-4 flex items-center">
+                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Content Performance</span>
+                      <span className="ml-2 px-2 py-0.5 text-xs bg-green-100 text-green-800 rounded-full">+24%</span>
+                    </h3>
+                    
+                    {/* Content metrics */}
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+                        <div className="flex items-center mb-2">
+                          <Zap className="h-4 w-4 text-blue-500 mr-2" />
+                          <span className="text-xs text-gray-500">Engagement</span>
+                        </div>
+                        <p className="text-xl font-bold">87%</p>
+                      </div>
+                      <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+                        <div className="flex items-center mb-2">
+                          <Target className="h-4 w-4 text-purple-500 mr-2" />
+                          <span className="text-xs text-gray-500">Conversions</span>
+                        </div>
+                        <p className="text-xl font-bold">32%</p>
+                      </div>
+                      <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+                        <div className="flex items-center mb-2">
+                          <TrendingUp className="h-4 w-4 text-green-500 mr-2" />
+                          <span className="text-xs text-gray-500">Growth</span>
+                        </div>
+                        <p className="text-xl font-bold">+18%</p>
+                      </div>
+                    </div>
+                    
+                    {/* Content chart visualization */}
+                    <div className="h-32 bg-gray-50 dark:bg-gray-800 rounded-lg mb-4 overflow-hidden relative">
+                      <div className="absolute bottom-0 inset-x-0 h-32 flex items-end">
+                        <div className="w-1/6 h-40% bg-blue-500 opacity-80 mx-1 rounded-t"></div>
+                        <div className="w-1/6 h-70% bg-blue-500 opacity-80 mx-1 rounded-t"></div>
+                        <div className="w-1/6 h-50% bg-blue-500 opacity-80 mx-1 rounded-t"></div>
+                        <div className="w-1/6 h-90% bg-purple-500 opacity-80 mx-1 rounded-t"></div>
+                        <div className="w-1/6 h-60% bg-purple-500 opacity-80 mx-1 rounded-t"></div>
+                        <div className="w-1/6 h-80% bg-purple-500 opacity-80 mx-1 rounded-t"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Content performance table */}
+                    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                      <div className="text-xs text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 grid grid-cols-3 p-2">
+                        <div>Channel</div>
+                        <div>Performance</div>
+                        <div>ROI</div>
+                      </div>
+                      <div className="text-xs grid grid-cols-3 p-2 border-b border-gray-200 dark:border-gray-700">
+                        <div>Blog Posts</div>
+                        <div className="text-green-600">High</div>
+                        <div>324%</div>
+                      </div>
+                      <div className="text-xs grid grid-cols-3 p-2">
+                        <div>Social Media</div>
+                        <div className="text-blue-600">Medium</div>
+                        <div>215%</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              {/* Enhanced Stats overlay */}
+              {/* Floating elements */}
               <motion.div 
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="absolute -right-4 bottom-20 glass-panel py-4 px-5 rounded-lg shadow-lg border border-white/20"
+                transition={{ duration: 0.5, delay: 0.9 }}
+                className="absolute -right-4 top-12 glass-panel py-3 px-4 rounded-lg shadow-lg border border-white/30 backdrop-blur-md"
               >
-                <div className="flex items-center space-x-4">
-                  <div className="bg-green-500/15 p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-green-500/20 p-2 rounded-full">
+                    <Zap className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground font-medium">Avg. Conversion Rate</p>
-                    <p className="text-base font-bold text-green-600">+27% Increase</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">New Leads</p>
+                    <p className="text-sm font-semibold">+18 Today</p>
                   </div>
                 </div>
               </motion.div>
               
-              {/* Enhanced decoration element */}
               <motion.div 
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                className="absolute -left-3 top-12 glass-panel p-3 rounded-lg shadow-lg border border-white/20"
-              >
-                <div className="bg-blue-500/15 p-2.5 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-              </motion.div>
-              
-              {/* Additional element */}
-              <motion.div 
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
-                className="absolute -bottom-3 left-1/4 glass-panel py-3 px-4 rounded-lg shadow-lg border border-white/20"
+                transition={{ duration: 0.5, delay: 1.1 }}
+                className="absolute -left-4 bottom-20 glass-panel py-3 px-4 rounded-lg shadow-lg border border-white/30 backdrop-blur-md"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="bg-purple-500/15 p-2 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                  <div className="bg-purple-500/20 p-2 rounded-full">
+                    <Target className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">Content Creation</p>
-                    <p className="text-sm font-semibold">3x Faster</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">Conversion Rate</p>
+                    <p className="text-sm font-semibold text-purple-600">32.5%</p>
                   </div>
                 </div>
               </motion.div>
