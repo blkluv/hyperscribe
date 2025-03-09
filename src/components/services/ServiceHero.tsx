@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const ServiceHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-b from-blue-50 to-white">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-purple-500/15 to-blue-400/5">
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
