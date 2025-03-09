@@ -47,9 +47,9 @@ const HeroContent = () => {
           Book a Consultation
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
-        <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50">
-          View Services
-        </Button>
+        <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50" onClick={() => window.location.href = '/services'}>
+              View Services
+            </Button>
       </motion.div>
       <motion.div 
         initial={{ opacity: 0 }}

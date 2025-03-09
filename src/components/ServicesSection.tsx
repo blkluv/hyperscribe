@@ -14,7 +14,6 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
-    price: '$1,200',
     period: '/month',
     features: ['Daily posts', 'Audience growth', 'Performance metrics', 'Strategic planning'],
   },
@@ -26,19 +25,17 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
-    price: '$2,400',
     period: '/month',
     features: ['4 articles/month', 'Keyword research', 'Competitive analysis', 'Internal linking'],
   },
   {
-    title: 'Fundraising Content',
-    description: 'Create compelling pitch decks and investor materials that secure funding.',
+    title: 'Website Copywriting',
+    description: 'Convert more visitors with persuasive website copy that communicates your value proposition.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    price: '$5,000',
     period: '/project',
     features: ['Pitch deck design', 'Financial narrative', 'Market analysis', 'Investor FAQs'],
   }
@@ -102,8 +99,6 @@ const ServicesSection = () => {
                 </CardHeader>
                 <CardContent className="pb-0 grow">
                   <div className="flex items-baseline mb-6">
-                    <span className="text-3xl font-bold">{service.price}</span>
-                    <span className="ml-1 text-muted-foreground">{service.period}</span>
                   </div>
                   <ul className="space-y-2">
                     {service.features.map((feature, i) => (
@@ -128,9 +123,9 @@ const ServicesSection = () => {
         </motion.div>
         
         <div className="text-center mt-16">
-          <Button className="rounded-full px-8 py-6 shadow-lg">
-            View All Services
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button className="rounded-full px-8 py-6 shadow-lg" onClick={() => window.location.href = '/services'}>
+                View All Services
+                <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

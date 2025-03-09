@@ -37,9 +37,6 @@ const CTASection = () => {
                 Book a Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="ghost" className="text-white border-2 border-white/30 hover:bg-white/10 rounded-full px-8 py-6 text-base">
-                View Pricing
-              </Button>
             </div>
           </div>
         </motion.div>

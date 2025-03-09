@@ -17,7 +17,6 @@ const services = [
       'Performance analytics and optimization recommendations',
       'A/B testing of content types to maximize engagement'
     ],
-    price: '$1,200/month',
     primary: true
   },
   {
@@ -31,35 +30,6 @@ const services = [
       'Custom graphics and visuals for each article',
       'Regular performance reporting and content refinement'
     ],
-    price: '$2,400/month',
-    primary: false
-  },
-  {
-    icon: <DollarSign className="h-8 w-8" />,
-    title: 'Fundraising Content',
-    description: 'Create compelling pitch decks and investor materials that effectively communicate your value proposition and secure funding.',
-    details: [
-      'Comprehensive pitch deck development with compelling narrative',
-      'Executive summary and one-pager creation',
-      'Financial projections presentation design',
-      'Investor FAQ preparation and objection handling',
-      'Pitch rehearsal and feedback sessions'
-    ],
-    price: '$5,000/project',
-    primary: false
-  },
-  {
-    icon: <BarChart className="h-8 w-8" />,
-    title: 'SaaS Case Studies',
-    description: 'Showcase your success stories with professionally written case studies that highlight your product\'s value and ROI.',
-    details: [
-      'Customer interview and data collection',
-      'Narrative-driven case study development',
-      'ROI and metrics visualization',
-      'Design and formatting for multiple channels',
-      'Repurposing for social media and sales collateral'
-    ],
-    price: '$1,800/case study',
     primary: false
   },
   {
@@ -73,23 +43,8 @@ const services = [
       'SEO optimization for key pages',
       'A/B testing recommendations for continuous improvement'
     ],
-    price: '$3,500/project',
     primary: false
   },
-  {
-    icon: <Award className="h-8 w-8" />,
-    title: 'Content Marketing Retainer',
-    description: 'Get a comprehensive content strategy and execution plan with our all-inclusive content marketing retainer service.',
-    details: [
-      'Content strategy development and planning',
-      'Blog posts, social media content, and email newsletters',
-      'Monthly performance reporting and strategy refinement',
-      'Competitive analysis and market trend monitoring',
-      'Regular strategy calls with our content team'
-    ],
-    price: 'Starting at $4,500/month',
-    primary: false
-  }
 ];
 
 const ServicesList = () => {
@@ -147,7 +102,6 @@ const ServicesList = () => {
                 </CardHeader>
                 <CardContent className="pb-0 grow">
                   <div className="flex items-baseline mb-6">
-                    <span className="text-2xl font-bold">{service.price}</span>
                   </div>
                   <ul className="space-y-2">
                     {service.details.map((detail, i) => (

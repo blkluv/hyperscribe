@@ -25,11 +25,8 @@ const ServiceHero = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
             <Button className="rounded-full px-8 py-6 shadow-lg text-base bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-              Book a Free Strategy Call
+              Book a Free Consultation Call
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50">
-              View Pricing
             </Button>
           </div>
         </motion.div>
