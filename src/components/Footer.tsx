@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">ContentAI</h3>
+            <h3 className="text-xl font-bold mb-4">HyperScriber</h3>
             <p className="text-muted-foreground mb-6">
               AI-powered content agency for SaaS startups that delivers results.
             </p>
@@ -90,8 +90,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-muted-foreground" />
-                <a href="mailto:info@contentai.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@contentai.com
+                <a href="mailto:info@hyperscriber.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  info@hyperscriber.com
                 </a>
               </li>
             </ul>
@@ -119,7 +119,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ContentAI. All rights reserved.
+            © {new Date().getFullYear()} HyperScriber. All rights reserved.
           </p>
         </div>
       </div>

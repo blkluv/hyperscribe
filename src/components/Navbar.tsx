@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-          <span className="text-2xl font-bold">ContentAI</span>
+          <span className="text-2xl font-bold">HyperScriber</span>
         </Link>
 
         {/* Desktop Navigation */}
