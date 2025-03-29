@@ -115,58 +115,6 @@ const TestimonialsSection = () => {
             </motion.div>
           ))}
         </motion.div>
-        
-        {/* Case Study Highlight */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-100 text-blue-600">
-                CASE STUDY
-              </span>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                How TechFlow Increased MQLs by 156% in 3 Months
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                See how our content strategy helped this SaaS platform dramatically increase their qualified leads while reducing their cost per acquisition.
-              </p>
-              <div className="flex space-x-8 mb-6">
-                <div>
-                  <p className="text-3xl font-bold mb-1 text-gradient">+156%</p>
-                  <p className="text-sm text-muted-foreground">Marketing Qualified Leads</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold mb-1 text-gradient">-32%</p>
-                  <p className="text-sm text-muted-foreground">Cost Per Acquisition</p>
-                </div>
-              </div>
-              <button className="text-blue-600 font-medium flex items-center hover:text-blue-700 transition-colors">
-                Read the full case study
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <div className="h-64 bg-blue-100 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 mx-auto bg-white/80 rounded-full flex items-center justify-center mb-4">
-                    <svg className="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Growth Metrics</h3>
-                  <p className="text-sm text-gray-600">Interactive case study dashboard</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

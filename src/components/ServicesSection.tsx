@@ -128,7 +128,7 @@ const ServicesSection = () => {
         </motion.div>
         
         <div className="text-center mt-16">
-          <Button className="rounded-full px-8 py-6 shadow-lg" onClick={() => window.location.href = '/services'}>
+          <Button className="rounded-full px-8 py-6 shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" onClick={() => window.location.href = '/services'}>
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
