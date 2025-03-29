@@ -9,6 +9,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Index = () => {
   useEffect(() => {
@@ -22,6 +23,12 @@ const Index = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen"
     >
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>HyperScriber | Home</title>
+                <meta name="description" content="Leveraging AI to create high-converting content that drives growth for SaaS companies. Content that converts, at scale." />
+                <link rel="canonical" href="https://hyperscriber.com/" />
+      </Helmet>
       <Navbar />
       <HeroSection />
       <ServicesSection />

@@ -112,7 +112,12 @@ const ServicesSection = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-6">
-                  <Button variant="outline" className="w-full border-2 rounded-lg group" size="lg">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-2 rounded-lg group" 
+                    size="lg"
+                    onClick={() => window.location.href = '/services'}
+                  >
                     <span>Learn More</span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>

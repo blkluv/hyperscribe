@@ -7,11 +7,18 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
+import { Helmet } from 'react-helmet';
 
 const ContactHero = () => {
   return (
     <section className="pt-32 pb-8 bg-gradient-to-br from-blue-600/8 via-purple-500/12 to-blue-400/4">
       <div className="container mx-auto px-6">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>HyperScriber | Contact Us</title>
+          <meta name="description" content="Have questions about our services or ready to transform your content strategy? We're here to help." />
+          <link rel="canonical" href="https://hyperscriber.com/contact" />
+        </Helmet>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -119,40 +126,6 @@ const ContactForm = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="space-y-8"
           >
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <MapPin className="mr-3 h-5 w-5 text-blue-600 mt-0.5" />
-                  <div>
-                    <h3 className="font-medium">Address</h3>
-                    <p className="text-muted-foreground">
-                      1234 Market St, San Francisco, CA 94103
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Mail className="mr-3 h-5 w-5 text-blue-600 mt-0.5" />
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">
-                      info@hyperscriber.com
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Phone className="mr-3 h-5 w-5 text-blue-600 mt-0.5" />
-                  <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">
-                      (123) 456-7890
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             
             <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-8 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Book a Consultation</h3>

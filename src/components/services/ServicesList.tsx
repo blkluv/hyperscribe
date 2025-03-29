@@ -90,7 +90,7 @@ const ServicesList = () => {
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants} className="hover-scale">
-              <Card className={`h-full flex flex-col border-0 shadow-md rounded-xl overflow-hidden ${service.primary ? 'border-l-4 border-l-blue-500' : ''}`}>
+              <Card className={`h-full flex flex-col border-0 shadow-md rounded-xl overflow-hidden`}>
                 <CardHeader className="pb-4">
                   <div className="mb-3 w-14 h-14 flex items-center justify-center rounded-lg bg-blue-50 text-blue-600">
                     {service.icon}
@@ -103,7 +103,7 @@ const ServicesList = () => {
                 <CardContent className="pb-0 grow">
                   <div className="flex items-baseline mb-6">
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-10">
                     {service.details.map((detail, i) => (
                       <li key={i} className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -114,12 +114,6 @@ const ServicesList = () => {
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter className="pt-6">
-                  <Button variant={service.primary ? "default" : "outline"} className={`w-full ${service.primary ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} size="lg">
-                    <span>Learn More</span>
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </CardFooter>
               </Card>
             </motion.div>
           ))}

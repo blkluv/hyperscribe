@@ -58,11 +58,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-muted-foreground hover:text-primary transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
@@ -74,37 +69,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin size={18} className="mr-2 text-muted-foreground mt-0.5" />
-                <span className="text-muted-foreground">
-                  1234 Market St, San Francisco, CA 94103
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={18} className="mr-2 text-muted-foreground" />
-                <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                  (123) 456-7890
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Mail size={18} className="mr-2 text-muted-foreground" />
-                <a href="mailto:info@hyperscriber.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@hyperscriber.com
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} HyperScriber. All rights reserved.
+            © {new Date().getFullYear()} HyperScriber. All rights reserved. Website by Lorenzo Filips <a href="https://github.com/Desk888">(Desk888)</a>
           </p>
         </div>
       </div>

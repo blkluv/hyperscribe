@@ -57,14 +57,6 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="mt-12 flex items-center justify-center lg:justify-start space-x-8"
       >
-        <p className="text-sm text-muted-foreground">Trusted by:</p>
-        <div className="flex space-x-8">
-          {['Company1', 'Company2', 'Company3'].map((company, index) => (
-            <span key={index} className="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity">
-              {company}
-            </span>
-          ))}
-        </div>
       </motion.div>
     </motion.div>
   );
