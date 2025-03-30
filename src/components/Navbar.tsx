@@ -38,8 +38,12 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-          <span className="text-2xl font-bold">HyperScriber</span>
+      <Link to="/" className="flex items-center space-x-2 z-30">
+          <img 
+            src="../../public/HyperScriber_Logo.svg"
+            loading="lazy"
+            alt="Social Stoic Logo" 
+          />
         </Link>
 
         {/* Desktop Navigation */}
