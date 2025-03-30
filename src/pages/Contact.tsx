@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet';
 
 const ContactHero = () => {
   return (
-    <section className="pt-32 pb-8 bg-gradient-to-br from-blue-600/8 via-purple-500/12 to-blue-400/4">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-purple-500/15 to-blue-400/5">
       <div className="container mx-auto px-6">
         <Helmet>
           <meta charSet="utf-8" />
