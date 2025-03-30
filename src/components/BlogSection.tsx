@@ -64,7 +64,7 @@ const BlogSection = () => {
               Latest from Our Blog
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Actionable insights, case studies, and expert advice to help SaaS businesses grow through content marketing.
+              Expert advice to help SaaS businesses grow through content marketing.
             </p>
           </div>
           <div className="mt-8 md:mt-0">
