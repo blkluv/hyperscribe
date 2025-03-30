@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const HeroContent = () => {
   return (
@@ -47,8 +48,14 @@ const HeroContent = () => {
           Book a Consultation
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
-        <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50">
-              View Services
+        <Button 
+          variant="outline" 
+          className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50"
+          asChild
+        >
+          <Link to="/services">
+            View Services
+          </Link>
         </Button>
       </motion.div>
       <motion.div 
