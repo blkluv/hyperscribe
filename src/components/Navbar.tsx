@@ -53,13 +53,14 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary',
+                'text-sm font-medium transition-colors hover:text-primary relative group',
                 location.pathname === link.path 
                   ? 'text-primary' 
                   : 'text-muted-foreground'
               )}
             >
               {link.name}
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </Link>
           ))}
           <Button size="sm" className="ml-2 rounded-full px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
@@ -86,7 +87,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  'py-2 transition-colors text-base font-medium',
+                  'py-2 transition-colors text-base font-medium relative group',
                   location.pathname === link.path 
                     ? 'text-primary' 
                     : 'text-muted-foreground'
@@ -94,6 +95,7 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 {link.name}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>
             ))}
             <Button className="w-full mt-4 rounded-full">
