@@ -116,7 +116,6 @@ const ServicesSection = () => {
                     variant="outline" 
                     className="w-full border-2 rounded-lg group" 
                     size="lg"
-                    onClick={() => window.location.href = '/services'}
                   >
                     <span>Learn More</span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -128,7 +127,7 @@ const ServicesSection = () => {
         </motion.div>
         
         <div className="text-center mt-16">
-          <Button className="rounded-full px-8 py-6 shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800" onClick={() => window.location.href = '/services'}>
+          <Button className="rounded-full px-8 py-6 shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
