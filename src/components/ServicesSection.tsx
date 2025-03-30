@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 
@@ -114,11 +115,14 @@ const ServicesSection = () => {
                 <CardFooter className="pt-6">
                   <Button 
                     variant="outline" 
-                    className="w-full border-2 rounded-lg group" 
+                    className="w-full border-2 rounded-lg group"
                     size="lg"
+                    asChild
                   >
-                    <span>Learn More</span>
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <Link to="/services">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -127,9 +131,14 @@ const ServicesSection = () => {
         </motion.div>
         
         <div className="text-center mt-16">
-          <Button className="rounded-full px-8 py-6 shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                View All Services
-                <ArrowRight className="ml-2 h-5 w-5" />
+          <Button 
+            className="rounded-full px-8 py-6 shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+            asChild
+          >
+            <Link to="/services">
+              View All Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </div>
