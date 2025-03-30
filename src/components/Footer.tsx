@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1">
             <img 
-              src="./../../public/HyperScriber_Logo.svg" 
+              src="/HyperScriber_Logo.svg" 
               alt="HyperScriber Logo" 
             />
             <p className="text-muted-foreground mb-6">
@@ -63,32 +63,17 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Content Strategy
+                  LinkedIn Ghostwriting
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog Articles
+                  SEO Blog Articles
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  SEO Content
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Whitepapers
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Email Newsletters
+                  Website Copywriting
                 </Link>
               </li>
             </ul>
@@ -101,10 +86,6 @@ const Footer = () => {
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-muted-foreground mr-3 mt-0.5" />
                 <span className="text-muted-foreground">hello@hyperscriber.com</span>
-              </li>
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 text-muted-foreground mr-3 mt-0.5" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-muted-foreground mr-3 mt-0.5" />
