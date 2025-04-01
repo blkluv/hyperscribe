@@ -95,7 +95,7 @@ const ServicesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={childVariants} className="hover-scale">
@@ -130,6 +130,10 @@ const ServicesSection = () => {
                     size="lg"
                     asChild
                   >
+                    <Link to="/services">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
