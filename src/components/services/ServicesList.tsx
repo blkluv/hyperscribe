@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, FileText, DollarSign, BarChart, Laptop, Award } from 'lucide-react';
+import { ArrowRight, MessageSquare, FileText, DollarSign, BarChart, Laptop, Award, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -44,6 +44,19 @@ const services = [
     ],
     primary: false
   },
+  {
+    icon: <Mail className="h-8 w-8" />,
+    title: 'Newsletter Creation',
+    description: 'AI-assisted newsletters for SaaS brands to nurture leads, maintain customer engagement, and drive recurring revenue.',
+    details: [
+      'Consistent weekly or monthly newsletters tailored to your audience',
+      'Segmentation strategies for personalized messaging',
+      'A/B testing subject lines and content formats',
+      'Automated workflow setup and management',
+      'Detailed analytics and performance optimization'
+    ],
+    primary: false
+  }
 ];
 
 const ServicesList = () => {

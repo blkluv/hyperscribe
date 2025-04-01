@@ -76,6 +76,11 @@ const Footer = () => {
                   Website Copywriting
                 </Link>
               </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Newsletter Creation
+                </Link>
+              </li>
             </ul>
           </div>
 
