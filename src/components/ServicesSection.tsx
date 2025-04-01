@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageSquare, FileText, Laptop, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,44 +9,28 @@ const services = [
   {
     title: 'LinkedIn Ghostwriting',
     description: 'Build thought leadership and generate leads with professionally crafted LinkedIn content.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: <MessageSquare className="h-8 w-8" />,
     period: '/month',
     features: ['Daily posts', 'Audience growth', 'Performance metrics', 'Strategic planning'],
   },
   {
     title: 'SEO Blog Articles',
     description: 'Rank higher and drive more organic traffic with SEO-optimized blog content.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
+    icon: <FileText className="h-8 w-8" />,
     period: '/month',
     features: ['Monthly articles', 'Keyword research', 'Competitive analysis', 'Internal linking'],
   },
   {
     title: 'Website Copywriting',
     description: 'Convert more visitors with persuasive website copy that communicates your value proposition.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    icon: <Laptop className="h-8 w-8" />,
     period: '/project',
     features: ['Conversion-Focused Copy', 'Landing Page Copy', 'SEO Optimized Pages', 'Brand Voice Consistency'],
   },
   {
     title: 'Newsletter Creation',
     description: 'AI-assisted newsletters for SaaS brands to nurture leads and maintain customer engagement.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: <Mail className="h-8 w-8" />,
     period: '/month',
     features: ['Weekly newsletters', 'Audience segmentation', 'Analytics tracking', 'Strategic content planning'],
   }
