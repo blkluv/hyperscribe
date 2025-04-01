@@ -30,7 +30,7 @@ const Blog = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-28 bg-slate-50">
+        <section className="py-20 md:py-28 bg-slate-50 bg-gradient-to-br from-blue-600/10 via-purple-500/15 to-blue-400/5">
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100">
@@ -53,30 +53,6 @@ const Blog = () => {
               {blogPosts.map((post) => (
                 <BlogCard key={post.id} post={post} />
               ))}
-            </div>
-            
-            {/* Pagination */}
-            <div className="mt-16">
-              <Pagination>
-                <PaginationContent>
-                  <PaginationItem>
-                    <PaginationPrevious href="#" />
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationLink href="#" isActive>
-                      1
-                    </PaginationLink>
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationLink href="#">
-                      2
-                    </PaginationLink>
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationNext href="#" />
-                  </PaginationItem>
-                </PaginationContent>
-              </Pagination>
             </div>
           </div>
         </section>

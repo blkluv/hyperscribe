@@ -113,11 +113,11 @@ const CompletePackages = () => {
                 </CardContent>
                 <CardFooter className="pt-8">
                   <Button 
-                    variant={pkg.isCustom ? "default" : "outline"} 
-                    className={`w-full ${pkg.isCustom ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} 
+                    variant="default"
+                    className="w-full bg-blue-600 hover:bg-blue-700 rounded-lg group"
                     size="lg"
                   >
-                    <span>{pkg.isCustom ? "Get In Touch" : "Get Started"}</span>
+                    <span>Get In Touch</span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </CardFooter>
