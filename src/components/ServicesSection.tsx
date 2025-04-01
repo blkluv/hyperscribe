@@ -27,7 +27,7 @@ const services = [
       </svg>
     ),
     period: '/month',
-    features: ['4 articles/month', 'Keyword research', 'Competitive analysis', 'Internal linking'],
+    features: ['Monthly articles', 'Keyword research', 'Competitive analysis', 'Internal linking'],
   },
   {
     title: 'Website Copywriting',
@@ -38,7 +38,7 @@ const services = [
       </svg>
     ),
     period: '/project',
-    features: ['Pitch deck design', 'Financial narrative', 'Market analysis', 'Investor FAQs'],
+    features: ['Conversion-Focused Copy', 'Landing Page Copy', 'SEO Optimized Pages', 'Brand Voice Consistency'],
   }
 ];
 
@@ -119,10 +119,6 @@ const ServicesSection = () => {
                     size="lg"
                     asChild
                   >
-                    <Link to="/services">
-                      <span>Learn More</span>
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

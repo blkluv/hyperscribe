@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "What's your turnaround time for content creation?",
-    answer: "Turnaround times vary by service type. LinkedIn posts typically take 2-3 business days, blog articles 5-7 business days, and case studies 7-10 business days. Rush delivery is available for an additional fee. Our project management system keeps you updated on progress throughout the process."
+    answer: "Turnaround times vary by service type. LinkedIn posts typically take 2-3 business days, blog articles 5-7 business days, and  website copywriting depends on the amounts of content needed. Rush delivery is available for an additional fee."
   },
   {
     question: "How do you measure content performance?",

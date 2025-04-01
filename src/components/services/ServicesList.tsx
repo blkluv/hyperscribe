@@ -11,11 +11,10 @@ const services = [
     title: 'LinkedIn Ghostwriting',
     description: 'Build thought leadership and generate leads with professionally crafted LinkedIn content tailored for SaaS executives.',
     details: [
-      'Daily personalized posts that reflect your voice and expertise',
+      'Personalized posts that reflect your voice and expertise',
       'Strategic content calendar aligned with your business goals',
       'Engagement with your target audience to build meaningful connections',
       'Performance analytics and optimization recommendations',
-      'A/B testing of content types to maximize engagement'
     ],
     primary: true
   },
@@ -25,10 +24,10 @@ const services = [
     description: 'Rank higher and drive more organic traffic with SEO-optimized blog content that converts visitors into customers.',
     details: [
       'Comprehensive keyword research and competitive analysis',
-      '4 long-form articles (1,500+ words) per month',
+      'long-form articles (1,500+ words) per month',
       'On-page SEO optimization and internal linking strategy',
       'Custom graphics and visuals for each article',
-      'Regular performance reporting and content refinement'
+      'Regular performance reporting'
     ],
     primary: false
   },
@@ -37,7 +36,7 @@ const services = [
     title: 'Website Copywriting',
     description: 'Convert more visitors with persuasive website copy that clearly communicates your value proposition and drives action.',
     details: [
-      'Comprehensive website audit and strategy',
+      'Comprehensive website content audit and strategy',
       'Conversion-focused homepage, product, and landing page copy',
       'UX writing for improved user experience',
       'SEO optimization for key pages',
