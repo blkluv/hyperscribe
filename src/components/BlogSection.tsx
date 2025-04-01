@@ -4,33 +4,8 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-
-const blogPosts = [
-  {
-    title: 'How AI is Transforming SaaS Content Marketing in 2023',
-    excerpt: 'Discover the latest AI-driven strategies that are revolutionizing content creation for SaaS companies.',
-    image: 'bg-blue-100',
-    date: 'May 15, 2023',
-    category: 'AI & Content',
-    readTime: '5 min read',
-  },
-  {
-    title: 'The Ultimate Guide to LinkedIn Thought Leadership for SaaS Founders',
-    excerpt: 'Learn how to establish yourself as an industry leader and generate high-quality leads through LinkedIn.',
-    image: 'bg-purple-100',
-    date: 'April 28, 2023',
-    category: 'LinkedIn Strategy',
-    readTime: '8 min read',
-  },
-  {
-    title: '7 Content Metrics Every SaaS Marketer Should Track',
-    excerpt: 'Focus on the metrics that actually matter for your content marketing strategy and business growth.',
-    image: 'bg-green-100',
-    date: 'April 12, 2023',
-    category: 'Analytics',
-    readTime: '6 min read',
-  },
-];
+import { Link } from 'react-router-dom';
+import { blogPosts } from '@/data/blogPosts';
 
 const BlogSection = () => {
   const containerVariants = {
@@ -52,6 +27,9 @@ const BlogSection = () => {
     }
   };
 
+  // Only show the first 3 blog posts on the homepage
+  const featuredPosts = blogPosts.slice(0, 3);
+
   return (
     <section id="blog" className="py-24">
       <div className="container mx-auto px-6">
@@ -68,9 +46,16 @@ const BlogSection = () => {
             </p>
           </div>
           <div className="mt-8 md:mt-0">
-            <Button variant="ghost" className="group" size="lg">
-              View All Articles
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button 
+              variant="ghost" 
+              className="group" 
+              size="lg"
+              asChild
+            >
+              <Link to="/blog">
+                View All Articles
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -82,10 +67,10 @@ const BlogSection = () => {
           viewport={{ once: true, amount: 0.1 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {blogPosts.map((post, index) => (
-            <motion.div key={index} variants={itemVariants} className="hover-scale">
+          {featuredPosts.map((post, index) => (
+            <motion.div key={post.id} variants={itemVariants} className="hover-scale">
               <Card className="h-full flex flex-col border-0 shadow-md overflow-hidden">
-                <div className={`aspect-video ${post.image} flex items-center justify-center`}>
+                <div className={`aspect-video ${post.featuredImage} flex items-center justify-center`}>
                   <div className="p-6 text-center">
                     <div className="w-12 h-12 mx-auto bg-white/80 rounded-full flex items-center justify-center mb-2">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -112,9 +97,16 @@ const BlogSection = () => {
                   </p>
                 </CardContent>
                 <CardFooter className="pt-0 pb-6">
-                  <Button variant="ghost" className="group p-0" size="sm">
-                    Read Article
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <Button 
+                    variant="ghost" 
+                    className="group p-0" 
+                    size="sm"
+                    asChild
+                  >
+                    <Link to={`/blog/${post.slug}`}>
+                      Read Article
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
