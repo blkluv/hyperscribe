@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check } from 'lucide-react';
@@ -112,14 +111,21 @@ const CompletePackages = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-8">
-                  <Button 
-                    variant="default"
-                    className="w-full bg-blue-600 hover:bg-blue-700 rounded-lg group"
-                    size="lg"
+                  <a 
+                    href="https://calendly.com/hyperscriber/free-introductory-call" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full"
                   >
-                    <span>Get In Touch</span>
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
+                    <Button 
+                      variant="default"
+                      className="w-full bg-blue-600 hover:bg-blue-700 rounded-lg group"
+                      size="lg"
+                    >
+                      <span>Get In Touch</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </a>
                 </CardFooter>
               </Card>
             </motion.div>

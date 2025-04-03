@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
@@ -88,18 +87,20 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
+            <li className="flex items-start">
                 <Mail className="h-5 w-5 text-muted-foreground mr-3 mt-0.5" />
-                <span className="text-muted-foreground">hello@hyperscriber.com</span>
+                <span className="text-muted-foreground">info@hyperscriber.com</span>
               </li>
-              <li className="flex items-start">
+              {/* <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-muted-foreground mr-3 mt-0.5" />
                 <span className="text-muted-foreground">123 Content St, San Francisco, CA 94103</span>
-              </li>
+              </li> */}
               <li className="mt-4">
-                <Button size="sm" className="rounded-full px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                  Book a Call
-                </Button>
+                <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" className="rounded-full px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+                    Book a Call
+                  </Button>
+                </a>
               </li>
             </ul>
           </div>

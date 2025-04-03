@@ -7,7 +7,7 @@ const baseUrl = 'https://www.hyperscriber.com';
 const pages = [
   '/',
   '/services',
-  '/howitworks',
+  '/how-it-works',
   '/blog', 
   '/contact',
 ];

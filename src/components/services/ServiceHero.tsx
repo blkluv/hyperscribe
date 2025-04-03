@@ -24,10 +24,12 @@ const ServiceHero = () => {
             We combine AI efficiency with human creativity to deliver high-converting content that drives growth, engages audiences, and establishes thought leadership.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+          <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
             <Button className="rounded-full px-8 py-6 shadow-lg text-base bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
               Book a Free Consultation Call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+            </a>
           </div>
         </motion.div>
       </div>

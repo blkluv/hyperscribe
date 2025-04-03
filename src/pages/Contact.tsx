@@ -132,12 +132,14 @@ const ContactForm = () => {
               <p className="text-muted-foreground mb-6">
                 Ready to discuss your content needs? Schedule a free 30-minute consultation with our team.
               </p>
+              <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="default"
                 className="w-full rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
               >
                 Book a Call <Calendar className="ml-2 h-4 w-4" />
               </Button>
+              </a>
             </div>
           </motion.div>
         </div>

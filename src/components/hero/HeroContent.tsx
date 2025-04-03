@@ -44,10 +44,12 @@ const HeroContent = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start"
       >
+        <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
         <Button className="rounded-full px-8 py-6 shadow-lg hover:shadow-xl transition-all text-base bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
           Book a Consultation
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
+        </a>
         <Button 
           variant="outline" 
           className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50"

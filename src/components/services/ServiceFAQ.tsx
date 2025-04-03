@@ -27,19 +27,11 @@ const faqs = [
   },
   {
     question: "How do you research our industry to create expert content?",
-    answer: "Our process includes in-depth research of your industry, competitors, and target audience. We conduct stakeholder interviews, review your existing materials, study industry reports, and leverage specialized AI tools to gather insights. Our team includes writers with specific industry expertise in SaaS, tech, and B2B sectors."
-  },
-  {
-    question: "Do you offer content strategy services?",
-    answer: "Yes, all our service packages include strategic planning. For more comprehensive strategy work, our Content Marketing Retainer includes quarterly content strategy sessions, content calendars, channel planning, and continuous optimization based on performance data and changing business objectives."
-  },
-  {
-    question: "What happens after I sign up for a service?",
-    answer: "After signing up, you'll be assigned a dedicated content manager who will schedule a kickoff call to understand your goals, brand voice, and preferences. We'll create a content brief and calendar for your approval, then begin producing content according to the agreed schedule. Regular check-ins ensure we're meeting your expectations."
+    answer: "Our process includes in-depth research of your industry, competitors, and target audience."
   },
   {
     question: "Can I upgrade or downgrade my plan later?",
-    answer: "Yes, you can change your plan at any time with 30 days' notice. We understand that your content needs may evolve as your business grows. Your content manager will help you determine the right service level based on your changing requirements and objectives."
+    answer: "Yes, you can change your plan at any time with 30 days' notice. We understand that your content needs may evolve as your business grows. We will help you determine the right service level based on your changing requirements and objectives."
   }
 ];
 
