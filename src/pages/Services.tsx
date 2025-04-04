@@ -33,7 +33,7 @@ const Services = () => {
       <Navbar />
       <ServiceHero />
       <ServicesList />
-      <CompletePackages />
+      {/* <CompletePackages /> */}
       <ServiceProcess />
       <ServiceFAQ />
       <CTASection />
