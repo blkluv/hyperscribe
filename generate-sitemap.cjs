@@ -8,8 +8,9 @@ const pages = [
   '/',
   '/services',
   '/how-it-works',
-  '/blog', 
   '/contact',
+  '/terms-condition',
+  '/privacy-policy'
 ];
 
 (async () => {

@@ -39,12 +39,12 @@ const Footer = () => {
                   <span>Services</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-blue-600 transition-colors flex items-center">
                   <span className="inline-block w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 opacity-0 transform -translate-x-2 transition-all duration-200"></span>
                   <span>Blog</span>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-blue-600 transition-colors flex items-center">
                   <span className="inline-block w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 opacity-0 transform -translate-x-2 transition-all duration-200"></span>

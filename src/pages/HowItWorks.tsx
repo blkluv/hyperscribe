@@ -28,7 +28,7 @@ const HowItWorks = () => {
                 <meta charSet="utf-8" />
                 <title>HyperScriber | How It Works</title>
                 <meta name="description" content="Our streamlined AI + human workflow delivers exceptional content that drives real business results." />
-                <link rel="canonical" href="https://hyperscriber.com/howitworks" />
+                <link rel="canonical" href="https://hyperscriber.com/how-it-works" />
               </Helmet>
         <div className="container mx-auto px-6">
           <motion.div 
