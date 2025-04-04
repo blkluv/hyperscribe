@@ -14,14 +14,41 @@ const pages = [
 ];
 
 (async () => {
-  const sitemap = new SitemapStream({ hostname: baseUrl });
+  const sitemap = new SitemapStream({ 
+    hostname: baseUrl,
+    xmlns: {
+      news: true,
+      xhtml: true,
+      image: true,
+      video: true
+    }
+  });
 
-  pages.forEach(page => sitemap.write(page));
+  // Add each page to the sitemap
+  pages.forEach(page => {
+    sitemap.write({
+      url: page,
+      changefreq: 'daily',
+      priority: page === '/' ? 1.0 : 0.8
+    });
+  });
 
   sitemap.end();
 
   const sitemapOutput = await streamToPromise(sitemap);
+  
+  // Ensure the public directory exists
+  const publicDir = path.resolve(__dirname, 'public');
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
 
-  fs.writeFileSync(path.resolve(__dirname, 'public/sitemap.xml'), sitemapOutput.toString());
+  // Write the sitemap file
+  fs.writeFileSync(
+    path.resolve(publicDir, 'sitemap.xml'),
+    sitemapOutput.toString()
+  );
+  
   console.log('✅ Sitemap generated successfully!');
+  console.log(`Sitemap location: ${baseUrl}/sitemap.xml`);
 })();
