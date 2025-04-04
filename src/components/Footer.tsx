@@ -9,25 +9,6 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-white to-slate-50 border-t">
       <div className="max-w-7xl mx-auto pt-20 pb-10 px-6">
-        {/* Newsletter Subscription */}
-        <div className="mb-16 max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-3">Get Content Insights in Your Inbox</h3>
-          <p className="text-muted-foreground mb-6">
-            Join our newsletter to receive the latest content marketing strategies and tips.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            />
-            <Button className="rounded-md bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-              Subscribe
-            </Button>
-          </div>
-        </div>
-
-        <Separator className="mb-12" />
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Company Info with improved visuals */}
@@ -40,18 +21,6 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6">
               AI-powered content agency for SaaS startups that delivers results.
             </p>
-            {/* Social Media Icons */}
-            <div className="flex items-center space-x-4 mb-6">
-              <a href="https://twitter.com/hyperscriber" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="https://linkedin.com/company/hyperscriber" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="https://instagram.com/hyperscriber" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links with improved hover states */}
