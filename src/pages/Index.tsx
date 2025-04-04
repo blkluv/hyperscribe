@@ -25,7 +25,7 @@ const Index = () => {
     >
       <Helmet>
                 <meta charSet="utf-8" />
-                <title>HyperScriber | Home</title>
+                <title>HyperScriber | AI-Powered Content Agency</title>
                 <meta name="description" content="Leveraging AI to create high-converting content that drives growth for SaaS companies. Content that converts, at scale." />
                 <link rel="canonical" href="https://hyperscriber.com/" />
       </Helmet>
