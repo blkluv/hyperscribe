@@ -33,8 +33,8 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       <WorkflowSection />
-      <TestimonialsSection />
-      <BlogSection />
+      {/* <TestimonialsSection /> */}
+      {/* <BlogSection /> */}
       <CTASection />
       <Footer />
     </motion.div>
