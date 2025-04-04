@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
       <Link to="/" className="flex items-center space-x-2 z-30">
           <img 
-            src="/HyperScriber_Logo.svg"
+            src="/hyperscriber_web.svg"
             loading="lazy"
             alt="Social Stoic Logo" 
           />

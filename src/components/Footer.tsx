@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1">
             <img 
-              src="/HyperScriber_Logo.svg" 
+              src="/hyperscriber_web.svg" 
               alt="HyperScriber Logo" 
             />
             <p className="text-muted-foreground mb-6">
