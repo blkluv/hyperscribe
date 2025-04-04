@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -8,6 +7,12 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Helmet } from 'react-helmet';
+import emailjs from '@emailjs/browser'
+
+interface ContactFormProps {
+  className?: string;
+}
+
 
 const ContactHero = () => {
   return (
@@ -41,16 +46,75 @@ const ContactHero = () => {
   );
 };
 
-const ContactForm = () => {
-  const { toast } = useToast();
+const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
 
-  const handleSubmit = (e: React.FormEvent) => {
+const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize EmailJS
+  React.useEffect(() => {
+    emailjs.init('4COZc8xvshn3d5SLB');
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      if (!formRef.current) {
+        throw new Error('Form reference not found');
+      }
+
+      // Send the contact form template
+      const contactResult = await emailjs.sendForm(
+        'service_k2fd7af',
+        'template_5yet3ff',
+        formRef.current,
+        '4COZc8xvshn3d5SLB'
+      );
+
+      console.log('Contact EmailJS Result:', contactResult);
+
+      // Send the auto-reply template
+      const autoReplyResult = await emailjs.sendForm(
+        'service_k2fd7af',
+        'template_h1t6dko',
+        formRef.current,
+        '4COZc8xvshn3d5SLB'
+      );
+
+      console.log('Auto-reply EmailJS Result:', autoReplyResult);
+
+      if (contactResult.status !== 200 || autoReplyResult.status !== 200) {
+        throw new Error(`Failed to send message. Contact Status: ${contactResult.status}, Auto-reply Status: ${autoReplyResult.status}`);
+      }
+
+      toast({
+        title: "Message sent",
+        description: "We'll get back to you as soon as possible.",
+        duration: 5000,
+      });
+
+      formRef.current.reset();
+
+    } catch (error) {
+      console.error('EmailJS Error Details:', {
+        error,
+        message: error instanceof Error ? error.message : 'Unknown error',
+        stack: error instanceof Error ? error.stack : undefined
+      });
+
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <section className="py-16">
@@ -64,13 +128,14 @@ const ContactForm = () => {
             className="bg-white rounded-lg shadow-lg p-8"
           >
             <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Full Name
                 </label>
                 <Input 
                   id="name" 
+                  name="name"
                   type="text" 
                   placeholder="Your name" 
                   required 
@@ -83,13 +148,14 @@ const ContactForm = () => {
                 </label>
                 <Input 
                   id="email" 
+                  name="email"
                   type="email" 
                   placeholder="email@example.com" 
                   required 
                 />
               </div>
               
-              <div>
+              {/* <div>
                 <label htmlFor="company" className="block text-sm font-medium mb-2">
                   Company (Optional)
                 </label>
@@ -98,7 +164,7 @@ const ContactForm = () => {
                   type="text" 
                   placeholder="Your company" 
                 />
-              </div>
+              </div> */}
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
@@ -106,6 +172,7 @@ const ContactForm = () => {
                 </label>
                 <textarea 
                   id="message" 
+                  name="message"
                   rows={4}
                   placeholder="How can we help you?" 
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
