@@ -9,6 +9,7 @@ import { blogPosts } from '@/data/blogPosts';
 import { ArrowLeft, Share2, Calendar, Clock, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -59,10 +60,6 @@ const BlogPost = () => {
                   </Link>
                 </Button>
                 
-                <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100">
-                  {post.category}
-                </span>
-                
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                   {post.title}
                 </h1>
@@ -93,7 +90,7 @@ const BlogPost = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
               <article 
-                className="prose prose-lg max-w-none"
+                className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               ></article>
               
