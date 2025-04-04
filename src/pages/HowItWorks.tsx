@@ -23,7 +23,7 @@ const HowItWorks = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/5 via-purple-500/10 to-blue-400/5">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/5 via-blue-500/10 to-blue-400/5">
               <Helmet>
                 <meta charSet="utf-8" />
                 <title>HyperScriber | How It Works</title>

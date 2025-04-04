@@ -30,7 +30,7 @@ const Blog = () => {
       
       <main>
         {/* Hero Section - Updated to match other pages */}
-        <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-purple-500/15 to-blue-400/5">
+        <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-blue-500/15 to-blue-400/5">
           <div className="container mx-auto px-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

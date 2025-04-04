@@ -1,3 +1,4 @@
+
 import React, {useState, useRef} from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin, Calendar } from 'lucide-react';
@@ -16,7 +17,7 @@ interface ContactFormProps {
 
 const ContactHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-purple-500/15 to-blue-400/5">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-blue-500/15 to-blue-400/5">
       <div className="container mx-auto px-6">
         <Helmet>
           <meta charSet="utf-8" />
