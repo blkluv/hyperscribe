@@ -24,6 +24,7 @@ const ContactHero = () => {
           <title>HyperScriber | Contact Us</title>
           <meta name="description" content="Have questions about our services or ready to transform your content strategy? We're here to help." />
           <link rel="canonical" href="https://hyperscriber.com/contact" />
+          <link rel="icon" href="/favicon.ico" />
         </Helmet>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

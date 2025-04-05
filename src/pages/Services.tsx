@@ -29,6 +29,7 @@ const Services = () => {
         <title>HyperScriber | Services</title>
         <meta name="description" content="We combine AI efficiency with human creativity to deliver high-converting content that drives growth, engages audiences, and establishes thought leadership." />
         <link rel="canonical" href="https://hyperscriber.com/services" />
+        <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
       <ServiceHero />

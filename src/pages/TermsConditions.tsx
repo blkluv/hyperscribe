@@ -22,6 +22,7 @@ const TermsConditions = () => {
         <title>HyperScriber | Terms & Conditions</title>
         <meta name="description" content="Terms and conditions for using HyperScriber services." />
         <link rel="canonical" href="https://hyperscriber.com/terms-conditions" />
+        <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
       

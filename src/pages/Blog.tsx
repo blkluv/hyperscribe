@@ -27,6 +27,7 @@ const Blog = () => {
         <title>HyperScriber | Blog</title>
         <meta name="description" content="Expert advice to help SaaS businesses grow through content marketing." />
         <link rel="canonical" href="https://hyperscriber.com/blog" />
+        <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
       

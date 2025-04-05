@@ -22,6 +22,7 @@ const PrivacyPolicy = () => {
         <title>HyperScriber | Privacy Policy</title>
         <meta name="description" content="Privacy policy for HyperScriber services." />
         <link rel="canonical" href="https://hyperscriber.com/privacy-policy" />
+        <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
       

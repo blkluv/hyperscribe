@@ -39,6 +39,7 @@ const BlogPost = () => {
         <title>{`HyperScriber | ${post.title}`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={`https://hyperscriber.com/blog/${post.slug}`} />
+        <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
       
