@@ -5,8 +5,6 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import WorkflowSection from '@/components/WorkflowSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import BlogSection from '@/components/BlogSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet';
@@ -21,20 +19,19 @@ const Index = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen"
+      className="min-h-screen overflow-x-hidden"
     >
       <Helmet>
-                <meta charSet="utf-8" />
-                <title>HyperScriber | AI-Powered Content Agency</title>
-                <meta name="description" content="Leveraging AI to create high-converting content that drives growth for SaaS companies. Content that converts, at scale." />
-                <link rel="canonical" href="https://hyperscriber.com/" />
+        <meta charSet="utf-8" />
+        <title>HyperScriber | AI-Powered Content Agency</title>
+        <meta name="description" content="Leveraging AI to create high-converting content that drives growth for SaaS companies. Content that converts, at scale." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="canonical" href="https://hyperscriber.com/" />
       </Helmet>
       <Navbar />
       <HeroSection />
       <ServicesSection />
       <WorkflowSection />
-      {/* <TestimonialsSection /> */}
-      {/* <BlogSection /> */}
       <CTASection />
       <Footer />
     </motion.div>

@@ -90,8 +90,44 @@
     @apply border-border;
   }
 
+  html {
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+    max-width: 100vw;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Improved button tap states on mobile */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Responsive typography */
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl font-bold;
+  }
+
+  p {
+    @apply mb-4 last:mb-0;
+  }
+
+  img {
+    @apply max-w-full h-auto;
   }
 
   .glass-panel {
@@ -112,5 +148,12 @@
 
   .page-transition-exit {
     @apply animate-exit;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 640px) {
+    .container {
+      @apply px-4;
+    }
   }
 }
