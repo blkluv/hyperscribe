@@ -16,7 +16,7 @@ const Footer = () => {
             <img 
               src="/hyperscriber_web.svg" 
               alt="HyperScriber Logo" 
-              className="mb-4 h-8"
+              className="mb-4 h-auto w-auto"
             />
             <p className="text-muted-foreground mb-6">
               AI-powered content agency for SaaS startups that delivers results.

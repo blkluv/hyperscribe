@@ -49,7 +49,7 @@ const Navbar = () => {
           <img 
             src="/hyperscriber_web.svg"
             alt="HyperScriber Logo" 
-            className="h-7 sm:h-8 w-auto object-contain"
+            className="h-auto w-auto object-contain"
             loading="eager"
             width={isMobile ? 150 : 180}
             height={isMobile ? 28 : 32}
