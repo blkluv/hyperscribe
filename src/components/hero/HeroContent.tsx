@@ -31,7 +31,7 @@ const HeroContent = () => {
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
       >
         Smart Content for 
-        <span className="text-gradient bg-gradient-to-r from-blue-600 to-blue-500"> SaaS Startups</span>
+        <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span>
       </motion.h1>
       <motion.p 
         initial={{ opacity: 0 }}

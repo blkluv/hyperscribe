@@ -29,10 +29,6 @@ const faqs = [
     question: "How do you research our industry to create expert content?",
     answer: "Our process includes in-depth research of your industry, competitors, and target audience."
   },
-  {
-    question: "Can I upgrade or downgrade my plan later?",
-    answer: "Yes, you can change your plan at any time with 30 days' notice. We understand that your content needs may evolve as your business grows. We will help you determine the right service level based on your changing requirements and objectives."
-  }
 ];
 
 const ServiceFAQ = () => {

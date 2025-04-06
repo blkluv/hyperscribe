@@ -102,23 +102,6 @@ const Footer = () => {
                   info@hyperscriber.com
                 </a>
               </li>
-              <li className="mt-6">
-                <p className="text-sm text-slate-700 mb-3 font-medium">Ready to boost your content strategy?</p>
-                <a 
-                  href="https://calendly.com/hyperscriber/free-introductory-call" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group"
-                >
-                  <Button 
-                    size="sm" 
-                    className="w-full justify-between rounded-md bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 shadow-sm hover:shadow group"
-                  >
-                    Book a Free Call
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

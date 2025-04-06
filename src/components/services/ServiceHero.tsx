@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const ServiceHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-blue-500/15 to-blue-400/5">
+    <section className="pt-32 pb-16 bg-slate-50">
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ const ServiceHero = () => {
             OUR SERVICES
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            AI-Powered Content Solutions for <span className="text-gradient bg-gradient-to-r from-blue-600 to-blue-700">SaaS Growth</span>
+            AI-Powered Content Solutions for <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">SaaS Growth</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6">
             We combine AI efficiency with human creativity to deliver high-converting content that drives growth, engages audiences, and establishes thought leadership.

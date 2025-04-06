@@ -17,7 +17,7 @@ interface ContactFormProps {
 
 const ContactHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600/10 via-blue-500/15 to-blue-400/5">
+    <section className="pt-32 pb-16 bg-slate-50">
       <div className="container mx-auto px-6">
         <Helmet>
           <meta charSet="utf-8" />

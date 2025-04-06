@@ -13,7 +13,7 @@ const HeroSection = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative min-h-[calc(100vh-60px)] md:min-h-screen flex items-center bg-gradient-to-br from-blue-600/5 via-blue-500/10 to-blue-400/5"
+      className="relative min-h-[calc(100vh-60px)] md:min-h-screen flex items-center"
     >
       <div className="container mx-auto px-4 sm:px-6 pt-28 pb-16 md:pt-40 md:pb-32">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-16">
