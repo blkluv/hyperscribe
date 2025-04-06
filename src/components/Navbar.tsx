@@ -5,9 +5,9 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isMobile = useIsMobile();
@@ -20,14 +20,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -80,45 +72,47 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <button 
-          onClick={toggleMenu} 
-          className="md:hidden text-primary p-1"
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden fixed top-[56px] left-0 w-full h-[calc(100vh-56px)] bg-white/98 backdrop-blur-lg shadow-lg animate-fade-in overflow-auto z-50">
-          <div className="flex flex-col space-y-4 p-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={cn(
-                  'py-3 px-2 transition-colors text-base font-medium rounded-md',
-                  location.pathname === link.path 
-                    ? 'text-blue-700 bg-blue-50' 
-                    : 'text-muted-foreground hover:bg-blue-50/50'
-                )}
-                onClick={closeMenu}
+        {/* Mobile Navigation using Sheet component for swipe gesture support */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <button 
+                className="text-primary p-1"
+                aria-label="Toggle Menu"
               >
-                {link.name}
-              </Link>
-            ))}
-            <div className="pt-4 mt-4 border-t">
-              <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full rounded-full py-6 text-base bg-gradient-to-r from-blue-600 to-blue-700">
-                  Book a Free Consultation
-                </Button>
-              </a>
-            </div>
-          </div>
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-full p-0">
+              <div className="pt-14 pb-6 px-6">
+                <div className="flex flex-col space-y-4">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className={cn(
+                        'py-3 px-2 transition-colors text-base font-medium rounded-md',
+                        location.pathname === link.path 
+                          ? 'text-blue-700 bg-blue-50' 
+                          : 'text-muted-foreground hover:bg-blue-50/50'
+                      )}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                  <div className="pt-4 mt-4 border-t">
+                    <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full rounded-full py-6 text-base bg-gradient-to-r from-blue-600 to-blue-700">
+                        Book a Free Consultation
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
