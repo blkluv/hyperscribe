@@ -9,12 +9,15 @@ const FloatingCards = () => {
     <>
       {/* Growth Analytics Card */}
       <FloatingCard
-        className="absolute left-[20%] top-[20%] w-48 h-48"
-        rotate={6}
+        className="absolute left-[25%] top-[15%] w-48 h-48"
         animationProps={{
-          initial: { y: 0 },
-          animate: { y: [-10, 10, -10] },
-          transition: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+          initial: { opacity: 0, y: 20, rotate: 6 },
+          animate: { opacity: 1, y: 0, rotate: 6 },
+          transition: { duration: 0.8, ease: "easeOut" },
+          float: {
+            y: [-5, 5, -5],
+            transition: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+          }
         }}
       >
         <div className="flex items-center space-x-3">
@@ -39,11 +42,14 @@ const FloatingCards = () => {
       {/* AI Content Card */}
       <FloatingCard
         className="absolute right-[15%] top-[10%] w-56 h-44"
-        rotate={-3}
         animationProps={{
-          initial: { y: 0 },
-          animate: { y: [15, -5, 15] },
-          transition: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }
+          initial: { opacity: 0, y: 20, rotate: -3 },
+          animate: { opacity: 1, y: 0, rotate: -3 },
+          transition: { duration: 0.8, delay: 0.2, ease: "easeOut" },
+          float: {
+            y: [8, -8, 8],
+            transition: { duration: 7, repeat: Infinity, ease: "easeInOut" }
+          }
         }}
       >
         <div className="flex items-center space-x-3">
@@ -66,12 +72,15 @@ const FloatingCards = () => {
       
       {/* Launch Strategy Card */}
       <FloatingCard
-        className="absolute left-[10%] bottom-[15%] w-52 h-40"
-        rotate={12}
+        className="absolute left-[10%] bottom-[18%] w-52 h-40"
         animationProps={{
-          initial: { y: 0 },
-          animate: { y: [5, -15, 5] },
-          transition: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }
+          initial: { opacity: 0, y: 20, rotate: 8 },
+          animate: { opacity: 1, y: 0, rotate: 8 },
+          transition: { duration: 0.8, delay: 0.4, ease: "easeOut" },
+          float: {
+            y: [-7, 7, -7],
+            transition: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+          }
         }}
       >
         <div className="flex items-center space-x-3">
@@ -95,12 +104,15 @@ const FloatingCards = () => {
       
       {/* Conversion Rate Card */}
       <FloatingCard
-        className="absolute right-[20%] bottom-[20%] w-48 h-36"
-        rotate={-6}
+        className="absolute right-[20%] bottom-[15%] w-48 h-36"
         animationProps={{
-          initial: { y: 0 },
-          animate: { y: [-8, 12, -8] },
-          transition: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1.5 }
+          initial: { opacity: 0, y: 20, rotate: -5 },
+          animate: { opacity: 1, y: 0, rotate: -5 },
+          transition: { duration: 0.8, delay: 0.6, ease: "easeOut" },
+          float: {
+            y: [6, -6, 6],
+            transition: { duration: 6.5, repeat: Infinity, ease: "easeInOut" }
+          }
         }}
       >
         <div className="flex items-center space-x-2">

@@ -4,21 +4,23 @@ import { motion } from 'framer-motion';
 
 type FloatingCardProps = {
   className: string;
-  rotate?: number;
   animationProps: {
-    initial: { y: number };
-    animate: { y: number[] };
-    transition: {
-      duration: number;
-      repeat: number;
-      ease: string;
-      delay?: number;
-    };
+    initial: any;
+    animate: any;
+    transition: any;
+    float: {
+      y: number[];
+      transition: {
+        duration: number;
+        repeat: number;
+        ease: string;
+      }
+    }
   };
   children: React.ReactNode;
 };
 
-const FloatingCard = ({ className, rotate = 0, animationProps, children }: FloatingCardProps) => {
+const FloatingCard = ({ className, animationProps, children }: FloatingCardProps) => {
   return (
     <motion.div
       initial={animationProps.initial}
@@ -26,12 +28,13 @@ const FloatingCard = ({ className, rotate = 0, animationProps, children }: Float
       transition={animationProps.transition}
       className={className}
     >
-      <div 
-        className="glass-panel h-full w-full rounded-2xl shadow-lg border border-white/30 backdrop-blur-sm p-5 flex flex-col justify-between"
-        style={{ transform: rotate !== 0 ? `rotate(${rotate}deg)` : 'none' }}
+      <motion.div 
+        animate={animationProps.float.y ? { y: animationProps.float.y } : {}}
+        transition={animationProps.float.transition}
+        className="glass-panel h-full w-full rounded-2xl shadow-lg border border-white/20 backdrop-blur-sm p-5 flex flex-col justify-between"
       >
         {children}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
