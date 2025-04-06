@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -94,14 +96,16 @@
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
     max-width: 100vw;
+    font-family: 'Inter', sans-serif;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
     overflow-x: hidden;
     max-width: 100vw;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    font-family: 'Inter', sans-serif;
   }
 
   /* Improved button tap states on mobile */
@@ -109,21 +113,24 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Responsive typography */
+  /* Responsive typography with improved spacing */
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-bold;
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl font-bold;
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+    letter-spacing: -0.01em;
   }
 
   h3 {
-    @apply text-2xl sm:text-3xl font-bold;
+    @apply text-2xl sm:text-3xl font-bold tracking-tight;
+    letter-spacing: -0.01em;
   }
 
   p {
-    @apply mb-4 last:mb-0;
+    @apply mb-4 last:mb-0 leading-relaxed;
   }
 
   img {
@@ -131,11 +138,11 @@
   }
 
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-lg shadow-lg rounded-xl border border-white/20;
+    @apply bg-white/90 backdrop-blur-lg shadow-lg rounded-xl border border-white/30;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500;
   }
 
   .hover-scale {
@@ -157,3 +164,4 @@
     }
   }
 }
+

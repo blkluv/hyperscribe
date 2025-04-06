@@ -27,7 +27,7 @@ const FloatingCard = ({ className, rotate = 0, animationProps, children }: Float
       className={className}
     >
       <div 
-        className={`glass-panel h-full w-full rounded-2xl shadow-xl border border-white/20 backdrop-blur-sm p-5 flex flex-col justify-between transform ${rotate !== 0 ? `rotate-${rotate}` : ''}`}
+        className="glass-panel h-full w-full rounded-2xl shadow-lg border border-white/30 backdrop-blur-sm p-5 flex flex-col justify-between"
         style={{ transform: rotate !== 0 ? `rotate(${rotate}deg)` : 'none' }}
       >
         {children}
