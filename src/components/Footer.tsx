@@ -31,7 +31,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://twitter.com/hyperscriber" 
+                href="https://x.com/hyperscriber" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 bg-blue-100 rounded-full text-blue-600 hover:bg-blue-200 transition-colors duration-200 hover:scale-110 transform"
