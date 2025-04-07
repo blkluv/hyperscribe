@@ -38,14 +38,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center z-30">
-          <img 
-            src="/hyperscriber_web.svg"
-            alt="HyperScriber Logo" 
-            className="h-auto w-auto object-contain"
-            loading="eager"
-            width={isMobile ? 150 : 180}
-            height={isMobile ? 28 : 32}
-          />
+          <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+            HyperScriber
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

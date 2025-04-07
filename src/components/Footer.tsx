@@ -12,11 +12,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Company Info with improved typography */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <img 
-              src="/hyperscriber_web.svg" 
-              alt="HyperScriber Logo" 
-              className="mb-6 h-auto w-auto max-w-[180px]"
-            />
+            <div className="mb-6">
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+                HyperScriber
+              </span>
+            </div>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
               AI-powered content agency for SaaS startups that delivers measurable growth and engagement.
             </p>
