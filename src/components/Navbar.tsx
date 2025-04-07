@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center z-30">
-          <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+          <span className="text-xl md:text-2xl font-bold text-black">
             HyperScriber
           </span>
         </Link>

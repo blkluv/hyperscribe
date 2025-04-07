@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Info with improved typography */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="mb-6">
-              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold text-black">
                 HyperScriber
               </span>
             </div>
