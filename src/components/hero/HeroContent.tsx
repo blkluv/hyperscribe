@@ -30,7 +30,7 @@ const HeroContent = () => {
         transition={{ duration: 0.7, delay: 0.3 }}
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
       >
-        Smart Content for 
+        AI-Powered Content for 
         <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span>
       </motion.h1>
       <motion.p 
@@ -39,7 +39,7 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl lg:mx-0 mx-auto font-light"
       >
-        Leveraging AI to create high-converting content that drives growth for SaaS companies. Content that converts, at scale.
+        Supercharge your SaaS startup growth with performance-focused content that combines AI efficiency and human expertise. Strategy, quality, and speed—without compromise.
       </motion.p>
       
       {/* Social proof element with improved spacing */}
@@ -55,11 +55,11 @@ const HeroContent = () => {
         </div>
         <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
           <Check size={16} className="text-green-600" />
-          <span className="text-sm font-medium">AI + human quality</span>
+          <span className="text-sm font-medium">AI + human expertise</span>
         </div>
         <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
           <Check size={16} className="text-green-600" />
-          <span className="text-sm font-medium">ROI focused approach</span>
+          <span className="text-sm font-medium">Built to convert</span>
         </div>
       </motion.div>
       
