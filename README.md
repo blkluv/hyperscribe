@@ -1,69 +1,97 @@
-# Welcome to your Lovable project
+# HyperScriber
 
-## Project info
+<div align="center">
+  <img src="./src/assets/logo.png" alt="HyperScriber Logo" width="120" />
+</div>
 
-**URL**: https://lovable.dev/projects/32d65689-4655-46a9-86df-feaeda23ee72
+HyperScriber is a modern web application built with React, TypeScript, and Vite, featuring a beautiful UI powered by Tailwind CSS and Radix UI components.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- 🎨 Modern and responsive UI design with blue gradient theme
+- 🚀 Built with Vite for lightning-fast development
+- 💪 TypeScript for enhanced type safety and developer experience
+- 🎯 React Query for efficient server state management
+- 📱 Mobile-friendly and accessible components
+- 🌙 Light/dark mode support with next-themes
+- 📊 Data visualization with Recharts
+- 🔄 Form handling with React Hook Form and Zod validation
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/32d65689-4655-46a9-86df-feaeda23ee72) and start prompting.
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI
+- **State Management:** React Query
+- **Routing:** React Router DOM
+- **Form Handling:** React Hook Form + Zod
+- **Data Visualization:** Recharts
+- **Animations:** Framer Motion
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v18 or higher)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd hyperscriber-ui
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-**Use GitHub Codespaces**
+### Available Scripts
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with .
+```
+hyperscriber-ui/
+├── src/
+│   ├── assets/        # Static assets (images, fonts)
+│   ├── components/    # Reusable UI components
+│   ├── layouts/       # Layout components
+│   ├── pages/         # Page components
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # Utility functions and constants
+│   ├── styles/        # Global styles and Tailwind config
+│   └── App.tsx        # Root component
+├── public/            # Public static files
+└── package.json       # Project dependencies and scripts
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contributing
 
-## How can I deploy this project?
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Simply open [Lovable](https://lovable.dev/projects/32d65689-4655-46a9-86df-feaeda23ee72) and click on Share -> Publish.
+## License
 
-## I want to use a custom domain - is that possible?
+This project is proprietary software.
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+---
+
+Built with ❤️ by the HyperScriber team
