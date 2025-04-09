@@ -20,14 +20,8 @@ const HeroSection = () => {
           {/* Left content */}
           <HeroContent />
           
-          {/* Right visual - only show on large screens or at the bottom on mobile */}
-          {!isMobile ? (
-            <HeroVisual />
-          ) : (
-            <div className="w-full mt-8">
-              <HeroVisual />
-            </div>
-          )}
+          {/* Right visual - only show on desktop */}
+          {!isMobile && <HeroVisual />}
         </div>
       </div>
     </motion.div>

@@ -13,9 +13,12 @@ const Footer = () => {
           {/* Company Info with improved typography */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="mb-6">
-              <span className="text-xl md:text-2xl font-bold text-black">
-                HyperScriber
-              </span>
+              <div className="flex items-center gap-2">
+                <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-20 w-10 object-contain" />
+                <span className="text-xl md:text-2xl font-bold text-black">
+                  HyperScriber
+                </span>
+              </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
               AI-powered content agency for SaaS startups that delivers measurable growth and engagement.

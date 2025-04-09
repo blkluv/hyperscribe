@@ -8,11 +8,11 @@ const services = [
   {
     icon: <MessageSquare className="h-8 w-8" />,
     title: 'LinkedIn Ghostwriting',
-    description: 'Build thought leadership and generate leads with professionally crafted LinkedIn content tailored for SaaS executives.',
+    description: 'Position yourself as a thought leader and attract qualified leads.',
     details: [
-      'Personalized posts that reflect your voice and expertise',
-      'Strategic content calendar aligned with your business goals',
-      'Engagement with your target audience to build meaningful connections',
+      'Custom posts that match your tone and expertise',
+      'Strategic content calendar aligned with your goals',
+      'Audience engagement to grow your network',
       'Performance analytics and optimization recommendations',
     ],
     primary: true
@@ -20,12 +20,11 @@ const services = [
   {
     icon: <FileText className="h-8 w-8" />,
     title: 'SEO Blog Articles',
-    description: 'Rank higher and drive more organic traffic with SEO-optimized blog content that converts visitors into customers.',
+    description: 'Boost rankings and turn traffic into customers with conversion-focused blog content.',
     details: [
-      'Comprehensive keyword research and competitive analysis',
-      'long-form articles (1,500+ words) per month',
-      'On-page SEO optimization and internal linking strategy',
-      'Custom graphics and visuals for each article',
+      'In-depth keyword & competitor research',
+      '1,500+ word SEO-optimized articles',
+      'Smart internal linking & on-page SEO',
       'Regular performance reporting'
     ],
     primary: false
@@ -35,7 +34,7 @@ const services = [
     title: 'Website Copywriting',
     description: 'Convert more visitors with persuasive website copy that clearly communicates your value proposition and drives action.',
     details: [
-      'Comprehensive website content audit and strategy',
+      'Strategic website content audit and strategy',
       'Conversion-focused homepage, product, and landing page copy',
       'UX writing for improved user experience',
       'SEO optimization for key pages',
@@ -48,8 +47,8 @@ const services = [
     title: 'Newsletter Creation',
     description: 'AI-assisted newsletters for SaaS brands to nurture leads, maintain customer engagement, and drive recurring revenue.',
     details: [
-      'Consistent weekly or monthly newsletters tailored to your audience',
-      'Segmentation strategies for personalized messaging',
+      'Weekly or monthly newsletters tailored to your audience',
+      'Audience segmentation for personalized messaging',
       'A/B testing subject lines and content formats',
       'Automated workflow setup and management',
       'Detailed analytics and performance optimization'

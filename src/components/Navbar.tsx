@@ -25,7 +25,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'How It Works', path: '/how-it-works' },
-    // { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -37,7 +36,8 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center z-30">
+        <Link to="/" className="flex items-center z-30 gap-2">
+          <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-20 w-10 object-contain" />
           <span className="text-xl md:text-2xl font-bold text-black">
             HyperScriber
           </span>
