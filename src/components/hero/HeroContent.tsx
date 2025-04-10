@@ -29,7 +29,7 @@ const HeroContent = () => {
         transition={{ duration: 0.7, delay: 0.3 }}
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
       >
-        AI-Powered <br/>Content for 
+        AI-Powered <br/>Content Solutions for 
         <br/><span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span> 🚀
       </motion.h1>
       <motion.p 

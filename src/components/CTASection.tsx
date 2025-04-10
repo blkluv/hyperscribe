@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -41,7 +41,7 @@ const CTASection = () => {
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-3 sm:px-4 py-2 rounded-full">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                <span className="text-white text-sm sm:text-base font-medium">25-minute strategy session</span>
+                <span className="text-white text-sm sm:text-base font-medium">15-minute strategy session</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-3 sm:px-4 py-2 rounded-full">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white" />

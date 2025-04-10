@@ -1,7 +1,6 @@
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, ArrowDown } from 'lucide-react';
 
 const PricingHero = () => {
   return (
@@ -43,6 +42,20 @@ const PricingHero = () => {
             </div>
           </motion.div>
         </motion.div>
+        <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="flex justify-center mt-12"
+              >
+                <a 
+                  href="#workflow" 
+                  className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  <span className="mb-2">See packages below</span>
+                  <ArrowDown className="animate-bounce" />
+                </a>
+              </motion.div>
       </div>
     </section>
   );

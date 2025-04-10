@@ -1,7 +1,6 @@
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ServiceHero = () => {
@@ -55,6 +54,20 @@ const ServiceHero = () => {
             </a>
           </div>
         </motion.div>
+        <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="flex justify-center mt-12"
+              >
+                <a 
+                  href="#workflow" 
+                  className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  <span className="mb-2">See all services</span>
+                  <ArrowDown className="animate-bounce" />
+                </a>
+              </motion.div>
       </div>
     </section>
   );

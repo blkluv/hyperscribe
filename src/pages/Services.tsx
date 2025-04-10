@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
@@ -31,12 +30,15 @@ const Services = () => {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
-      <ServiceHero />
-      <ServicesList />
-      <ServiceProcess />
-      <CompletePackages />
-      <ServiceFAQ />
-      <CTASection />
+      {/* Add main tag with top margin */}
+      <main className="mt-16">
+        <ServiceHero />
+        <ServicesList />
+        <ServiceProcess />
+        <CompletePackages />
+        <ServiceFAQ />
+        <CTASection />
+      </main>
       <Footer />
     </motion.div>
   );

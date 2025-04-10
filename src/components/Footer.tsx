@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="mb-6">
               <div className="flex items-center gap-3">
                 <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
-                <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500">
+                <span className="text-xl md:text-2xl font-bold bg-clip-text">
                   HyperScriber
                 </span>
               </div>

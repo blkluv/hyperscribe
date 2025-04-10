@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
@@ -29,10 +28,12 @@ const Pricing = () => {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
-      <PricingHero />
-      <PricingPlans />
-      <PricingBenefits />
-      <CTASection />
+      <main className="mt-16">
+        <PricingHero />
+        <PricingPlans />
+        <PricingBenefits />
+        <CTASection />
+      </main>
       <Footer />
     </motion.div>
   );

@@ -34,7 +34,7 @@ const ContactHero = () => {
           <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
             GET IN TOUCH
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Let's Start a <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Conversation</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-4">
@@ -230,8 +230,10 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <ContactHero />
-      <ContactForm />
+      <main className="mt-16">
+        <ContactHero />
+        <ContactForm />
+      </main>
       <Footer />
     </>
   );

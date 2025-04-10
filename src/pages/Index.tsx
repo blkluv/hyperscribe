@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
@@ -30,10 +29,12 @@ const Index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <PricingBenefits />
-      <CTASection />
+      <main className="mt-16">
+        <HeroSection />
+        <ServicesSection />
+        <PricingBenefits />
+        <CTASection />
+      </main>
       <Footer />
     </motion.div>
   );
