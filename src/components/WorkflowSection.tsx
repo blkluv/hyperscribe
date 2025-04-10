@@ -1,125 +1,114 @@
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Check, ChevronRight, ArrowRight } from 'lucide-react';
-import { steps } from '@/data/workflow-steps';
+import { motion } from 'framer-motion';
+import { ChevronRight, BrainCircuit, Database, FileEdit, CheckCircle, Share2, BarChart3 } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
+const steps = [
+  {
+    number: '01',
+    title: 'Strategy & Analysis',
+    description: 'We analyze your audience, competitors, and goals to create a tailored content strategy.',
+    icon: <BrainCircuit className="h-6 w-6" />,
+    details: [
+      'Comprehensive audience analysis',
+      'Competitive landscape review',
+      'Content gap identification',
+      'Goal alignment workshop'
+    ]
+  },
+  {
+    number: '02',
+    title: 'AI-Powered Research',
+    description: 'Our AI tools gather and analyze data to identify content opportunities and optimal topics.',
+    icon: <Database className="h-6 w-6" />,
+    details: [
+      'AI data mining & pattern recognition',
+      'Semantic topic clustering',
+      'Keyword opportunity identification',
+      'Trend analysis & prediction'
+    ]
+  },
+  {
+    number: '03',
+    title: 'Content Creation',
+    description: 'Our expert team creates high-quality content optimized for your specific goals and channels.',
+    icon: <FileEdit className="h-6 w-6" />,
+    details: [
+      'AI-assisted draft generation',
+      'Expert human writing & editing',
+      'SEO optimization',
+      'Multimedia content integration'
+    ]
+  },
+  {
+    number: '04',
+    title: 'Human Review & Refinement',
+    description: 'Content experts review, edit, and refine to ensure quality, accuracy, and brand voice.',
+    icon: <CheckCircle className="h-6 w-6" />,
+    details: [
+      'Quality assurance review',
+      'Brand voice consistency check',
+      'Fact checking & verification',
+      'Content polish & enhancement'
+    ]
+  },
+  {
+    number: '05',
+    title: 'Publication',
+    description: 'We publish your content with the best SEO practices.',
+    icon: <Share2 className="h-6 w-6" />,
+    details: [
+      'Multi-channel distribution',
+      'Technical SEO implementation',
+      'Metadata optimization',
+      'Schema markup integration'
+    ]
+  },
+  {
+    number: '06',
+    title: 'Analysis & Optimization',
+    description: 'Continuous monitoring and data analysis to optimize performance and improve future content.',
+    icon: <BarChart3 className="h-6 w-6" />,
+    details: [
+      'Performance tracking & analytics',
+      'User behavior analysis',
+      'Conversion rate optimization',
+      'Iterative content refinement'
+    ]
   }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 }
-  }
-};
+];
 
 const WorkflowSection = () => {
-  const [selectedStep, setSelectedStep] = useState<number | null>(null);
-
-  // Reorganized original steps data
-  const workflowSteps = [
-    {
-      id: 1,
-      title: 'Strategy & Analysis',
-      subtitle: 'The Foundation',
-      icon: '01',
-      description: 'We analyze your audience, competitors, and goals to create a tailored content strategy.',
-      details: [
-        'Comprehensive audience analysis',
-        'Competitive landscape review',
-        'Content gap identification',
-        'Goal alignment workshop'
-      ]
-    },
-    {
-      id: 2,
-      title: 'AI-Powered Research',
-      subtitle: 'Data Intelligence',
-      icon: '02',
-      description: 'Our AI tools gather and analyze data to identify content opportunities and optimal topics.',
-      details: [
-        'AI data mining & pattern recognition',
-        'Semantic topic clustering',
-        'Keyword opportunity identification',
-        'Trend analysis & prediction'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Content Creation',
-      subtitle: 'Crafting Quality',
-      icon: '03',
-      description: 'Our expert team creates high-quality content optimized for your specific goals and channels.',
-      details: [
-        'AI-assisted draft generation',
-        'Expert human writing & editing',
-        'SEO optimization',
-        'Multimedia content integration'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Human Review & Refinement',
-      subtitle: 'Quality Assurance',
-      icon: '04',
-      description: 'Content experts review, edit, and refine to ensure quality, accuracy, and brand voice.',
-      details: [
-        'Quality assurance review',
-        'Brand voice consistency check',
-        'Fact checking & verification',
-        'Content polish & enhancement'
-      ]
-    },
-    {
-      id: 5,
-      title: 'Publication & Distribution',
-      subtitle: 'Going Live',
-      icon: '05',
-      description: 'We publish your content with the best SEO practices and distribution channels.',
-      details: [
-        'Multi-channel distribution',
-        'Technical SEO implementation',
-        'Metadata optimization',
-        'Schema markup integration'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Analysis & Optimization',
-      subtitle: 'Continuous Improvement',
-      icon: '06',
-      description: 'Continuous monitoring and data analysis to optimize performance and improve future content.',
-      details: [
-        'Performance tracking & analytics',
-        'User behavior analysis',
-        'Conversion rate optimization',
-        'Iterative content refinement'
-      ]
+  const [expandedStep, setExpandedStep] = useState<number | null>(null);
+  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
-  ];
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
 
   return (
     <section id="how-it-works" className="py-24 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="mb-5 py-1.5 px-4 bg-blue-50 text-blue-600 border-blue-100 hover:bg-blue-100">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600">
             HOW IT WORKS
-          </Badge>
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our AI + Human Workflow
           </h2>
@@ -127,125 +116,84 @@ const WorkflowSection = () => {
             We combine the efficiency of AI with the creativity and expertise of humans to deliver exceptional content.
           </p>
         </div>
-
-        {/* Workflow Process - Modern Version */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {workflowSteps.map((step, index) => (
-              <motion.div
-                key={step.id}
+        
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="max-w-5xl mx-auto"
+        >
+          {/* Workflow Steps Timeline */}
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-200 to-blue-500 hidden sm:block" />
+            
+            {steps.map((step, index) => (
+              <motion.div 
+                key={index} 
                 variants={itemVariants}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="h-full"
+                className="mb-8 last:mb-0"
               >
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Card className="h-full cursor-pointer overflow-hidden hover:shadow-lg transition-all duration-300 bg-white border border-slate-100 relative">
-                      <div className="absolute top-0 left-0 w-1.5 h-full bg-blue-500" />
-                      <div className="absolute -top-2 -right-2 w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl transform rotate-12">
-                        {step.icon}
-                      </div>
-                      
-                      <CardContent className="p-6 pt-8">
-                        <h3 className="text-xl font-bold mb-1">{step.title}</h3>
-                        <p className="text-blue-600 text-sm font-medium mb-3">{step.subtitle}</p>
-                        <p className="text-muted-foreground">{step.description}</p>
-                        
-                        <div className="mt-4 flex items-center text-blue-600 font-medium text-sm">
-                          <span>Learn more</span>
-                          <ChevronRight className="h-4 w-4 ml-1" />
+                <Collapsible 
+                  open={expandedStep === index} 
+                  onOpenChange={() => setExpandedStep(expandedStep === index ? null : index)}
+                >
+                  <CollapsibleTrigger className="w-full">
+                    <Card className={`relative border-0 transition-all duration-300 overflow-hidden ${expandedStep === index ? 'shadow-lg scale-[1.02]' : 'shadow-md hover:shadow-lg hover:scale-[1.01]'}`}>
+                      <CardContent className="p-6">
+                        <div className="flex items-center">
+                          {/* Timeline dot with number */}
+                          <div className="relative mr-4 sm:mr-6 flex-shrink-0">
+                            <div className="w-8 h-8 sm:w-16 sm:h-16 rounded-full flex items-center justify-center bg-blue-50 text-blue-600 border-2 border-blue-100 z-10 relative">
+                              <div className="text-sm sm:text-lg font-bold">{step.number}</div>
+                            </div>
+                          </div>
+                          
+                          {/* Content */}
+                          <div className="flex-grow">
+                            <div className="flex items-center gap-3 mb-1">
+                              <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                                {step.icon}
+                              </div>
+                              <h3 className="text-xl font-bold">{step.title}</h3>
+                            </div>
+                            <p className="text-muted-foreground">{step.description}</p>
+                          </div>
+                          
+                          {/* Icon */}
+                          <div className="ml-2 flex-shrink-0 transition-transform duration-300" style={{ transform: expandedStep === index ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                            <ChevronRight className="h-5 w-5 text-blue-600" />
+                          </div>
                         </div>
                       </CardContent>
                     </Card>
-                  </DialogTrigger>
+                  </CollapsibleTrigger>
                   
-                  <DialogContent className="max-w-md">
-                    <DialogHeader>
-                      <DialogTitle className="flex items-center gap-2">
-                        <span className="bg-blue-50 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center">
-                          {step.icon}
-                        </span>
-                        {step.title}
-                      </DialogTitle>
-                    </DialogHeader>
-                    
-                    <Separator className="my-2" />
-                    
-                    <div className="mt-2">
-                      <p className="text-muted-foreground mb-4">{step.description}</p>
-                      <h4 className="font-semibold mb-3">What we do:</h4>
-                      <ul className="space-y-2">
-                        {step.details.map((detail, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <div className="rounded-full bg-blue-50 p-1 mt-0.5">
-                              <Check className="h-3 w-3 text-blue-600" />
-                            </div>
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  <CollapsibleContent>
+                    <div className="pl-12 sm:pl-24 mt-2 mb-6 pr-4 ml-[2px]">
+                      <Card className="border-0 bg-blue-50/50 shadow-sm">
+                        <CardContent className="p-4">
+                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {step.details.map((detail, i) => (
+                              <li key={i} className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                <span className="text-sm">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
                     </div>
-                  </DialogContent>
-                </Dialog>
+                  </CollapsibleContent>
+                </Collapsible>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-        
-        {/* Process Navigation */}
-        <div className="mb-20 max-w-5xl mx-auto">
-          <div className="bg-blue-50/50 rounded-xl p-8 border border-blue-100/50">
-            <div className="flex flex-wrap justify-center items-center gap-4">
-              <span className="text-blue-600 font-medium">Start your journey:</span>
-              {workflowSteps.map((step, index) => (
-                <React.Fragment key={step.id}>
-                  <Button 
-                    onClick={() => setSelectedStep(index)}
-                    variant={selectedStep === index ? "default" : "outline"}
-                    className={selectedStep === index ? "bg-blue-600" : "border-blue-200 hover:border-blue-300"}
-                    size="sm"
-                  >
-                    {step.title}
-                  </Button>
-                  {index < workflowSteps.length - 1 && (
-                    <ArrowRight className="h-4 w-4 text-blue-300" />
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-            
-            {selectedStep !== null && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="mt-6 bg-white p-6 rounded-lg border border-blue-100/50"
-              >
-                <h4 className="font-bold text-lg mb-2">{workflowSteps[selectedStep].title}</h4>
-                <p className="text-muted-foreground mb-4">{workflowSteps[selectedStep].description}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {workflowSteps[selectedStep].details.map((detail, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <div className="rounded-full bg-blue-50 p-1 mt-0.5">
-                        <Check className="h-3 w-3 text-blue-600" />
-                      </div>
-                      <span className="text-sm">{detail}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
           </div>
-        </div>
-
+        </motion.div>
+        
         {/* Statistics section with redesigned cards */}
-        <div className="mt-10 max-w-5xl mx-auto">
+        <div className="mt-20 max-w-5xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -254,26 +202,26 @@ const WorkflowSection = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {[
-              { value: "3x", label: "Faster Production", detail: "Compared to traditional methods" },
-              { value: "87%", label: "Client Satisfaction Rate", detail: "Based on post-project surveys" },
-              { value: "+156%", label: "Average Traffic Increase", detail: "Within 6 months of implementation" }
+              { value: "3x", label: "Faster Production", delay: 0 },
+              { value: "87%", label: "Client Satisfaction Rate", delay: 0.1 },
+              { value: "+156%", label: "Average Traffic Increase", delay: 0.2 }
             ].map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: stat.delay }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                whileHover={{ y: -5 }}
+                className="text-center"
               >
-                <Card className="overflow-hidden border-0 shadow-md h-full bg-white relative">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600" />
-                  <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50">
-                      <span className="text-2xl font-bold text-blue-600">{stat.value}</span>
+                <Card className="border-0 shadow-md h-full bg-gradient-to-br from-white to-blue-50 overflow-hidden">
+                  <CardContent className="p-6 relative">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-blue-500" />
+                    <div className="text-4xl md:text-5xl font-bold mb-3 text-gradient bg-gradient-to-r from-blue-600 to-blue-500">
+                      {stat.value}
                     </div>
-                    <h4 className="text-lg font-bold mb-2">{stat.label}</h4>
-                    <p className="text-muted-foreground text-sm">{stat.detail}</p>
+                    <p className="text-muted-foreground font-medium">{stat.label}</p>
                   </CardContent>
                 </Card>
               </motion.div>
