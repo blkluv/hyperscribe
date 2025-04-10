@@ -80,14 +80,11 @@ const ServiceProcess = () => {
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600">
-            OUR PROCESS
-          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How We Deliver Exceptional Content
+            Our AI + Human Workflow
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our streamlined process combines AI efficiency with human creativity to deliver high-quality content that drives real business results.
+            Simple Process, Expert Minds
           </p>
         </div>
         

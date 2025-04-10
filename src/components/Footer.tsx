@@ -110,7 +110,7 @@ const Footer = () => {
                   href="tel:+447543469409" 
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Sales: +44 7543 469409 (Whatsapp Available)
+                  +44 7543 469409
                 </a>
               </li>
               <li className="flex items-start group">

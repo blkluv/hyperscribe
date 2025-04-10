@@ -5,7 +5,7 @@ import { Check } from 'lucide-react';
 
 const PricingHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-slate-50">
+    <section className="pt-32 pb-16 bg-white">
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const PricingHero = () => {
             Simple, <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Transparent</span> Pricing
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6">
-            Choose the plan that fits your business needs and scale as you grow. All plans include our AI-powered content creation process.
+            Choose the package that fits your business needs and scale as you grow. All packages include our AI-powered content creation process.
           </p>
           
           <motion.div

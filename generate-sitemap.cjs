@@ -8,6 +8,7 @@ const pages = [
   '/',
   '/services',
   '/how-it-works',
+  '/pricing',
   '/contact',
   '/terms-condition',
   '/privacy-policy'

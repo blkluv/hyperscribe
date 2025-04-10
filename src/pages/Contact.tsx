@@ -204,13 +204,13 @@ const { toast } = useToast();
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-600" />
                   <a href="mailto:info@hyperscriber.com" className="text-sm hover:text-blue-700 transition-colors">
-                    General & Sales Inquiries: info@hyperscriber.com
+                    info@hyperscriber.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-blue-600" />
                   <a href="tel:+447543469409" className="text-sm hover:text-blue-700 transition-colors">
-                    Sales Team Line: +44 7543 469409 (Whatsapp Available)
+                    UK +44 7543 469409 (Whatsapp Available)
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">

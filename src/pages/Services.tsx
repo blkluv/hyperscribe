@@ -32,7 +32,6 @@ const Services = () => {
       <Navbar />
       <ServiceHero />
       <ServicesList />
-      <ServiceProcess />
       <ServiceFAQ />
       <CTASection />
       <Footer />

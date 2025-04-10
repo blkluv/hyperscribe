@@ -7,30 +7,33 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const plans = [
   {
-    name: 'Essential',
+    name: 'Starter',
     description: 'Perfect for early-stage SaaS startups looking to establish their content foundation.',
-    monthlyPrice: '$1,500',
-    yearlyPrice: '$1,200',
+    monthlyPrice: '$1,599',
+    yearlyPrice: '$1,359',
     features: [
       '2 LinkedIn posts per week',
       '2 Blog articles per month',
-      'Basic SEO optimization',
+      'Standard SEO optimization',
       'Monthly performance report',
-      'Email support'
+      'Email support',
+      '1 Monthly call'
     ],
     highlighted: false
   },
   {
-    name: 'Professional',
+    name: 'Growth',
     description: 'Ideal for scaling SaaS startups ready to accelerate their content marketing efforts.',
-    monthlyPrice: '$3,500',
-    yearlyPrice: '$2,800',
+    monthlyPrice: '$2,999',
+    yearlyPrice: '$2,549',
     features: [
       'Daily LinkedIn posts',
       '4 Blog articles per month',
-      'Advanced SEO optimization',
+      '1 Newsletter per month',
+      '1 Landing Page Copy',
+      'Standard SEO optimization',
       'Biweekly strategy calls',
-      '1 Case study per month',
+      'Dedicated content specialist',
       'Priority support'
     ],
     highlighted: true
@@ -39,14 +42,16 @@ const plans = [
     name: 'Enterprise',
     description: 'Comprehensive solution for established SaaS companies with advanced content needs.',
     monthlyPrice: '$6,000',
-    yearlyPrice: '$4,800',
+    yearlyPrice: '$5,500',
     features: [
       'Multichannel content strategy',
-      '8 Blog articles per month',
+      'Unlimited Blog articles per month',
+      'Unlimited Newsletter per month',
+      'Unlimited Landing Page Copy',
       'Premium SEO optimization',
       'Weekly strategy calls',
-      '2 Case studies per month',
-      'Dedicated content manager'
+      'Dedicated content manager',
+      'Priority support'
     ],
     highlighted: false
   }
@@ -77,14 +82,14 @@ const PricingPlans = () => {
   };
   
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Choose Your Plan
+            Choose Your Package
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            All plans include our core AI-powered content creation process, professional editing, and dedicated support.
+            All packages include our core AI-powered content creation process, professional editing, and dedicated support.
           </p>
           
           <div className="flex items-center justify-center space-x-4 mb-10">
@@ -97,7 +102,7 @@ const PricingPlans = () => {
                 className={`inline-block h-5 w-5 transform rounded-full bg-white transition duration-200 ease-in-out ${annually ? 'translate-x-6' : 'translate-x-0'}`}
               />
             </button>
-            <span className={`text-sm font-medium ${annually ? 'text-primary' : 'text-muted-foreground'}`}>Annually (20% off)</span>
+            <span className={`text-sm font-medium ${annually ? 'text-primary' : 'text-muted-foreground'}`}>Annually (15% off)</span>
           </div>
         </div>
         
@@ -163,7 +168,7 @@ const PricingPlans = () => {
           <p className="text-muted-foreground mb-8">
             Need a custom solution? Contact us for a personalized quote tailored to your specific business requirements.
           </p>
-          <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
+          <a href="/contact">
             <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50">
               Contact for Custom Pricing
             </Button>

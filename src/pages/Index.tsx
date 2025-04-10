@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
-import WorkflowSection from '@/components/WorkflowSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet';
+import PricingBenefits from '@/components/pricing/PricingBenefits';
 
 const Index = () => {
   useEffect(() => {
@@ -32,7 +32,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <ServicesSection />
-      <WorkflowSection />
+      <PricingBenefits />
       <CTASection />
       <Footer />
     </motion.div>

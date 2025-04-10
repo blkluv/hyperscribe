@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import WorkflowSection from '@/components/WorkflowSection';
+import ServiceProcess from '@/components/services/ServiceProcess';
 import CTASection from '@/components/CTASection';
 import { ArrowDown } from 'lucide-react';
 import { Helmet } from 'react-helmet';
@@ -23,7 +23,7 @@ const HowItWorks = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-slate-50">
+      <section className="pt-32 pb-16 bg-white">
               <Helmet>
                 <meta charSet="utf-8" />
                 <title>HyperScriber | How It Works</title>
@@ -68,11 +68,11 @@ const HowItWorks = () => {
       
       {/* Workflow Section - Using our existing component */}
       <div id="workflow">
-        <WorkflowSection />
+      <ServiceProcess />
       </div>
       
       {/* Process Details Section - Using a modified version of ServiceProcess */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-6 text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Makes Our Process Different
