@@ -65,6 +65,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				blue: {
+					50: '#f0f5ff',
+					100: '#e0eaff',
+					200: '#c7d7fe',
+					300: '#a4bcfd',
+					400: '#8098fb',
+					500: '#6272f8',
+					600: '#444bed',
+					700: '#3935d8',
+					800: '#312cae',
+					900: '#2b2a8a',
 				}
 			},
 			borderRadius: {
@@ -127,6 +139,11 @@ export default {
 				'exit': 'fade-out 0.3s ease-out, scale-out 0.2s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+			},
+			boxShadow: {
+				'button': '0 4px 14px 0 rgba(59, 130, 246, 0.3)',
+				'card': '0 8px 30px rgba(0, 0, 0, 0.06)',
+				'card-hover': '0 10px 40px rgba(0, 0, 0, 0.1)',
 			}
 		}
 	},

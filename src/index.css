@@ -97,6 +97,7 @@
     overflow-x: hidden;
     max-width: 100vw;
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -117,26 +118,31 @@
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight;
     letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 
   h2 {
     @apply text-3xl sm:text-4xl font-bold tracking-tight;
     letter-spacing: -0.01em;
+    line-height: 1.2;
   }
 
   h3 {
     @apply text-2xl sm:text-3xl font-bold tracking-tight;
     letter-spacing: -0.01em;
+    line-height: 1.3;
   }
 
   p {
     @apply mb-4 last:mb-0 leading-relaxed;
+    line-height: 1.7;
   }
 
   img {
     @apply max-w-full h-auto;
   }
 
+  /* Component styles */
   .glass-panel {
     @apply bg-white/90 backdrop-blur-lg shadow-lg rounded-xl border border-white/30;
   }
@@ -157,11 +163,29 @@
     @apply animate-exit;
   }
   
+  /* Button styles */
+  .button-primary {
+    @apply rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 hover:from-blue-700 hover:to-blue-600;
+  }
+  
+  .button-secondary {
+    @apply rounded-full border-2 border-blue-200 text-blue-700 font-medium px-6 py-3 hover:bg-blue-50 transition-all duration-300;
+  }
+  
+  /* Card styles */
+  .card-highlight {
+    @apply border-0 shadow-md rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
   /* Mobile-specific styles */
   @media (max-width: 640px) {
     .container {
       @apply px-4;
     }
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
   }
 }
-
