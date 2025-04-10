@@ -16,7 +16,7 @@ interface ContactFormProps {
 
 const ContactHero = () => {
   return (
-    <section className="pt-32 pb-16 bg-slate-50">
+    <section className="pt-32 pb-16 bg-white">
       <div className="container mx-auto px-6">
         <Helmet>
           <meta charSet="utf-8" />
@@ -118,7 +118,7 @@ const { toast } = useToast();
 
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
@@ -184,7 +184,7 @@ const { toast } = useToast();
             className="space-y-8"
           >
             
-            <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-8 rounded-lg">
+            <div className="bg-white p-8 shadow-md rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Book a Consultation</h3>
               <p className="text-muted-foreground mb-6">
                 Ready to discuss your content needs? Schedule a free 30-minute consultation with our team.

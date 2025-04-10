@@ -141,9 +141,7 @@ const ServicesList = () => {
                 
                 <CardFooter className="pt-2 pb-6">
                   <a 
-                    href="https://calendly.com/hyperscriber/free-introductory-call" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    href="/contact" 
                     className="w-full"
                   >
                     <Button 
