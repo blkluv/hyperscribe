@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check } from 'lucide-react';
@@ -28,10 +27,10 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
       >
         AI-Powered <br/>Content for 
-        <br/><span className="text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span> 🚀
+        <br/><span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span> 🚀
       </motion.h1>
       <motion.p 
         initial={{ opacity: 0 }}
