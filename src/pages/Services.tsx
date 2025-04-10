@@ -7,6 +7,7 @@ import ServiceHero from '@/components/services/ServiceHero';
 import ServicesList from '@/components/services/ServicesList';
 import ServiceProcess from '@/components/services/ServiceProcess';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
+import CompletePackages from '@/components/services/CompletePackages';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
 
@@ -32,6 +33,8 @@ const Services = () => {
       <Navbar />
       <ServiceHero />
       <ServicesList />
+      <ServiceProcess />
+      <CompletePackages />
       <ServiceFAQ />
       <CTASection />
       <Footer />
