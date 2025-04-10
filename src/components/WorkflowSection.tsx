@@ -1,72 +1,88 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import { ChevronRight, BrainCircuit, Database, FileEdit, CheckCircle, Share2, BarChart3 } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 const steps = [
   {
     number: '01',
     title: 'Strategy & Analysis',
     description: 'We analyze your audience, competitors, and goals to create a tailored content strategy.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    )
+    icon: <BrainCircuit className="h-6 w-6" />,
+    details: [
+      'Comprehensive audience analysis',
+      'Competitive landscape review',
+      'Content gap identification',
+      'Goal alignment workshop'
+    ]
   },
   {
     number: '02',
     title: 'AI-Powered Research',
     description: 'Our AI tools gather and analyze data to identify content opportunities and optimal topics.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-      </svg>
-    )
+    icon: <Database className="h-6 w-6" />,
+    details: [
+      'AI data mining & pattern recognition',
+      'Semantic topic clustering',
+      'Keyword opportunity identification',
+      'Trend analysis & prediction'
+    ]
   },
   {
     number: '03',
     title: 'Content Creation',
     description: 'Our expert team creates high-quality content optimized for your specific goals and channels.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-      </svg>
-    )
+    icon: <FileEdit className="h-6 w-6" />,
+    details: [
+      'AI-assisted draft generation',
+      'Expert human writing & editing',
+      'SEO optimization',
+      'Multimedia content integration'
+    ]
   },
   {
     number: '04',
     title: 'Human Review & Refinement',
     description: 'Content experts review, edit, and refine to ensure quality, accuracy, and brand voice.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-      </svg>
-    )
+    icon: <CheckCircle className="h-6 w-6" />,
+    details: [
+      'Quality assurance review',
+      'Brand voice consistency check',
+      'Fact checking & verification',
+      'Content polish & enhancement'
+    ]
   },
   {
     number: '05',
     title: 'Publication',
     description: 'We publish your content with the best SEO practices.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-      </svg>
-    )
+    icon: <Share2 className="h-6 w-6" />,
+    details: [
+      'Multi-channel distribution',
+      'Technical SEO implementation',
+      'Metadata optimization',
+      'Schema markup integration'
+    ]
   },
   {
     number: '06',
     title: 'Analysis & Optimization',
     description: 'Continuous monitoring and data analysis to optimize performance and improve future content.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    )
+    icon: <BarChart3 className="h-6 w-6" />,
+    details: [
+      'Performance tracking & analytics',
+      'User behavior analysis',
+      'Conversion rate optimization',
+      'Iterative content refinement'
+    ]
   }
 ];
 
 const WorkflowSection = () => {
+  const [expandedStep, setExpandedStep] = useState<number | null>(null);
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -87,9 +103,9 @@ const WorkflowSection = () => {
   };
 
   return (
-    <section id="how-it-works" className="py-24">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id="how-it-works" className="py-24 bg-gradient-to-b from-white to-slate-50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600">
             HOW IT WORKS
           </span>
@@ -106,65 +122,110 @@ const WorkflowSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="max-w-5xl mx-auto"
         >
-          {steps.map((step, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="border-0 shadow-md h-full">
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-lg bg-blue-50 text-blue-600">
-                      {step.icon}
+          {/* Workflow Steps Timeline */}
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-200 to-blue-500 hidden sm:block" />
+            
+            {steps.map((step, index) => (
+              <motion.div 
+                key={index} 
+                variants={itemVariants}
+                className="mb-8 last:mb-0"
+              >
+                <Collapsible 
+                  open={expandedStep === index} 
+                  onOpenChange={() => setExpandedStep(expandedStep === index ? null : index)}
+                >
+                  <CollapsibleTrigger className="w-full">
+                    <Card className={`relative border-0 transition-all duration-300 overflow-hidden ${expandedStep === index ? 'shadow-lg scale-[1.02]' : 'shadow-md hover:shadow-lg hover:scale-[1.01]'}`}>
+                      <CardContent className="p-6">
+                        <div className="flex items-center">
+                          {/* Timeline dot with number */}
+                          <div className="relative mr-4 sm:mr-6 flex-shrink-0">
+                            <div className="w-8 h-8 sm:w-16 sm:h-16 rounded-full flex items-center justify-center bg-blue-50 text-blue-600 border-2 border-blue-100 z-10 relative">
+                              <div className="text-sm sm:text-lg font-bold">{step.number}</div>
+                            </div>
+                          </div>
+                          
+                          {/* Content */}
+                          <div className="flex-grow">
+                            <div className="flex items-center gap-3 mb-1">
+                              <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                                {step.icon}
+                              </div>
+                              <h3 className="text-xl font-bold">{step.title}</h3>
+                            </div>
+                            <p className="text-muted-foreground">{step.description}</p>
+                          </div>
+                          
+                          {/* Icon */}
+                          <div className="ml-2 flex-shrink-0 transition-transform duration-300" style={{ transform: expandedStep === index ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                            <ChevronRight className="h-5 w-5 text-blue-600" />
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CollapsibleTrigger>
+                  
+                  <CollapsibleContent>
+                    <div className="pl-12 sm:pl-24 mt-2 mb-6 pr-4 ml-[2px]">
+                      <Card className="border-0 bg-blue-50/50 shadow-sm">
+                        <CardContent className="p-4">
+                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {step.details.map((detail, i) => (
+                              <li key={i} className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                <span className="text-sm">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
                     </div>
-                    <span className="text-5xl font-bold text-slate-100">{step.number}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  </CollapsibleContent>
+                </Collapsible>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
         
-        {/* Statistics section */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Statistics section with redesigned cards */}
+        <div className="mt-20 max-w-5xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            <div className="text-4xl md:text-5xl font-bold mb-2 text-gradient">
-              3x
-            </div>
-            <p className="text-muted-foreground">Faster Production</p>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className="text-4xl md:text-5xl font-bold mb-2 text-gradient">
-              87%
-            </div>
-            <p className="text-muted-foreground">Client Satisfaction Rate</p>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className="text-4xl md:text-5xl font-bold mb-2 text-gradient">
-              +156%
-            </div>
-            <p className="text-muted-foreground">Average Traffic Increase</p>
+            {[
+              { value: "3x", label: "Faster Production", delay: 0 },
+              { value: "87%", label: "Client Satisfaction Rate", delay: 0.1 },
+              { value: "+156%", label: "Average Traffic Increase", delay: 0.2 }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: stat.delay }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="text-center"
+              >
+                <Card className="border-0 shadow-md h-full bg-gradient-to-br from-white to-blue-50 overflow-hidden">
+                  <CardContent className="p-6 relative">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-blue-500" />
+                    <div className="text-4xl md:text-5xl font-bold mb-3 text-gradient bg-gradient-to-r from-blue-600 to-blue-500">
+                      {stat.value}
+                    </div>
+                    <p className="text-muted-foreground font-medium">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
