@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, MapPin, Phone, Instagram, Linkedin, Twitter, ExternalLink } from 'lucide-react';
@@ -11,10 +10,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto pt-20 pb-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Company Info with improved typography */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <div className="mb-6">
-              <div className="flex items-center gap-2">
-                <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-20 w-10 object-contain" />
+              <div className="flex items-center gap-3">
+                <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
                 <span className="text-xl md:text-2xl font-bold text-black">
                   HyperScriber
                 </span>
@@ -102,8 +101,23 @@ const Footer = () => {
                   href="mailto:info@hyperscriber.com" 
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  info@hyperscriber.com
+                info@hyperscriber.com
                 </a>
+              </li>
+              <li className="flex items-start group">
+                <Phone className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+                <a 
+                  href="tel:+447543469409" 
+                  className="text-muted-foreground hover:text-blue-600 transition-colors"
+                >
+                  Sales: +44 7543 469409 (Whatsapp Available)
+                </a>
+              </li>
+              <li className="flex items-start group">
+                <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+                <span className="text-muted-foreground hover:text-blue-600 transition-colors">
+                  Fully Remote & Global Team
+                </span>
               </li>
             </ul>
           </div>
@@ -116,7 +130,7 @@ const Footer = () => {
 
         {/* Copyright with improved styling */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} HyperScriber. All rights reserved.</p>
+          <p> {new Date().getFullYear()} HyperScriber. All rights reserved.</p> 
           <p className="mt-2 md:mt-0">
             Website by Lorenzo Filips <a href="https://github.com/Desk888" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
               (Desk888) <ExternalLink className="h-3 w-3" />

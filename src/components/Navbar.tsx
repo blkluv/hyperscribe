@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -50,7 +49,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary relative group',
+                'text-base font-medium transition-colors hover:text-primary relative group',
                 location.pathname === link.path 
                   ? 'text-primary' 
                   : 'text-muted-foreground'
@@ -61,9 +60,9 @@ const Navbar = () => {
             </Link>
           ))}
           <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
-            <Button size="sm" className="ml-2 rounded-full px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-3 rounded-full hover:opacity-90 transition-opacity duration-200 text-md">
               Book a Call
-            </Button>
+            </button>
           </a>
         </div>
 

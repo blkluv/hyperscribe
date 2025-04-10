@@ -1,4 +1,3 @@
-
 import React, {useState, useRef} from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin, Calendar } from 'lucide-react';
@@ -157,17 +156,6 @@ const { toast } = useToast();
                 />
               </div>
               
-              {/* <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company (Optional)
-                </label>
-                <Input 
-                  id="company" 
-                  type="text" 
-                  placeholder="Your company" 
-                />
-              </div> */}
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Your Message
@@ -210,6 +198,27 @@ const { toast } = useToast();
               </Button>
               </a>
             </div>
+
+            {/* New Contact Details Section */}
+            <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-blue-600" />
+                  <a href="mailto:info@hyperscriber.com" className="text-sm hover:text-blue-700 transition-colors">
+                    General & Sales Inquiries: info@hyperscriber.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-5 w-5 text-blue-600" />
+                  <a href="tel:+447543469409" className="text-sm hover:text-blue-700 transition-colors">
+                    Sales Team Line: +44 7543 469409 (Whatsapp Available)
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-5 w-5 text-blue-600" />
+                  <span className="text-sm">Fully Remote & Global Team (we value work-life balance 😅)</span>
+                </div>
+            </div>
+
           </motion.div>
         </div>
       </div>

@@ -22,16 +22,16 @@ const HeroContent = () => {
         transition={{ duration: 0.4, delay: 0.2 }}
         className="inline-block py-1.5 px-4 mb-5 sm:mb-6 text-xs font-medium tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm"
       >
-        AI-POWERED CONTENT AGENCY
+        TOP CONTENT AGENCY
       </motion.span>
       <motion.h1 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+        className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
       >
-        AI-Powered Content for 
-        <br/><span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span>
+        AI-Powered <br/>Content for 
+        <br/><span className="text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span> 🚀
       </motion.h1>
       <motion.p 
         initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl lg:mx-0 mx-auto font-light"
       >
-        Supercharge your SaaS startup growth with performance-focused content that combines AI efficiency and human expertise. Strategy, quality, and speed—without compromise.
+        Supercharge your SaaS startup growth with performance-focused content services that combines AI efficiency and human expertise. Strategy, quality, and speed—without compromise.
       </motion.p>
       
       {/* Social proof element with improved spacing */}
@@ -70,15 +70,15 @@ const HeroContent = () => {
         className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
       >
         <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-          <Button className="w-full sm:w-auto rounded-full px-6 sm:px-8 py-5 sm:py-6 shadow-lg hover:shadow-xl transition-all text-sm sm:text-base bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 relative overflow-hidden group">
+          <Button className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 relative overflow-hidden group">
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
             Book a Free Consultation
-            <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 h-5 sm:h-6 w-5 sm:w-6 transition-transform group-hover:translate-x-1" />
           </Button>
         </a>
         <Button 
           variant="outline" 
-          className="w-full sm:w-auto rounded-full px-6 sm:px-8 py-5 sm:py-6 border-2 text-sm sm:text-base hover:bg-blue-50/50"
+          className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 border-2 text-base sm:text-lg hover:bg-blue-50/50"
           asChild
         >
           <Link to="/services">
