@@ -52,7 +52,7 @@ const PricingHero = () => {
                   href="#workflow" 
                   className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
                 >
-                  <span className="mb-2">See packages below</span>
+                  <span className="mb-2">See all plans</span>
                   <ArrowDown className="animate-bounce" />
                 </a>
               </motion.div>

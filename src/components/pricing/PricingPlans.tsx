@@ -148,7 +148,7 @@ const PricingPlans = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-8">
-                  <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <a href="/contact" className="w-full">
                     <Button 
                       variant={plan.highlighted ? "default" : "outline"} 
                       className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} 
