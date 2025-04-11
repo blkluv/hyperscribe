@@ -59,15 +59,15 @@ const ContactHero = () => {
             className="flex flex-wrap justify-center gap-4 mb-8"
           >
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle className="h-5 w-5 text-green-500" />
+              <CheckCircle className="h-5 w-5 text-blue-500" />
               <span className="text-sm font-medium">Fast Response</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle className="h-5 w-5 text-green-500" />
+              <CheckCircle className="h-5 w-5 text-blue-500" />
               <span className="text-sm font-medium">Expert Team</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle className="h-5 w-5 text-green-500" />
+              <CheckCircle className="h-5 w-5 text-blue-500" />
               <span className="text-sm font-medium">Customized Solutions</span>
             </div>
           </motion.div>
