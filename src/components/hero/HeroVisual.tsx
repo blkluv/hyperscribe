@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import HeroBackground from './HeroBackground';
-import FloatingCards from './FloatingCards';
+import AIHumanWorkflow from './AIHumanWorkflow';
 
 const HeroVisual = () => {
   return (
@@ -13,7 +13,7 @@ const HeroVisual = () => {
       className="w-full lg:w-1/2 relative h-[500px] overflow-hidden rounded-xl"
     >
       <HeroBackground />
-      <FloatingCards />
+      <AIHumanWorkflow />
     </motion.div>
   );
 };
