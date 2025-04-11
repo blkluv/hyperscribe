@@ -1,7 +1,7 @@
 
 import React, {useState, useRef} from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin, Calendar, CheckCircle, Check } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, Calendar, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -58,16 +58,16 @@ const ContactHero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4 mb-8"
           >
-            <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
-              <Check size={16} className="text-green-600" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+              <CheckCircle size={18} className="text-blue-500" />
               <span className="text-sm font-medium">Fast Response</span>
             </div>
-            <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
-              <Check size={16} className="text-green-600" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+              <CheckCircle size={18} className="text-blue-500" />
               <span className="text-sm font-medium">Expert Team</span>
             </div>
-            <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
-              <Check size={16} className="text-green-600" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+              <CheckCircle size={18} className="text-blue-500" />
               <span className="text-sm font-medium">Customized Solutions</span>
             </div>
           </motion.div>

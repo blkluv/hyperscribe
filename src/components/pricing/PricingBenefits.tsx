@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Zap, TrendingUp, Award, Clock, BarChart2 } from 'lucide-react';
+import { CheckCircle, Zap, TrendingUp, Award, Clock, BarChart2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const benefits = [
@@ -33,7 +33,7 @@ const benefits = [
   {
     title: "Strategic Growth Partnership",
     description: "We don't just create content - we become your strategic partner focused on driving business growth.",
-    icon: <Check className="h-10 w-10 text-blue-500" />
+    icon: <CheckCircle className="h-10 w-10 text-blue-500" />
   }
 ];
 

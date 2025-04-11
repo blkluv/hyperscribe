@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -48,16 +49,16 @@ const HeroContent = () => {
         transition={{ duration: 0.5, delay: 0.45 }}
         className="mb-10 flex flex-wrap gap-3 justify-center lg:justify-start"
       >
-        <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
-          <Check size={16} className="text-green-600" />
+        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+          <CheckCircle size={18} className="text-blue-500" />
           <span className="text-sm font-medium">3x faster content delivery</span>
         </div>
-        <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
-          <Check size={16} className="text-green-600" />
+        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+          <CheckCircle size={18} className="text-blue-500" />
           <span className="text-sm font-medium">AI + human expertise</span>
         </div>
-        <div className="flex items-center gap-2 bg-blue-50/80 px-4 py-2 rounded-full">
-          <Check size={16} className="text-green-600" />
+        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+          <CheckCircle size={18} className="text-blue-500" />
           <span className="text-sm font-medium">Built to convert</span>
         </div>
       </motion.div>

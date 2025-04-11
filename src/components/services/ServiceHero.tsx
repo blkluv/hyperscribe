@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, ArrowDown } from 'lucide-react';
+import { ArrowRight, CheckCircle, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ServiceHero = () => {
@@ -30,16 +30,16 @@ const ServiceHero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mb-8 flex flex-wrap gap-3 justify-center"
           >
-            <div className="flex items-center gap-2 bg-blue-50/80 px-3 py-1.5 rounded-full">
-              <Check size={16} className="text-green-600" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+              <CheckCircle size={18} className="text-blue-500" />
               <span className="text-sm font-medium">Trusted by 30+ SaaS companies</span>
             </div>
-            <div className="flex items-center gap-2 bg-blue-50/80 px-3 py-1.5 rounded-full">
-              <Check size={16} className="text-green-600" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+              <CheckCircle size={18} className="text-blue-500" />
               <span className="text-sm font-medium">100% satisfaction guarantee</span>
             </div>
-            <div className="flex items-center gap-2 bg-blue-50/80 px-3 py-1.5 rounded-full">
-              <Check size={16} className="text-green-600" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+              <CheckCircle size={18} className="text-blue-500" />
               <span className="text-sm font-medium">Expert content team</span>
             </div>
           </motion.div>
