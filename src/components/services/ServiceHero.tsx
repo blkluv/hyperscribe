@@ -55,19 +55,19 @@ const ServiceHero = () => {
           </div>
         </motion.div>
         <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="flex justify-center mt-12"
-              >
-                <a 
-                  href="#workflow" 
-                  className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
-                >
-                  <span className="mb-2">See all services</span>
-                  <ArrowDown className="animate-bounce" />
-                </a>
-              </motion.div>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="flex justify-center mt-12"
+        >
+          <a 
+            href="#workflow" 
+            className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+          >
+            <span className="mb-2">See all services</span>
+            <ArrowDown className="animate-bounce" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

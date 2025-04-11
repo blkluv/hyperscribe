@@ -24,19 +24,19 @@ const HeroSection = () => {
           {!isMobile && <HeroVisual />}
         </div>
         <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="flex justify-center mt-20"
-              >
-                <a 
-                  href="#workflow" 
-                  className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
-                >
-                  <span>View more</span>
-                  <ArrowDown className="animate-bounce" />
-                </a>
-              </motion.div>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="flex justify-center mt-20"
+        >
+          <a 
+            href="#workflow" 
+            className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+          >
+            <span className="mb-2">View more</span>
+            <ArrowDown className="animate-bounce" />
+          </a>
+        </motion.div>
       </div>
     </motion.div>
   );
