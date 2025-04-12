@@ -34,8 +34,6 @@ const Services = () => {
       <main className="mt-16">
         <ServiceHero />
         <ServicesList />
-        <ServiceProcess />
-        <CompletePackages />
         <ServiceFAQ />
         <CTASection />
       </main>

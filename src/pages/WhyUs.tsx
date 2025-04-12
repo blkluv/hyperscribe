@@ -7,7 +7,7 @@ import CTASection from '@/components/CTASection';
 import { ArrowDown } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
-const HowItWorks = () => {
+const WhyUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -25,9 +25,9 @@ const HowItWorks = () => {
         <section className="pt-32 pb-16 bg-white">
           <Helmet>
             <meta charSet="utf-8" />
-            <title>HyperScriber | How It Works</title>
+            <title>HyperScriber | Why Us</title>
             <meta name="description" content="Our streamlined AI + human workflow delivers exceptional content that drives real business results." />
-            <link rel="canonical" href="https://hyperscriber.com/how-it-works" />
+            <link rel="canonical" href="https://hyperscriber.com/why-us" />
             <link rel="icon" href="/favicon.ico" />
           </Helmet>
           <div className="container mx-auto px-6">
@@ -135,4 +135,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default WhyUs;
