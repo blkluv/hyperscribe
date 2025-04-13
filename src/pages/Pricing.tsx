@@ -1,13 +1,15 @@
+
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PricingHero from '@/components/pricing/PricingHero';
 import PricingPlans from '@/components/pricing/PricingPlans';
+import PricingComparison from '@/components/pricing/PricingComparison';
+import PricingGuarantee from '@/components/pricing/PricingGuarantee';
 import PricingFAQ from '@/components/pricing/PricingFAQ';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
-
 
 const Pricing = () => {
   useEffect(() => {
@@ -32,6 +34,8 @@ const Pricing = () => {
       <main className="mt-16">
         <PricingHero />
         <PricingPlans />
+        <PricingComparison />
+        <PricingGuarantee />
         <PricingFAQ />
         <CTASection />
       </main>

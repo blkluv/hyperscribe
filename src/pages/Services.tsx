@@ -1,12 +1,12 @@
+
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHero from '@/components/services/ServiceHero';
 import ServicesList from '@/components/services/ServicesList';
-import ServiceProcess from '@/components/services/ServiceProcess';
+import ServiceDeepDive from '@/components/services/ServiceDeepDive';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
-import CompletePackages from '@/components/services/CompletePackages';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
 
@@ -30,10 +30,10 @@ const Services = () => {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
-      {/* Add main tag with top margin */}
       <main className="mt-16">
         <ServiceHero />
         <ServicesList />
+        <ServiceDeepDive />
         <ServiceFAQ />
         <CTASection />
       </main>
