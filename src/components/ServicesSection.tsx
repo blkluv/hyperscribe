@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, MessageSquare, FileText, Laptop, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -26,11 +25,17 @@ const services = [
     bgLight: 'bg-purple-50'
   },
   {
-    title: 'Website Copywriting',
-    description: 'Convert more visitors with persuasive website copy that communicates your value proposition.',
+    title: 'Website & Ad Copywriting', // Updated title
+    description: 'Convert more visitors with persuasive website and ad copy that clearly communicates your value proposition and drives action.',
     icon: <Laptop className="h-8 w-8" />,
     period: '/project',
-    features: ['Conversion-Focused Copy', 'Landing Page Copy', 'SEO Optimized Pages', 'Brand Voice Consistency'],
+    features: [
+      'Conversion-Focused Website Copy', 
+      'Landing Page Copy', 
+      'SEO Optimized Pages', 
+      'Brand Voice Consistency',
+      'High-Converting Ad Copywriting' // Added feature
+    ],
     color: 'from-teal-500 to-blue-500',
     bgLight: 'bg-teal-50'
   },

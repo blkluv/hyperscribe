@@ -111,20 +111,23 @@ const services = [
   {
     id: "website",
     icon: <Laptop className="h-8 w-8" />,
-    title: 'Website Copywriting',
-    description: 'Convert more visitors with persuasive website copy that clearly communicates your value proposition and drives action.',
+    title: 'Website & Ad Copywriting', // Updated title
+    description: 'Convert more visitors with persuasive website and ad copy that clearly communicates your value proposition and drives action.',
     details: [
       'Strategic website content audit and strategy',
       'Conversion-focused homepage, product, and landing page copy',
       'UX writing for improved user experience',
       'SEO optimization for key pages',
-      'A/B testing recommendations for continuous improvement'
+      'A/B testing recommendations for continuous improvement',
+      'Targeted ad copywriting for digital platforms', // Added detail
+      'Ad copy optimized for different platforms (Google, Meta, LinkedIn)' // Added detail
     ],
     benefits: [
       'Higher conversion rates on landing pages',
       'Clearer communication of your unique value proposition',
       'Improved user experience through strategic copywriting',
-      'Consistent brand voice across your digital presence'
+      'Consistent brand voice across your digital presence',
+      'Increased ad engagement and click-through rates' // Added benefit
     ],
     process: [
       {
@@ -145,7 +148,7 @@ const services = [
       {
         title: "A/B Testing & Refinement",
         icon: <BarChart className="h-6 w-6 text-teal-500" />,
-        description: "Data-driven testing to continuously improve conversion rates."
+        description: "Data-driven testing to continuously improve conversion rates and ad performance."
       }
     ],
     caseStudy: {
@@ -153,7 +156,8 @@ const services = [
       results: [
         "89% increase in demo requests",
         "42% improvement in page conversion rate",
-        "25% reduction in bounce rate"
+        "25% reduction in bounce rate",
+        "35% increase in ad click-through rates" // Added result
       ]
     },
     color: 'from-teal-500 to-blue-500',
