@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHero from '@/components/services/ServiceHero';
 import ServicesList from '@/components/services/ServicesList';
-import ServiceDeepDive from '@/components/services/ServiceDeepDive';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
@@ -33,7 +32,6 @@ const Services = () => {
       <main className="mt-16">
         <ServiceHero />
         <ServicesList />
-        <ServiceDeepDive />
         <ServiceFAQ />
         <CTASection />
       </main>
