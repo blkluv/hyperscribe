@@ -18,7 +18,7 @@ const ContactHero = () => {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
-              Let's Start a <span className="text-gradient bg-gradient-to-r from-blue-600 to-blue-700">Conversation</span>
+              Let's Start a <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Conversation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
               Have questions about our services or ready to transform your content strategy?
