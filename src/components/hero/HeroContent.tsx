@@ -22,7 +22,7 @@ const HeroContent = () => {
         transition={{ duration: 0.4, delay: 0.2 }}
         className="inline-block py-1.5 px-4 mb-5 sm:mb-6 text-xs font-medium tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm"
       >
-        TOP CONTENT AGENCY
+        AI CONTENT AGENCY
       </motion.span>
       <motion.h1 
         initial={{ opacity: 0 }}
@@ -30,8 +30,9 @@ const HeroContent = () => {
         transition={{ duration: 0.7, delay: 0.3 }}
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
       >
-        AI-Powered <br/>Content Solutions for 
-        <br/><span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Startups</span> 🚀
+        Your <span className="text-4xl sm:text-5xl lg:text-6xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Business</span>
+        <br/>
+        Should Never Worry About Content Again
       </motion.h1>
       <motion.p 
         initial={{ opacity: 0 }}
@@ -39,7 +40,7 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl lg:mx-0 mx-auto font-light"
       >
-        Supercharge your SaaS startup growth with performance-focused content services that combines AI efficiency and human expertise. Strategy, quality, and speed—without compromise.
+        AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO blogs, landing pages, newsletters, and more. <br/> Strategy, quality, and speed—without compromise. 🚀
       </motion.p>
       
       {/* Social proof element with improved spacing */}
