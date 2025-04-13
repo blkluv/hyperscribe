@@ -91,7 +91,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7 }}
-      className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+      className="bg-white rounded-full shadow-lg p-8 border border-gray-100"
     >
       <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
       <Form {...form}>
