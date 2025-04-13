@@ -22,7 +22,7 @@ const services = [
     benefits: [
       'Increased audience engagement and network growth',
       'Consistent brand voice that resonates with your target audience',
-      'Strategic content that addresses your audience's pain points',
+      'Strategic content that addresses your audience\'s pain points',
       'Thought leadership to position you as an industry expert'
     ],
     process: [
