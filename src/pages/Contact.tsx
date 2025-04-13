@@ -29,11 +29,11 @@ const Contact = () => {
       <main className="min-h-screen mt-16">
         <ContactHero />
         
-        {/* Redesigned Contact Form Section */}
-        <section id="contact-form" className="py-20 bg-slate-50">
+        {/* Redesigned Contact Form Section with improved spacing */}
+        <section id="contact-form" className="py-24 bg-slate-50">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12">
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                 <ContactForm />
                 <ContactInfo />
               </div>

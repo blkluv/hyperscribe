@@ -4,7 +4,7 @@ import { CheckCircle, ArrowDown } from 'lucide-react';
 
 const ContactHero = () => {
     return (
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-32 pb-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -17,10 +17,10 @@ const ContactHero = () => {
                 GET IN TOUCH
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
               Let's Start a <span className="text-gradient bg-gradient-to-r from-blue-600 to-blue-700">Conversation</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
               Have questions about our services or ready to transform your content strategy?
               We're here to help.
             </p>
@@ -28,7 +28,7 @@ const ContactHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap justify-center gap-4 mb-8"
+              className="flex flex-wrap justify-center gap-4 mb-12"
             >
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
                 <CheckCircle size={18} className="text-blue-500" />
@@ -54,7 +54,7 @@ const ContactHero = () => {
               href="#contact-form" 
               className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
             >
-              <span className="mb-2">Contact Us</span>
+              <span className="mb-2 font-medium">Contact Us</span>
               <ArrowDown className="animate-bounce" />
             </a>
           </motion.div>
