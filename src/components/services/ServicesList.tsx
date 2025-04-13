@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, FileText, Laptop, Mail, ArrowRight, CheckCircle, BarChart, Users, Target, Lightbulb, PenTool, ChevronRight, Layers, Shield } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const services = [
   {
@@ -250,7 +251,7 @@ const ServicesList = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="space-y-8"
+          className="space-y-12"
         >
           {services.map((service, index) => (
             <motion.div 
@@ -274,103 +275,58 @@ const ServicesList = () => {
                     
                     <div className="mt-8">
                       <Button
-                        className={`rounded-full px-6 py-2 shadow-sm hover:shadow-md bg-white border border-blue-100 text-blue-600 hover:bg-blue-50 group`}
-                        id={`${service.id}-detail-button`}
-                        onClick={() => document.getElementById(`${service.id}-tab`)?.click()}
+                        className={`rounded-full px-6 py-2 shadow-sm hover:shadow-md bg-gradient-to-r ${service.color} text-white hover:opacity-90`}
+                        asChild
                       >
-                        <span>View Details</span>
-                        <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <Link to="/contact" className="flex items-center gap-2">
+                          <span>Request Service</span>
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
                       </Button>
                     </div>
                   </div>
                   
                   <div className="lg:col-span-8 p-8 bg-white">
-                    <h4 className="text-lg font-semibold mb-5">Key Features</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {service.details.map((detail, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="mt-1 p-1 rounded-full bg-green-100">
-                            <CheckCircle size={16} className="text-green-600" />
+                    <div className="mb-8">
+                      <h4 className="text-lg font-semibold mb-5">Key Features</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {service.details.map((detail, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <div className="mt-1 p-1 rounded-full bg-green-100">
+                              <CheckCircle size={16} className="text-green-600" />
+                            </div>
+                            <span className="text-muted-foreground">{detail}</span>
                           </div>
-                          <span className="text-muted-foreground">{detail}</span>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="mt-6 pt-6 border-t border-slate-100">
-                      <div className="flex flex-wrap items-center justify-between gap-4">
-                        <div className="flex items-center gap-2">
-                          <Shield size={18} className="text-blue-500" />
-                          <span className="text-sm font-medium">Case Study: {service.caseStudy.client}</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="text-sm text-green-600 font-medium">{service.caseStudy.results[0]}</span>
-                          <span className="h-4 w-0.5 bg-slate-200"></span>
-                          <span className="text-sm text-green-600 font-medium">{service.caseStudy.results[1]}</span>
-                        </div>
+                        ))}
                       </div>
                     </div>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-        
-        <div className="mt-20">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold mb-4">Service Details</h2>
-            <p className="text-lg text-muted-foreground">
-              Dive deeper into how our services work, the process we follow, and the results you can expect.
-            </p>
-          </div>
-          
-          <Tabs defaultValue="linkedin" className="w-full">
-            <TabsList className="w-full max-w-4xl mx-auto mb-10 grid grid-cols-2 md:grid-cols-4 gap-2">
-              {services.map((service) => (
-                <TabsTrigger
-                  key={service.id}
-                  value={service.id}
-                  className="flex items-center gap-2 py-3"
-                  id={`${service.id}-tab`}
-                >
-                  <div className={`w-6 h-6 flex items-center justify-center rounded-sm ${service.bgLight} text-blue-600`}>
-                    {service.icon}
-                  </div>
-                  <span className="hidden md:inline">{service.title}</span>
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {services.map((service) => (
-              <TabsContent key={service.id} value={service.id}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Card className="border-0 shadow-md overflow-hidden">
-                    <div className={`w-full h-2 bg-gradient-to-r ${service.color}`}></div>
                     
-                    <CardHeader className="pt-8 pb-0">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className={`w-14 h-14 flex items-center justify-center rounded-lg ${service.bgLight}`}>
-                          {service.icon}
-                        </div>
-                        <div>
-                          <CardTitle className="text-2xl font-bold">{service.title}</CardTitle>
-                        </div>
+                    <div className="mb-8">
+                      <h4 className="text-lg font-semibold mb-5">Process</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {service.process.map((step, i) => (
+                          <div key={i} className="flex gap-4">
+                            <div className="shrink-0 mt-1">
+                              <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                                {step.icon}
+                              </div>
+                            </div>
+                            <div>
+                              <h5 className="font-semibold">{step.title}</h5>
+                              <p className="text-sm text-muted-foreground">{step.description}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                      <CardDescription className="text-lg pb-4">
-                        {service.description}
-                      </CardDescription>
-                    </CardHeader>
+                    </div>
                     
-                    <CardContent className="pt-6">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        <div className="space-y-8">
-                          <div>
-                            <h4 className="text-xl font-semibold mb-4">Key Benefits</h4>
+                    <div className="mb-4">
+                      <Accordion type="single" collapsible className="border-0">
+                        <AccordionItem value={`benefits-${service.id}`} className="border-0">
+                          <AccordionTrigger className="py-2 font-semibold text-lg">
+                            Why Choose This Service?
+                          </AccordionTrigger>
+                          <AccordionContent className="pt-2">
                             <ul className="space-y-3">
                               {service.benefits.map((benefit, i) => (
                                 <li key={i} className="flex items-start gap-3">
@@ -381,69 +337,37 @@ const ServicesList = () => {
                                 </li>
                               ))}
                             </ul>
-                          </div>
-                          
-                          <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                            <h4 className="text-xl font-semibold mb-4">Case Study Results</h4>
-                            <p className="font-medium mb-3">{service.caseStudy.client}</p>
-                            <ul className="space-y-2">
-                              {service.caseStudy.results.map((result, i) => (
-                                <li key={i} className="flex items-center gap-3">
-                                  <div className="flex items-center justify-center bg-blue-50 p-1 rounded-full">
-                                    <CheckCircle size={16} className="text-blue-500" />
-                                  </div>
-                                  <span className="text-sm">{result}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
+                          </AccordionContent>
+                        </AccordionItem>
                         
-                        <div className="space-y-8">
-                          <div>
-                            <h4 className="text-xl font-semibold mb-6">Our Process</h4>
-                            <div className="space-y-6">
-                              {service.process.map((step, i) => (
-                                <div key={i} className="flex gap-4">
-                                  <div className="shrink-0 mt-1">
-                                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                                      {step.icon}
+                        <AccordionItem value={`case-study-${service.id}`} className="border-0">
+                          <AccordionTrigger className="py-2 font-semibold text-lg">
+                            Case Study Results
+                          </AccordionTrigger>
+                          <AccordionContent className="pt-2">
+                            <div className="bg-slate-50 p-5 rounded-xl">
+                              <p className="font-medium mb-3">{service.caseStudy.client}</p>
+                              <ul className="space-y-2">
+                                {service.caseStudy.results.map((result, i) => (
+                                  <li key={i} className="flex items-center gap-3">
+                                    <div className="flex items-center justify-center bg-blue-50 p-1 rounded-full">
+                                      <CheckCircle size={16} className="text-blue-500" />
                                     </div>
-                                    {i !== service.process.length - 1 && (
-                                      <div className="w-0.5 h-10 bg-blue-100 mx-auto my-1"></div>
-                                    )}
-                                  </div>
-                                  <div>
-                                    <h5 className="font-semibold text-lg">{step.title}</h5>
-                                    <p className="text-muted-foreground">{step.description}</p>
-                                  </div>
-                                </div>
-                              ))}
+                                    <span className="text-sm">{result}</span>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-                          </div>
-                          
-                          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl">
-                            <h4 className="text-xl font-semibold mb-4">Included Features</h4>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                              {service.details.map((feature, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                  <div className="flex items-center justify-center bg-white p-1 rounded-full mt-1">
-                                    <CheckCircle size={16} className="text-blue-500" />
-                                  </div>
-                                  <span className="text-sm">{feature}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
