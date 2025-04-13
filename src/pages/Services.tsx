@@ -8,6 +8,7 @@ import ServicesList from '@/components/services/ServicesList';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
+import { Separator } from '@/components/ui/separator';
 
 const Services = () => {
   useEffect(() => {
@@ -31,7 +32,9 @@ const Services = () => {
       <Navbar />
       <main className="mt-16">
         <ServiceHero />
+        <Separator className="my-8 bg-neutral-200" />
         <ServicesList />
+        <Separator className="my-8 bg-neutral-200" />
         <ServiceFAQ />
         <CTASection />
       </main>
@@ -41,3 +44,4 @@ const Services = () => {
 };
 
 export default Services;
+
