@@ -26,7 +26,7 @@ const services = [
   },
   {
     title: 'Website & Ad Copywriting', // Updated title
-    description: 'Convert more visitors with persuasive website and ad copy that clearly communicates your value proposition and drives action.',
+    description: 'Convert more with persuasive website and ad copy that clearly communicates your value proposition.',
     icon: <Laptop className="h-8 w-8" />,
     period: '/project',
     features: [
