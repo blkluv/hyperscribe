@@ -24,13 +24,13 @@ const CTASection = () => {
           
           <div className="relative z-10 p-6 sm:p-8 md:p-12 lg:p-16 text-center">
             <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-white/20 text-white">
-              LIMITED TIME OFFER
+              GET IN TOUCH
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white max-w-3xl mx-auto">
               Ready to Transform Your SaaS Content Strategy?
             </h2>
             <p className="text-white/90 text-base sm:text-lg mb-6 max-w-2xl mx-auto">
-              Book a free consultation today and get a custom content strategy plan worth $499, absolutely free.
+              Book a free consultation today to discuss your business needs.
             </p>
             
             {/* Social proof elements - made responsive */}

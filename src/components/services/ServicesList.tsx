@@ -340,7 +340,7 @@ const ServicesList = () => {
                           </AccordionContent>
                         </AccordionItem>
                         
-                        <AccordionItem value={`case-study-${service.id}`} className="border-0">
+                        {/* <AccordionItem value={`case-study-${service.id}`} className="border-0">
                           <AccordionTrigger className="py-2 font-semibold text-lg">
                             Case Study Results
                           </AccordionTrigger>
@@ -359,7 +359,7 @@ const ServicesList = () => {
                               </ul>
                             </div>
                           </AccordionContent>
-                        </AccordionItem>
+                        </AccordionItem> */}
                       </Accordion>
                     </div>
                   </div>
@@ -376,14 +376,6 @@ const ServicesList = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <Link to="/contact">
-            <Button 
-              className="rounded-full px-8 py-6 shadow-md hover:shadow-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 group"
-            >
-              <span>Request Custom Solution</span>
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
         </motion.div>
       </div>
     </section>

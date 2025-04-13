@@ -28,7 +28,7 @@ const PricingGuarantee = () => {
   };
   
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <motion.div 
           variants={containerVariants}
@@ -100,16 +100,10 @@ const PricingGuarantee = () => {
               </div>
             </div>
             <div className="md:w-2/3 text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-2">Cancel Anytime, No Contracts</h3>
+              <h3 className="text-2xl font-bold mb-2">Cancel Anytime</h3>
               <p className="text-muted-foreground mb-4">
-                No long-term contracts or commitments. You can pause or cancel your service at any time with just 14 days' notice.
+                You can pause or cancel your service at any time with just 14 days notice.
               </p>
-              <Link to="/contact">
-                <Button className="group">
-                  <span>Get Started Risk-Free</span>
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
             </div>
           </div>
         </motion.div>

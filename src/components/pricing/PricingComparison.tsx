@@ -198,68 +198,6 @@ const PricingComparison = () => {
           </div>
         </motion.div>
         
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
-        >
-          <h3 className="text-xl font-bold mb-4 text-center">Additional Cost Considerations</h3>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left">How much does employee turnover cost?</AccordionTrigger>
-              <AccordionContent>
-                <p className="mb-2">
-                  The cost of replacing a content marketing professional can range from 50-200% of their annual salary when accounting for:
-                </p>
-                <ul className="list-disc pl-6 space-y-1 mb-3">
-                  <li>Recruiting and hiring costs</li>
-                  <li>Onboarding and training time</li>
-                  <li>Lost productivity during transition</li>
-                  <li>Knowledge transfer challenges</li>
-                </ul>
-                <p>
-                  HyperScriber eliminates these risks with consistent, reliable service and no long-term commitment.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left">What's the true cost of missed opportunities?</AccordionTrigger>
-              <AccordionContent>
-                <p className="mb-3">
-                  Delayed or inconsistent content marketing can cost SaaS companies significantly in terms of:
-                </p>
-                <ul className="list-disc pl-6 space-y-1 mb-3">
-                  <li>Missed lead generation opportunities</li>
-                  <li>Slower market penetration</li>
-                  <li>Competitive disadvantage</li>
-                  <li>Extended sales cycles</li>
-                </ul>
-                <p>
-                  HyperScriber's reliable delivery schedule ensures you never miss critical market opportunities.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left">How do AI efficiencies translate to business value?</AccordionTrigger>
-              <AccordionContent>
-                <p className="mb-3">
-                  Our AI-powered approach delivers tangible business benefits:
-                </p>
-                <ul className="list-disc pl-6 space-y-1 mb-3">
-                  <li>3-5x faster content production</li>
-                  <li>40-60% cost savings vs. traditional methods</li>
-                  <li>Consistency that builds brand authority</li>
-                  <li>Data-driven optimization for better ROI</li>
-                </ul>
-                <p>
-                  This efficiency translates directly to faster growth and lower customer acquisition costs.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </motion.div>
       </div>
     </section>
   );

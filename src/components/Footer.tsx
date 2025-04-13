@@ -52,7 +52,7 @@ const Footer = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'Services', path: '/services' },
-                { name: 'How It Works', path: '/how-it-works' },
+                { name: 'Why Us', path: '/why-us' },
                 { name: 'Pricing', path: '/pricing' },
                 { name: 'Contact', path: '/contact' },
                 { name: 'Terms & Conditions', path: '/terms-conditions' },
@@ -119,7 +119,7 @@ const Footer = () => {
               <li className="flex items-start group">
                 <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span className="text-muted-foreground">
-                  Fully Remote & Global Team
+                  Fully Remote
                 </span>
               </li>
             </ul>
