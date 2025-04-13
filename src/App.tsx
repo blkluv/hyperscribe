@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
-import WhyUs from "./pages/WhyUS";
+import WhyUs from "./pages/WhyUs";
 import Contact from "./pages/Contact";
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
