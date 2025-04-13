@@ -13,7 +13,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl overflow-hidden relative"
+          className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl overflow-hidden relative"
         >
           {/* Decorative elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
