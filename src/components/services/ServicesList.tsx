@@ -112,10 +112,10 @@ const services = [
     id: "website",
     icon: <Laptop className="h-8 w-8" />,
     title: 'Website & Ad Copywriting', // Updated title
-    description: 'Convert more visitors with persuasive website and ad copy that clearly communicates your value proposition and drives action.',
+    description: 'Convert more with persuasive website and ad copy that communicates your value proposition.',
     details: [
       'Strategic website content audit and strategy',
-      'Conversion-focused homepage, product, and landing page copy',
+      'Conversion-focused landing page copy',
       'UX writing for improved user experience',
       'SEO optimization for key pages',
       'A/B testing recommendations for continuous improvement',
