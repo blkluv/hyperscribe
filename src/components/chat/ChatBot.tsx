@@ -2,16 +2,27 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageCircle, Send, Trash2, Save, ArrowUp } from "lucide-react";
+import { MessageCircle, Send, Trash2, ArrowUp, HelpCircle } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { DialogTitle } from "@/components/ui/dialog";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 // Local storage key for saving chat history
 const CHAT_HISTORY_KEY = 'hyperscriber-chat-history';
+
+// Sample questions to help users get started
+const SAMPLE_QUESTIONS = [
+  "What services do you offer?",
+  "How much do your services cost?",
+  "What is your turnaround time?",
+  "Do you offer revisions?",
+  "How does the process work?",
+  "What makes you different from other agencies?"
+];
 
 interface Message {
   role: 'user' | 'assistant';
@@ -136,9 +147,11 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Get the session asynchronously first
-      const { data: sessionData } = await supabase.auth.getSession();
-      const accessToken = sessionData?.session?.access_token || '';
+      // Get user session for authentication
+      const sessionResponse = await supabase.auth.getSession();
+      // For development purposes, we'll proceed even without authentication
+      // In production, you'd want to validate this and handle accordingly
+      const accessToken = sessionResponse?.data?.session?.access_token || 'anonymous-token';
       
       const response = await fetch('https://bkdjrpuqyafnqaoobcky.functions.supabase.co/chat', {
         method: 'POST',
@@ -154,8 +167,34 @@ const ChatBot = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to get a response');
+        // Check if this is a non-streamed predefined response
+        const responseData = await response.json();
+        if (responseData.isPredefinded) {
+          // Handle predefined answer
+          setMessages(prev => [...prev, {
+            role: 'assistant',
+            content: responseData.response
+          }]);
+          setIsLoading(false);
+          return;
+        }
+        
+        throw new Error(responseData.error || 'Failed to get a response');
+      }
+
+      // Check if this is a non-streamed predefined response
+      const contentType = response.headers.get('Content-Type');
+      if (contentType && contentType.includes('application/json')) {
+        const data = await response.json();
+        if (data.isPredefinded) {
+          // Handle predefined answer
+          setMessages(prev => [...prev, {
+            role: 'assistant',
+            content: data.response
+          }]);
+          setIsLoading(false);
+          return;
+        }
       }
 
       // Handle streaming response
@@ -168,12 +207,22 @@ const ChatBot = () => {
     } catch (error) {
       console.error('Chat error:', error);
       setIsLoading(false);
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: "I'm sorry, I encountered an error while processing your request. Please try again or contact our support team for assistance."
+      }]);
+      
       toast({
-        title: "Error",
+        title: "Chat Error",
         description: error instanceof Error ? error.message : "Failed to get a response. Please try again.",
         variant: "destructive"
       });
     }
+  };
+
+  const handleQuickQuestion = (question: string) => {
+    if (isLoading || isStreaming) return;
+    setInput(question);
   };
 
   const clearChat = () => {
@@ -204,32 +253,75 @@ const ChatBot = () => {
           <div className="flex flex-col h-[100vh]">
             <div className="p-4 border-b border-blue-200/20 bg-gradient-to-r from-blue-600/10 to-blue-500/10 flex justify-between items-center">
               <h2 className="text-lg font-semibold text-gradient">Chat with HyperScriber AI</h2>
-              <Collapsible>
-                <CollapsibleTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <ArrowUp className="h-4 w-4" />
-                  </Button>
-                </CollapsibleTrigger>
-                <CollapsibleContent className="absolute right-0 top-[60px] bg-background shadow-md rounded-md p-2 border border-blue-200/20">
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    onClick={clearChat}
-                    className="flex items-center gap-2 text-red-500 hover:text-red-600 hover:bg-red-100/10 w-full justify-start"
-                  >
-                    <Trash2 className="h-4 w-4" /> Clear Chat
-                  </Button>
-                </CollapsibleContent>
-              </Collapsible>
+              <div className="flex items-center gap-2">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                      <HelpCircle className="h-4 w-4" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-80">
+                    <div className="space-y-2">
+                      <h4 className="font-medium">Need help?</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Try asking one of these questions:
+                      </p>
+                      <div className="grid gap-2 pt-2">
+                        {SAMPLE_QUESTIONS.map((question, index) => (
+                          <Button 
+                            key={index} 
+                            variant="outline" 
+                            size="sm"
+                            className="justify-start text-left h-auto whitespace-normal"
+                            onClick={() => handleQuickQuestion(question)}
+                          >
+                            {question}
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+                <Collapsible>
+                  <CollapsibleTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                      <ArrowUp className="h-4 w-4" />
+                    </Button>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="absolute right-0 top-[60px] bg-background shadow-md rounded-md p-2 border border-blue-200/20">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      onClick={clearChat}
+                      className="flex items-center gap-2 text-red-500 hover:text-red-600 hover:bg-red-100/10 w-full justify-start"
+                    >
+                      <Trash2 className="h-4 w-4" /> Clear Chat
+                    </Button>
+                  </CollapsibleContent>
+                </Collapsible>
+              </div>
             </div>
             
             <ScrollArea className="flex-1 p-4">
               <div className="space-y-4">
                 {messages.length === 0 && (
-                  <div className="flex justify-center items-center h-32 text-muted-foreground">
+                  <div className="flex flex-col justify-center items-center h-32 text-muted-foreground">
                     <div className="text-center">
-                      <p>How can I help with your writing today?</p>
-                      <p className="text-sm mt-2">Ask me anything about content creation, editing, or improving your writing style.</p>
+                      <p>How can I help with your content needs today?</p>
+                      <p className="text-sm mt-2">Ask me anything about our services, pricing, or content creation process.</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2 mt-6">
+                      {SAMPLE_QUESTIONS.slice(0, 4).map((question, index) => (
+                        <Button 
+                          key={index} 
+                          variant="outline" 
+                          size="sm"
+                          className="justify-start text-left h-auto py-2 whitespace-normal"
+                          onClick={() => handleQuickQuestion(question)}
+                        >
+                          {question}
+                        </Button>
+                      ))}
                     </div>
                   </div>
                 )}
