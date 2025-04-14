@@ -30,7 +30,10 @@ const ChatBot = () => {
 
     try {
       const { data, error } = await supabase.functions.invoke('chat', {
-        body: { message: input }
+        body: { 
+          message: input,
+          previousMessages: messages // Send conversation history
+        }
       });
 
       if (error) throw error;

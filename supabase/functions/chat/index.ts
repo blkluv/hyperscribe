@@ -13,8 +13,14 @@ serve(async (req) => {
   }
 
   try {
-    const { message } = await req.json();
+    const { message, previousMessages } = await req.json();
     const apiKey = Deno.env.get('PERPLEXITY_API_KEY');
+
+    // Convert previous messages to the format expected by the API
+    const conversationHistory = previousMessages?.map(msg => ({
+      role: msg.role,
+      content: msg.content
+    })) || [];
 
     const response = await fetch('https://api.perplexity.ai/chat/completions', {
       method: 'POST',
@@ -27,8 +33,9 @@ serve(async (req) => {
         messages: [
           {
             role: 'system',
-            content: 'You are a helpful AI assistant that helps users with their questions. Be concise but informative.'
+            content: 'You are HyperScriber AI, a helpful AI assistant focused on helping users improve their writing and content creation. You provide concise but informative responses, always maintaining context of the conversation. Your goal is to help users express their ideas clearly and effectively.'
           },
+          ...conversationHistory,
           {
             role: 'user',
             content: message
