@@ -1,12 +1,14 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageCircle, Send, Trash2, Save, LucideLoader, ArrowUp } from "lucide-react";
+import { MessageCircle, Send, Trash2, Save, ArrowUp } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { DialogTitle } from "@/components/ui/dialog";
 
 // Local storage key for saving chat history
 const CHAT_HISTORY_KEY = 'hyperscriber-chat-history';
@@ -196,6 +198,9 @@ const ChatBot = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side="right" className="w-[90vw] sm:w-[400px] p-0 bg-background/95 backdrop-blur-sm border-l border-blue-200/20">
+          {/* Hidden DialogTitle for accessibility */}
+          <DialogTitle className="sr-only">Chat with HyperScriber AI</DialogTitle>
+          
           <div className="flex flex-col h-[100vh]">
             <div className="p-4 border-b border-blue-200/20 bg-gradient-to-r from-blue-600/10 to-blue-500/10 flex justify-between items-center">
               <h2 className="text-lg font-semibold text-gradient">Chat with HyperScriber AI</h2>
@@ -293,7 +298,7 @@ const ChatBot = () => {
                   className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transition-all duration-300"
                 >
                   {isLoading || isStreaming ? (
-                    <LucideLoader className="h-4 w-4 animate-spin" />
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
                   ) : (
                     <Send className="h-4 w-4" />
                   )}

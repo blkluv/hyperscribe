@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
@@ -22,6 +23,15 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({ error: 'API key not configured' }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Check authentication
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return new Response(
+        JSON.stringify({ error: 'Authentication required. Please sign in.' }),
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
@@ -67,6 +77,16 @@ serve(async (req) => {
         body: JSON.stringify(payload),
       });
 
+      // Check if the API request was successful
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`Perplexity API error: ${response.status} - ${errorText}`);
+        return new Response(
+          JSON.stringify({ error: `API error: ${response.status}` }),
+          { status: response.status, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
       // Return the stream directly to the client
       return new Response(response.body, {
         headers: {
@@ -87,6 +107,16 @@ serve(async (req) => {
         body: JSON.stringify(payload),
       });
 
+      // Check if the API request was successful
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`Perplexity API error: ${response.status} - ${errorText}`);
+        return new Response(
+          JSON.stringify({ error: `API error: ${response.status}` }),
+          { status: response.status, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
       const data = await response.json();
       
       return new Response(JSON.stringify({ 
@@ -98,7 +128,7 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in chat function:', error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: error.message || 'An unknown error occurred' }),
       {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
