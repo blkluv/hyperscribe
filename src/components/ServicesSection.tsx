@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, MessageSquare, FileText, Laptop, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -140,7 +141,7 @@ const ServicesSection = () => {
           ))}
         </motion.div>
         
-        <div className="text-center mt-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-16">
           <Button 
             className="rounded-full px-8 py-6 shadow-md hover:shadow-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 group"
             asChild
@@ -148,6 +149,16 @@ const ServicesSection = () => {
             <Link to="/services">
               View All Services
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            className="rounded-full px-8 py-6 border-blue-200 hover:bg-blue-50 text-blue-600"
+            asChild
+          >
+            <Link to="/blog">
+              Check Our Blog
             </Link>
           </Button>
         </div>
