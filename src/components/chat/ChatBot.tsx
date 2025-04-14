@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageCircle, X } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Message {
   role: 'user' | 'assistant';
@@ -15,24 +17,38 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || isLoading) return;
 
     const userMessage = { role: 'user' as const, content: input };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
-    // Temporary response until we implement the actual AI integration
-    setTimeout(() => {
+    try {
+      const { data, error } = await supabase.functions.invoke('chat', {
+        body: { message: input }
+      });
+
+      if (error) throw error;
+
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "Hi! I'm a chatbot. I'll be more helpful once you connect me to an AI service through Supabase!"
+        content: data.response
       }]);
+    } catch (error) {
+      console.error('Chat error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to get a response. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -93,6 +109,7 @@ const ChatBot = () => {
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type your message..."
                   className="flex-1 border-blue-200/20 focus-visible:ring-blue-500"
+                  disabled={isLoading}
                 />
                 <Button 
                   type="submit" 
