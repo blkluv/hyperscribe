@@ -1,14 +1,34 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
 const TopBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show banner when scrolling up or at top, hide when scrolling down
+      if (currentScrollY > lastScrollY && currentScrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 z-40">
+    <div className={`fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 z-40 transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex items-center justify-center gap-x-2 md:gap-x-4 text-center">
           <div className="flex items-center gap-x-2 md:gap-x-3">
