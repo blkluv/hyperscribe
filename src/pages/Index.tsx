@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -7,18 +7,15 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet';
 import PricingBenefits from '@/components/pricing/PricingBenefits';
+import TopBanner from '@/components/TopBanner';
 
 const Index = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen overflow-x-hidden"
+      className="min-h-screen flex flex-col"
     >
       <Helmet>
         <meta charSet="utf-8" />
@@ -28,8 +25,12 @@ const Index = () => {
         <link rel="canonical" href="https://hyperscriber.com/" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
+      <TopBanner />
       <Navbar />
-      <main className="mt-16">
+      <main 
+        className="mt-0 flex-grow"
+        style={{ paddingTop: 'calc(var(--banner-height, 0px) + 88px)' }} 
+      >
         <HeroSection />
         <ServicesSection />
         <PricingBenefits />

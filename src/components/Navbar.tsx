@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -32,12 +31,17 @@ const Navbar = () => {
   return (
     <nav 
       className={cn(
-        'fixed top-8 w-full z-50 transition-all duration-300 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200',
+        'fixed left-0 right-0 z-50 w-full transition-all duration-300 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200',
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
+      style={{ top: 'var(--banner-height, 0px)' }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center z-30 gap-2">
+        <Link 
+          to="/" 
+          className="flex items-center z-30 gap-2"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-20 w-10 object-contain" />
           <span className="text-xl md:text-2xl font-bold text-black">
             HyperScriber
@@ -56,6 +60,7 @@ const Navbar = () => {
                   ? 'text-primary' 
                   : 'text-muted-foreground'
               )}
+              onClick={() => window.scrollTo(0, 0)}
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -92,6 +97,7 @@ const Navbar = () => {
                           ? 'text-blue-700 bg-blue-50' 
                           : 'text-muted-foreground hover:bg-blue-50/50'
                       )}
+                      onClick={() => { window.scrollTo(0, 0); }}
                     >
                       {link.name}
                     </Link>
