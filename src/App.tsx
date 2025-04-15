@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -30,18 +31,22 @@ const App = () => (
       <Toaster />
       <Sonner position="top-center" />
       <BrowserRouter>
-        <TopBanner />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/why-us" element={<WhyUs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <CookieConsent />
+        <div className="flex flex-col min-h-screen">
+          <TopBanner />
+          <div className="flex-1">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/why-us" element={<WhyUs />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+          <CookieConsent />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

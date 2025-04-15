@@ -8,13 +8,13 @@ const TopBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative w-full bg-black text-white py-2">
+    <div className="relative w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex items-center justify-center gap-x-2 md:gap-x-4 text-center">
           <div className="flex items-center gap-x-2 md:gap-x-3">
             <span className="inline-flex items-center">
               <svg
-                className="hidden md:block h-5 w-5 text-purple-400"
+                className="hidden md:block h-5 w-5 text-white"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const TopBanner = () => {
               href="https://calendly.com/hyperscriber/free-introductory-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white px-3 md:px-4 py-1 rounded-full text-sm font-medium transition-colors duration-200"
+              className="inline-flex items-center justify-center bg-white hover:bg-blue-50 text-blue-700 px-3 md:px-4 py-1 rounded-full text-sm font-medium transition-colors duration-200"
             >
               Schedule Now
             </a>
