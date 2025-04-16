@@ -11,7 +11,7 @@ const HeroContent = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full max-w-3xl mx-auto text-center"
+      className="w-full max-w-3xl mx-auto text-center relative z-10"
     >
       <motion.span 
         initial={{ opacity: 0, y: -10 }}
@@ -25,7 +25,7 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 backdrop-blur-sm rounded-lg py-2"
       >
         Your <span className="text-4xl sm:text-5xl lg:text-6xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Business</span>
         <br/>
@@ -35,7 +35,7 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto"
+        className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto backdrop-blur-sm bg-white/30 rounded-lg p-3"
       >
         AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO blogs, landing pages, newsletters, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
       </motion.p>
@@ -47,15 +47,15 @@ const HeroContent = () => {
         transition={{ duration: 0.5, delay: 0.45 }}
         className="mb-10 flex flex-wrap gap-3 justify-center"
       >
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+        <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
           <CheckCircle size={18} className="text-blue-500" />
           <span className="text-sm font-medium">3x faster content delivery</span>
         </div>
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+        <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
           <CheckCircle size={18} className="text-blue-500" />
           <span className="text-sm font-medium">AI + human expertise</span>
         </div>
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+        <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
           <CheckCircle size={18} className="text-blue-500" />
           <span className="text-sm font-medium">Built to convert</span>
         </div>
@@ -76,7 +76,7 @@ const HeroContent = () => {
         </a>
         <Button 
           variant="outline" 
-          className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 border-2 text-base sm:text-lg hover:bg-blue-50/50"
+          className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 border-2 text-base sm:text-lg hover:bg-blue-50/50 bg-white/80 backdrop-blur-sm"
           asChild
         >
           <Link to="/services">

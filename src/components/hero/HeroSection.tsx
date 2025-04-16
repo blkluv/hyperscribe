@@ -1,5 +1,6 @@
 
 import HeroContent from './HeroContent';
+import HeroBackground from './HeroBackground';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
@@ -11,6 +12,9 @@ const HeroSection = () => {
       transition={{ duration: 0.8 }}
       className="relative min-h-[calc(100vh-60px)] md:min-h-screen flex items-center"
     >
+      {/* Add the animated background */}
+      <HeroBackground />
+      
       <div className="container mx-auto px-4 sm:px-6 pt-32 pb-16 md:pt-40 md:pb-32">
         <div className="flex flex-col items-center justify-center">
           {/* Centered content */}
