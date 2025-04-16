@@ -19,8 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Nunito"', 'sans-serif'],
-        gothic: ['"Nunito"', 'sans-serif'],
+        sans: ['"DM Sans"', 'sans-serif'],
+        gothic: ['"DM Sans"', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
