@@ -17,7 +17,7 @@ const HeroContent = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="inline-block py-1.5 px-4 mb-5 sm:mb-6 text-xs font-medium tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm"
+        className="inline-block py-1.5 px-4 mb-5 sm:mb-6 text-sm font-bold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm"
       >
         AI CONTENT AGENCY
       </motion.span>
@@ -25,9 +25,9 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 backdrop-blur-sm rounded-lg py-2"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 backdrop-blur-sm rounded-lg py-2"
       >
-        Your <span className="text-4xl sm:text-5xl lg:text-6xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Business</span>
+        Your <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Business</span>
         <br/>
         Should Never Worry About Content Again
       </motion.h1>
