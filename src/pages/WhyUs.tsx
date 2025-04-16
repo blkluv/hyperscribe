@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import ServiceProcess from '@/components/services/ServiceProcess';
 import CTASection from '@/components/CTASection';
 import { ArrowDown } from 'lucide-react';

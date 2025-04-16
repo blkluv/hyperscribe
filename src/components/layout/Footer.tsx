@@ -133,7 +133,7 @@ const Footer = () => {
 
         {/* Copyright with improved styling */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} HyperScriber. All rights reserved.</p> 
+          <p>© {new Date().getFullYear()} HyperScriber AI. All rights reserved.</p> 
           <p className="mt-2 md:mt-0">
             Website by Lorenzo Filips <a href="https://github.com/Desk888" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
               (Desk888) <ExternalLink className="h-3 w-3" />

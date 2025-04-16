@@ -1,8 +1,8 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import PricingHero from '@/components/pricing/PricingHero';
 import PricingPlans from '@/components/pricing/PricingPlans';
 import PricingComparison from '@/components/pricing/PricingComparison';

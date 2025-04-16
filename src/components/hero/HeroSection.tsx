@@ -1,6 +1,6 @@
 
-import HeroContent from './hero/HeroContent';
-import HeroVisual from './hero/HeroVisual';
+import HeroContent from './HeroContent';
+import HeroVisual from './HeroVisual';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';

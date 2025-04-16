@@ -7,7 +7,7 @@ const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
   
   useEffect(() => {
-    // Check if user has already accepted cookies
+    
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
     if (!hasAcceptedCookies) {
       setShowBanner(true);

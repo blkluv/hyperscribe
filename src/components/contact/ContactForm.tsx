@@ -42,11 +42,11 @@ const ContactForm = () => {
   const onSubmit = async (values: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      // Send the contact form template
+      
       const contactResult = await emailjs.send('service_k2fd7af', 'template_5yet3ff', values, '4COZc8xvshn3d5SLB');
       console.log('Contact EmailJS Result:', contactResult);
 
-      // Send the auto-reply template
+      
       const autoReplyResult = await emailjs.send('service_k2fd7af', 'template_h1t6dko', values, '4COZc8xvshn3d5SLB');
       console.log('Auto-reply EmailJS Result:', autoReplyResult);
       

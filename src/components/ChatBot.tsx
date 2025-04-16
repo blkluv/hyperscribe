@@ -41,7 +41,7 @@ const ChatBot: React.FC = () => {
     setInput('');
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3000/chat', {
+      const res = await fetch('https://hyperscriber-ai.up.railway.app/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMessage.text }),
@@ -50,6 +50,7 @@ const ChatBot: React.FC = () => {
       const data = await res.json();
       setMessages((msgs) => [...msgs, { sender: 'ai', text: data.reply || 'No response from AI.' }]);
     } catch (err: any) {
+      console.error('ChatBot fetch error:', err);
       setMessages((msgs) => [...msgs, { sender: 'ai', text: 'Sorry, there was an error connecting to the AI server.' }]);
       setError('Failed to connect to AI server.');
     } finally {
@@ -74,7 +75,7 @@ const ChatBot: React.FC = () => {
 
   return (
     <>
-      {/* Floating Chat Button */}
+      
       <button
         onClick={toggleChat}
         className="fixed bottom-8 right-8 bg-gradient-to-br from-blue-600 to-blue-700 text-white p-4 rounded-full shadow-xl hover:scale-110 transition-transform duration-200 z-50 border-2 border-white/40 backdrop-blur md:block hidden"
@@ -88,19 +89,19 @@ const ChatBot: React.FC = () => {
         )}
       </button>
 
-      {/* Chat Window */}
+      
       {isOpen && (
         <div
           className="fixed bottom-32 right-12 w-[32rem] max-w-[96vw] h-[38rem] bg-white/70 dark:bg-gray-900/70 rounded-2xl shadow-2xl border border-white/40 backdrop-blur-lg flex flex-col z-40 animate-fade-in md:flex hidden"
           style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.25)', backdropFilter: 'blur(12px)' }}
         >
-          {/* Header */}
+          
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-4 rounded-t-2xl flex items-center gap-3 shadow-sm">
-            {/* Logo/avatar */}
+            
             <div className="bg-white/30 rounded-full p-1 flex items-center justify-center h-10 w-10 border border-white/40">
               <ChatBubbleOvalLeftEllipsisIcon className="h-6 w-6 text-blue-100" />
             </div>
-            <h3 className="font-bold text-lg flex-1 tracking-wide">HyperScriber Assistant</h3>
+            <h3 className="font-bold text-lg flex-1 tracking-wide">HyperScriber AI Assistant</h3>
             <button
               onClick={handleNewChat}
               className="bg-white/20 border border-white/40 text-white px-3 py-1 rounded-lg ml-2 shadow hover:bg-blue-500/40 transition-colors duration-150 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300"
@@ -158,6 +159,7 @@ const ChatBot: React.FC = () => {
                             const data = await res.json();
                             setMessages((msgs) => [...msgs, { sender: 'ai', text: data.reply || 'No response from AI.' }]);
                           } catch (err) {
+                            console.error('ChatBot suggestion fetch error:', err);
                             setMessages((msgs) => [...msgs, { sender: 'ai', text: 'Sorry, there was an error connecting to the AI server.' }]);
                             setError('Failed to connect to AI server.');
                           } finally {
@@ -189,7 +191,7 @@ const ChatBot: React.FC = () => {
 
 
 
-          {/* Footer - Input */}
+          
           <form
             className="p-3 border-t border-white/30 bg-white/20 rounded-b-2xl flex gap-2"
             onSubmit={e => {
@@ -222,7 +224,7 @@ const ChatBot: React.FC = () => {
         </div>
       )}
 
-      {/* Animations */}
+      
       <style>{`
         @keyframes fade-in {
           0% { opacity: 0; transform: translateY(40px); }

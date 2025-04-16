@@ -1,8 +1,8 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import ServiceHero from '@/components/services/ServiceHero';
 import ServicesList from '@/components/services/ServicesList';
 import ServiceFAQ from '@/components/services/ServiceFAQ';

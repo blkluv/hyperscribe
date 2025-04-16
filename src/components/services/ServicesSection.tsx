@@ -25,7 +25,7 @@ const services = [
     bgLight: 'bg-purple-50'
   },
   {
-    title: 'Website & Ad Copywriting', // Updated title
+    title: 'Website & Ad Copywriting', 
     description: 'Convert more with persuasive website and ad copy that clearly communicates your value.',
     icon: <Laptop className="h-8 w-8" />,
     period: '/project',
@@ -34,7 +34,7 @@ const services = [
       'Landing Page Copy', 
       'SEO Optimized Pages', 
       'Brand Voice Consistency',
-      'High-Converting Ad Copywriting' // Added feature
+      'High-Converting Ad Copywriting' 
     ],
     color: 'from-teal-500 to-blue-500',
     bgLight: 'bg-teal-50'

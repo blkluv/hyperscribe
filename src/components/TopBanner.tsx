@@ -4,12 +4,12 @@ import { X } from 'lucide-react';
 const TopBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [bannerHeight, setBannerHeight] = useState('48px'); // Default mobile height
+  const [bannerHeight, setBannerHeight] = useState('48px'); 
 
-  // Update banner height based on screen size
+  
   useEffect(() => {
     const updateHeight = () => {
-      if (window.innerWidth >= 768) { // md breakpoint
+      if (window.innerWidth >= 768) { 
         setBannerHeight('56px'); 
       } else {
         setBannerHeight('48px');
@@ -26,7 +26,7 @@ const TopBanner = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Show banner when scrolling up or at top, hide when scrolling down
+      
       if (currentScrollY > lastScrollY && currentScrollY > 0) {
         setIsScrolled(true);
       } else {
@@ -40,20 +40,26 @@ const TopBanner = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Set CSS variable for banner height
+  
   useEffect(() => {
     const effectiveHeight = isVisible && !isScrolled ? bannerHeight : '0px';
     document.documentElement.style.setProperty('--banner-height', effectiveHeight);
-    // Cleanup on component unmount or visibility change
+    
     return () => {
        document.documentElement.style.setProperty('--banner-height', '0px');
     };
   }, [isVisible, isScrolled, bannerHeight]);
 
-  if (!isVisible) return null;
+  useEffect(() => {
+  if (!isVisible) {
+    document.documentElement.style.setProperty('--banner-height', '0px');
+  }
+}, [isVisible]);
+
+if (!isVisible) return null;
 
   return (
-    // Use the state variable for height class (h-12 = 48px, md:h-14 = 56px)
+    
     <div className={`fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white ${bannerHeight === '48px' ? 'h-12' : 'md:h-14'} z-40 transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
       {/* Adjust padding for mobile (px-2) and larger screens (sm:px-4) */}
       <div className="max-w-[1440px] mx-auto px-2 sm:px-4 h-full flex items-center justify-center">
@@ -75,7 +81,7 @@ const TopBanner = () => {
             </span>
             {/* Ensure font sizes are responsive */}
             <p className="text-xs sm:text-sm md:text-base font-medium text-center">
-              Book a content strategy call worth $499 completely free!
+              Limited Time Offer: Get a free SEO-optimized Blog Post completely for free!
             </p>
           </div>
           {/* Ensure button padding and text size are suitable for mobile */}
@@ -85,7 +91,7 @@ const TopBanner = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center flex-shrink-0 bg-white hover:bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
           >
-            Schedule Now
+            Get Started
           </a>
         </div>
       </div>

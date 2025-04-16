@@ -111,7 +111,7 @@ const services = [
   {
     id: "website",
     icon: <Laptop className="h-8 w-8" />,
-    title: 'Website & Ad Copywriting', // Updated title
+    title: 'Website & Ad Copywriting', 
     description: 'Convert more with persuasive website and ad copy that communicates your value proposition.',
     details: [
       'Strategic website content audit and strategy',
@@ -119,15 +119,15 @@ const services = [
       'UX writing for improved user experience',
       'SEO optimization for key pages',
       'A/B testing recommendations for continuous improvement',
-      'Targeted ad copywriting for digital platforms', // Added detail
-      'Ad copy optimized for different platforms (Google, Meta, LinkedIn)' // Added detail
+      'Targeted ad copywriting for digital platforms', 
+      'Ad copy optimized for different platforms (Google, Meta, LinkedIn)' 
     ],
     benefits: [
       'Higher conversion rates on landing pages',
       'Clearer communication of your unique value proposition',
       'Improved user experience through strategic copywriting',
       'Consistent brand voice across your digital presence',
-      'Increased ad engagement and click-through rates' // Added benefit
+      'Increased ad engagement and click-through rates' 
     ],
     process: [
       {
@@ -157,7 +157,7 @@ const services = [
         "89% increase in demo requests",
         "42% improvement in page conversion rate",
         "25% reduction in bounce rate",
-        "35% increase in ad click-through rates" // Added result
+        "35% increase in ad click-through rates" 
       ]
     },
     color: 'from-teal-500 to-blue-500',

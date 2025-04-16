@@ -2,16 +2,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import emailjs from '@emailjs/browser';
-import ContactHero from '@/components/ContactHero';
+import ContactHero from '@/components/contact/ContactHero';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
 
 const Contact = () => {
-  // Initialize EmailJS
+  
   React.useEffect(() => {
     emailjs.init('4COZc8xvshn3d5SLB');
   }, []);
@@ -29,7 +29,7 @@ const Contact = () => {
       <main className="min-h-screen mt-16">
         <ContactHero />
         
-        {/* Redesigned Contact Form Section with improved spacing */}
+        
         <section id="contact-form" className="py-24 bg-slate-50">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
@@ -41,7 +41,7 @@ const Contact = () => {
           </div>
         </section>
         
-        {/* CTA Section */}
+        
         <CTASection />
       </main>
       <Footer />

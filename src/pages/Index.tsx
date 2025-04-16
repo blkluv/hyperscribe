@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/hero/HeroSection';
+import ServicesSection from '@/components/services/ServicesSection';
 import CTASection from '@/components/CTASection';
-import Footer from '@/components/Footer';
+import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet';
 import PricingBenefits from '@/components/pricing/PricingBenefits';
 import TopBanner from '@/components/TopBanner';
@@ -25,7 +25,6 @@ const Index = () => {
         <link rel="canonical" href="https://hyperscriber.com/" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
-      <TopBanner />
       <Navbar />
       <main 
         className="mt-0 flex-grow"
