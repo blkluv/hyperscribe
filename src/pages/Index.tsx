@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
@@ -27,11 +26,12 @@ const Index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
-      <main className="flex-grow">
+      <main 
+        className="mt-0 flex-grow"
+        style={{ paddingTop: 'calc(var(--banner-height, 0px) + 88px)' }} 
+      >
         <HeroSection />
-        <div id="workflow">
-          <ServicesSection />
-        </div>
+        <ServicesSection />
         <PricingBenefits />
         <CTASection />
       </main>
