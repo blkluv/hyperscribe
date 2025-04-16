@@ -30,7 +30,7 @@ const services = [
     icon: <Laptop className="h-8 w-8" />,
     period: '/project',
     features: [
-      'Conversion-Focused Website & Ad Copy', 
+      'Conversion-Focused Copy', 
       'Landing Page Copy', 
       'SEO Optimized Pages', 
       'Brand Voice Consistency',
