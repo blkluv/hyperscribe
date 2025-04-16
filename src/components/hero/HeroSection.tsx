@@ -1,13 +1,9 @@
 
 import HeroContent from './HeroContent';
-import HeroVisual from './HeroVisual';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
-  const isMobile = useIsMobile();
-  
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -16,12 +12,9 @@ const HeroSection = () => {
       className="relative min-h-[calc(100vh-60px)] md:min-h-screen flex items-center"
     >
       <div className="container mx-auto px-4 sm:px-6 pt-32 pb-16 md:pt-40 md:pb-32">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-16">
-          {/* Left content */}
+        <div className="flex flex-col items-center justify-center">
+          {/* Centered content */}
           <HeroContent />
-          
-          {/* Right visual - only show on desktop */}
-          {!isMobile && <HeroVisual />}
         </div>
         <motion.div 
           initial={{ opacity: 0 }}

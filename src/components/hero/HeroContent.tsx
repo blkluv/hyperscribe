@@ -4,17 +4,14 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 const HeroContent = () => {
-  const isMobile = useIsMobile();
-  
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full lg:w-1/2 text-center lg:text-left"
+      className="w-full max-w-3xl mx-auto text-center"
     >
       <motion.span 
         initial={{ opacity: 0, y: -10 }}
@@ -38,7 +35,7 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl lg:mx-0 mx-auto font-light"
+        className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto font-light"
       >
         AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO blogs, landing pages, newsletters, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
       </motion.p>
@@ -48,7 +45,7 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.45 }}
-        className="mb-10 flex flex-wrap gap-3 justify-center lg:justify-start"
+        className="mb-10 flex flex-wrap gap-3 justify-center"
       >
         <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
           <CheckCircle size={18} className="text-blue-500" />
@@ -68,7 +65,7 @@ const HeroContent = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        className="flex flex-col sm:flex-row gap-4 justify-center"
       >
         <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
           <Button className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 relative overflow-hidden group">
