@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -95,7 +96,7 @@
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
     max-width: 100vw;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Special Gothic Expanded One', sans-serif;
     scroll-behavior: smooth;
   }
 
@@ -105,7 +106,7 @@
     max-width: 100vw;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Special Gothic Expanded One', sans-serif;
   }
 
   button, a {

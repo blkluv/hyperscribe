@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Special Elite"', 'cursive'],
-				gothic: ['"Special Elite"', 'cursive'],
+				sans: ['"Special Gothic Expanded One"', 'sans-serif'],
+				gothic: ['"Special Gothic Expanded One"', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
