@@ -19,8 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"DM Sans"', 'sans-serif'],
-        gothic: ['"DM Sans"', 'sans-serif'],
+        sans: ['"Quicksand"', 'sans-serif'],
+        gothic: ['"Quicksand"', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
