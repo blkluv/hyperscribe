@@ -111,8 +111,8 @@
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight;
-    letter-spacing: -0.02em;
+    @apply text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight;
+    letter-spacing: -0.03em;
     line-height: 1.1;
   }
 
