@@ -7,7 +7,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet';
 import PricingBenefits from '@/components/pricing/PricingBenefits';
-import TopBanner from '@/components/TopBanner';
+import TopBanner from '@/components/layout/TopBanner';
 
 const Index = () => {
   return (

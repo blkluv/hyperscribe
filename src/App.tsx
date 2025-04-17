@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TopBanner from "./components/TopBanner";
+import TopBanner from "./components/layout/TopBanner";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
@@ -13,7 +13,7 @@ import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import CookieConsent from "./components/CookieConsent";
-import ChatBot from "./components/ChatBot";
+import ChatBot from "./components/layout/ChatBot";
 
 const queryClient = new QueryClient({
   defaultOptions: {
