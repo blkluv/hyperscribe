@@ -35,7 +35,7 @@ const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto backdrop-blur-sm bg-white/30 rounded-lg p-3"
+        className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl mx-auto backdrop-blur-sm bg-white/30 rounded-lg p-3"
       >
         AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO blogs, landing pages, newsletters, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
       </motion.p>
