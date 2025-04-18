@@ -92,7 +92,7 @@ const ChatBot: React.FC = () => {
       
       {isOpen && (
         <div
-          className="fixed bottom-32 right-12 w-[32rem] max-w-[96vw] h-[38rem] bg-white/70 dark:bg-gray-900/70 rounded-2xl shadow-2xl border border-white/40 backdrop-blur-lg flex flex-col z-40 animate-fade-in md:flex hidden"
+          className="fixed bottom-32 right-12 w-[28rem] max-w-[90vw] h-[34rem] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-white/40 backdrop-blur-lg flex flex-col z-40 animate-fade-in md:flex hidden"
           style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.25)', backdropFilter: 'blur(12px)' }}
         >
           
@@ -101,7 +101,7 @@ const ChatBot: React.FC = () => {
             <div className="bg-white/30 rounded-full p-1 flex items-center justify-center h-10 w-10 border border-white/40">
               <ChatBubbleOvalLeftEllipsisIcon className="h-6 w-6 text-blue-100" />
             </div>
-            <h3 className="font-bold text-lg flex-1 tracking-wide">HyperScriber AI Assistant</h3>
+            <h3 className="font-bold text-lg flex-1 tracking-wide">AI Assistant</h3>
             <button
               onClick={handleNewChat}
               className="bg-white/20 border border-white/40 text-white px-3 py-1 rounded-lg ml-2 shadow hover:bg-blue-500/40 transition-colors duration-150 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300"

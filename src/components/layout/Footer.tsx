@@ -119,7 +119,7 @@ const Footer = () => {
               <li className="flex items-start group">
                 <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span className="text-muted-foreground">
-                  Fully Remote
+                  London, UK
                 </span>
               </li>
             </ul>

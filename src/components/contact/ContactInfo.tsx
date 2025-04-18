@@ -67,7 +67,7 @@ const ContactInfo = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500 font-medium">Location</p>
-                <span className="text-blue-600 font-medium">Fully Remote</span>
+                <span className="text-blue-600 font-medium">London, UK</span>
               </div>
             </div>
           </div>
