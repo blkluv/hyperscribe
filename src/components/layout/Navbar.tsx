@@ -66,7 +66,7 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </Link>
           ))}
-          <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer">
             <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-3 rounded-full hover:opacity-90 transition-opacity duration-200 text-md hover:scale-110 transition-transform duration-200">
               Book a Call
             </button>
@@ -103,7 +103,7 @@ const Navbar = () => {
                     </Link>
                   ))}
                   <div className="pt-4 mt-4 border-t">
-                    <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
+                    <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer">
                       <Button className="w-full rounded-full py-6 text-base bg-gradient-to-r from-blue-600 to-blue-700">
                         Book a Free Consultation
                       </Button>

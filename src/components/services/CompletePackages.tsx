@@ -112,7 +112,7 @@ const CompletePackages = () => {
                 </CardContent>
                 <CardFooter className="pt-8">
                   <a 
-                    href="https://calendly.com/hyperscriber/free-introductory-call" 
+                    href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full"

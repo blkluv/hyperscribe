@@ -20,7 +20,7 @@ const ContactInfo = () => {
           <p className="text-blue-50 mb-6">
             Ready to discuss your content needs? Schedule a free 15-minute consultation with our team.
           </p>
-          <a href="https://calendly.com/hyperscriber/free-introductory-call" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="default"
               className="w-full rounded-full py-6 bg-white hover:bg-blue-50 text-blue-700 transition-colors shadow-md hover:shadow-lg"
