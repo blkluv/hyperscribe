@@ -41,7 +41,7 @@ const ChatBot: React.FC = () => {
     setInput('');
     setLoading(true);
     try {
-      const res = await fetch('https://hyperscriber-ai.up.railway.app/chat', {
+      const res = await fetch('https://hyperscriber-ai.up.railway.app/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMessage.text }),

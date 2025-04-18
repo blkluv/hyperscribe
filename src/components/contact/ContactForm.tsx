@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from '@emailjs/browser';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -40,41 +39,46 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (values: ContactFormValues) => {
-    setIsSubmitting(true);
-    try {
-      
-      const contactResult = await emailjs.send('service_k2fd7af', 'template_5yet3ff', values, '4COZc8xvshn3d5SLB');
-      console.log('Contact EmailJS Result:', contactResult);
+  setIsSubmitting(true);
+  try {
+    const response = await fetch('https://hyperscriber-ai.up.railway.app/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    });
 
-      
-      const autoReplyResult = await emailjs.send('service_k2fd7af', 'template_h1t6dko', values, '4COZc8xvshn3d5SLB');
-      console.log('Auto-reply EmailJS Result:', autoReplyResult);
-      
-      if (contactResult.status !== 200 || autoReplyResult.status !== 200) {
-        throw new Error(`Failed to send message. Contact Status: ${contactResult.status}, Auto-reply Status: ${autoReplyResult.status}`);
+    if (!response.ok) {
+      let errorText = await response.text();
+      let errorMessage = 'Failed to send message. Please try again.';
+      try {
+        const errorData = JSON.parse(errorText);
+        errorMessage = errorData.message || errorText || errorMessage;
+      } catch {
+        if (errorText) errorMessage = errorText;
       }
-
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-        duration: 5000
-      });
-      form.reset();
-    } catch (error) {
-      console.error('EmailJS Error Details:', {
-        error,
-        message: error instanceof Error ? error.message : 'Unknown error',
-        stack: error instanceof Error ? error.stack : undefined
-      });
-      toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
+      console.error('Server error response:', errorText);
+      throw new Error(errorMessage);
     }
-  };
+
+    toast({
+      title: "Message sent successfully!",
+      description: "We'll get back to you as soon as possible.",
+      duration: 5000,
+    });
+    form.reset();
+  } catch (error) {
+    console.error('Contact Form Error:', error);
+    toast({
+      title: "Error",
+      description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <motion.div 
