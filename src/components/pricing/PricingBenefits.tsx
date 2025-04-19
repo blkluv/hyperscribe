@@ -1,39 +1,37 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Zap, TrendingUp, Award, Clock, BarChart2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const benefits = [
   {
     title: "AI-Powered Efficiency",
     description: "Create content 3x faster with our AI-powered creation process while maintaining high quality and originality.",
-    icon: <Zap className="h-10 w-10 text-blue-500" />
+    icon: "⚡" // Lightning bolt for speed/power
   },
   {
     title: "Human Creative Expertise",
     description: "Our content specialists ensure your brand voice remains consistent and your content connects with your audience.",
-    icon: <Award className="h-10 w-10 text-blue-500" />
+    icon: "🎨" // Artist palette for creativity
   },
   {
     title: "SEO-Optimized Content",
     description: "Every piece of content is strategically optimized to rank higher in search results and drive organic traffic.",
-    icon: <TrendingUp className="h-10 w-10 text-blue-500" />
+    icon: "📈" // Chart increasing for growth
   },
   {
     title: "Faster Time-to-Market",
     description: "Reduce content production timelines by weeks, allowing you to maintain a consistent publishing schedule.",
-    icon: <Clock className="h-10 w-10 text-blue-500" />
+    icon: "⏱️" // Stopwatch for speed
   },
   {
     title: "Performance Analytics",
     description: "Get detailed insights on how your content is performing with regular reports and actionable recommendations.",
-    icon: <BarChart2 className="h-10 w-10 text-blue-500" />
+    icon: "📊" // Bar chart for analytics
   },
   {
     title: "Strategic Growth Partnership",
     description: "We don't just create content - we become your strategic partner focused on driving business growth.",
-    icon: <CheckCircle className="h-10 w-10 text-blue-500" />
+    icon: "🤝" // Handshake for partnership
   }
 ];
 
@@ -87,10 +85,10 @@ const PricingBenefits = () => {
               variants={itemVariants}
               className="hover-scale"
             >
-              <Card className="h-full border-0 shadow-md rounded-xl overflow-hidden">
+              <Card className="h-full border-0 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <div className="flex flex-col items-center text-center">
-                    <div className="mb-4 p-3 rounded-full bg-blue-50">
+                    <div className="mb-4 p-3 rounded-full bg-blue-50 text-3xl">
                       {benefit.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
