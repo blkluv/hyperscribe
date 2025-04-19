@@ -19,7 +19,7 @@ const HeroContent = () => {
         transition={{ duration: 0.4, delay: 0.2 }}
         className="inline-block py-1.5 px-4 mb-5 sm:mb-6 text-sm font-bold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm"
       >
-        AI CONTENT AGENCY
+        AI-POWERED CRE GROWTH
       </motion.span>
       <motion.h1 
         initial={{ opacity: 0 }}
@@ -27,9 +27,9 @@ const HeroContent = () => {
         transition={{ duration: 0.7, delay: 0.3 }}
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 backdrop-blur-sm rounded-lg py-2"
       >
-        Your <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600"> SaaS Business</span>
+        Close More Deals With <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">AI</span>
         <br/>
-        Should Never Worry About Content Again
+        That Speaks <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Commercial Real Estate</span>
       </motion.h1>
       <motion.p 
         initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl mx-auto backdrop-blur-sm bg-white/30 rounded-lg p-3"
       >
-        AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO blogs, landing pages, newsletters, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
+        AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO , Video content, PPC, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
       </motion.p>
       
       {/* Social proof element with improved spacing */}
