@@ -21,6 +21,14 @@ const HeroContent = () => {
       >
         AI-POWERED CRE GROWTH
       </motion.span>
+      <motion.h1
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{ duration: 0.7, delay: 0.3 }}
+         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 backdrop-blur-sm rounded-lg py-2"
+      >
+        Close More Deals With <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">AI</span> That Speaks <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Commercial Real Estate</span>
+      </motion.h1>
       <motion.h1 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
