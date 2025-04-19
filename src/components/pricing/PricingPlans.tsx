@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
@@ -21,7 +20,9 @@ const plans = [
       'Email support'
     ],
     highlighted: false,
-    link: 'https://buy.stripe.com/test_dealstarter' // Replace with your actual Stripe link
+    links: {
+      monthly: 'https://buy.stripe.com/fZe3dx5hR1jefOo28X',
+      annually: 'https://buy.stripe.com/aEU29tbGfbXSgSscNC'
   },
   {
     name: 'Portfolio Accelerator',
@@ -36,10 +37,12 @@ const plans = [
       'Weekly performance optimizations',
       '24-hour priority support',
       'Dedicated content specialist',
-      'Priority support'
     ],
     highlighted: true,
-    link: 'https://buy.stripe.com/test_portfolio' 
+    links: {
+      monthly: 'https://buy.stripe.com/9AQeWfcKj9PK1XyfZP',
+      annually: 'https://buy.stripe.com/dR6eWf4dN2ni31CeVM'
+    }
   },
   {
     name: 'Enterprise Growth',
@@ -48,20 +51,24 @@ const plans = [
     yearlyPrice: '$7,600',
     features: [
       '25 LinkedIn ghostwriting posts',
-      '8 premium CRE research reports/month',
-      '4 AI video short 1 minute property reels',
+      '8 premium CRE research reports',
+      '4 AI video short (1 minute) property reels',
       'Dedicated PPC ad campaign strategist',
       'Biweekly Wizard of Hahz strategy sessions',
       'Same-day VIP support',
       'Multichannel content strategy'
     ],
     highlighted: false,
-    link: 'https://buy.stripe.com/test_enterprise'
+    links: {
+      monthly: 'https://buy.stripe.com/3cs15p9y77HC59KaFx',
+      annually: 'https://buy.stripe.com/14k4hB11Bge89q0dRK'
+    }
   }
+]; // ✅ THIS WAS MISSING
 
 const PricingPlans = () => {
   const [annually, setAnnually] = useState(true);
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -71,7 +78,7 @@ const PricingPlans = () => {
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -82,7 +89,7 @@ const PricingPlans = () => {
       }
     }
   };
-  
+
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -93,7 +100,7 @@ const PricingPlans = () => {
           <p className="text-lg text-muted-foreground mb-8">
             All packages include our core AI-powered content creation process, professional editing, and dedicated support.
           </p>
-          
+
           <div className="flex items-center justify-center space-x-4 mb-10">
             <span className={`text-sm font-medium ${!annually ? 'text-primary' : 'text-muted-foreground'}`}>Monthly</span>
             <button 
@@ -107,7 +114,7 @@ const PricingPlans = () => {
             <span className={`text-sm font-medium ${annually ? 'text-primary' : 'text-muted-foreground'}`}>Annually (15% off)</span>
           </div>
         </div>
-        
+
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -150,7 +157,13 @@ const PricingPlans = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-8">
-                <a href={plan.link} target="_blank" rel="noopener noreferrer" className="w-full">
+                <a 
+                    href={annually ? plan.links.annually : plan.links.monthly} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full"
+                    >
+
                     <Button 
                       variant={plan.highlighted ? "default" : "outline"} 
                       className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} 
@@ -165,7 +178,7 @@ const PricingPlans = () => {
             </motion.div>
           ))}
         </motion.div>
-        
+
         <div className="text-center mt-12 max-w-3xl mx-auto">
           <p className="text-muted-foreground mb-8">
             Need a custom solution? Contact us for a personalized quote tailored to your specific business requirements.
