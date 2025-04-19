@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
@@ -7,13 +6,13 @@ import { Link } from 'react-router-dom';
 
 const HeroContent = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="w-full max-w-3xl mx-auto text-center relative z-10"
     >
-      <motion.span 
+      <motion.span
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
@@ -29,17 +28,7 @@ const HeroContent = () => {
       >
         Close More Deals With <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">AI</span> That Speaks <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Commercial Real Estate</span>
       </motion.h1>
-      <motion.h1 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 backdrop-blur-sm rounded-lg py-2"
-      >
-        Close More Deals With <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">AI</span>
-        <br/>
-        That Speaks <span className="text-5xl sm:text-6xl lg:text-7xl text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Commercial Real Estate</span>
-      </motion.h1>
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -47,7 +36,7 @@ const HeroContent = () => {
       >
         AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO , Video content, PPC, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
       </motion.p>
-      
+
       {/* Social proof element with improved spacing */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -68,8 +57,8 @@ const HeroContent = () => {
           <span className="text-sm font-medium">Built to convert</span>
         </div>
       </motion.div>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -82,8 +71,8 @@ const HeroContent = () => {
             <ArrowRight className="ml-2 h-5 sm:h-6 w-5 sm:w-6 transition-transform group-hover:translate-x-1" />
           </Button>
         </a>
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 border-2 text-base sm:text-lg hover:bg-blue-50/50 bg-white/80 backdrop-blur-sm"
           asChild
         >
