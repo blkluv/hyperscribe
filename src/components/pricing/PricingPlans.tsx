@@ -37,7 +37,7 @@ const plans = [
       'Managed PPC campaigns ($1k ad credit)',
       'Weekly performance optimizations',
       '24-hour priority support',
-      'Dedicated content specialist',
+      'Dedicated content specialist'
     ],
     highlighted: true,
     links: {
@@ -65,7 +65,7 @@ const plans = [
       annually: 'https://buy.stripe.com/14k4hB11Bge89q0dRK'
     }
   }
-]; // ✅ THIS WAS MISSING
+];
 
 const PricingPlans = () => {
   const [annually, setAnnually] = useState(true);
@@ -158,13 +158,12 @@ const PricingPlans = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-8">
-                <a 
+                  <a 
                     href={annually ? plan.links.annually : plan.links.monthly} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="w-full"
-                    >
-
+                  >
                     <Button 
                       variant={plan.highlighted ? "default" : "outline"} 
                       className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} 
