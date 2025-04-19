@@ -48,11 +48,11 @@ const ContactForm = () => {
       // FormSubmit advanced features
       formData.append('_replyto', values.email); // Auto-reply to sender
       formData.append('_subject', 'New contact form submission'); // Custom subject
-      formData.append('_next', 'https://yourdomain.com/thanks'); // Redirect after submit
+      formData.append('_next', 'https://creai.digital'); // Redirect after submit
       formData.append('_template', 'table'); // Use table template
       formData.append('_captcha', 'false'); // Disable captcha (not recommended)
       
-      const response = await fetch('https://formsubmit.co/ajax/your@email.com', {
+      const response = await fetch('https://formsubmit.co/ajax/contact@creai.digital', {
         method: 'POST',
         body: formData,
       });
@@ -63,7 +63,7 @@ const ContactForm = () => {
 
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We'll get back to you within 8 hours.",
         duration: 5000,
       });
       form.reset();
@@ -90,7 +90,7 @@ const ContactForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-grow flex flex-col">
           {/* Hidden fields for FormSubmit features */}
-          <input type="hidden" name="_next" value="https://yourdomain.com/thanks" />
+          <input type="hidden" name="_next" value="https://creai.digital" />
           <input type="hidden" name="_subject" value="New contact form submission" />
           <input type="hidden" name="_template" value="table" />
           
