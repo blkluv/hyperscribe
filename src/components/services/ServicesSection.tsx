@@ -16,7 +16,7 @@ const services = [
       '8 hyper-targeted CRE posts',
       'Investor engagement scripts',
       'Deal-focused CTAs',
-      'Lead quality dashboard'
+      '60% time savings vs manual content creation'
     ],
     color: 'from-blue-600 to-sky-500',
     bgLight: 'bg-blue-50'
@@ -31,7 +31,7 @@ const services = [
       '4 data-driven articles',
       '2,000+ word pillar content',
       'Market data visualizations',
-      'Investor conversion tracking'
+      'CRE-specific keyword clusters'
     ],
     color: 'from-emerald-500 to-teal-600',
     bgLight: 'bg-emerald-50'
@@ -43,10 +43,10 @@ const services = [
     description: 'Showcase listings with AI-generated tours that convert 10x faster',
     period: '/project',
     features: [
-      'Script-to-video in 48hrs',
-      'Virtual staging included',
-      'Platform-optimized formats',
-      'Heatmap analytics'
+      'AI-generated video scripts',
+      'Automated voiceovers',
+      'Create short reel ads',
+      '3-5X more engagement'
     ],
     color: 'from-purple-500 to-fuchsia-500',
     bgLight: 'bg-purple-50'
@@ -58,8 +58,8 @@ const services = [
     description: 'Hyper-targeted paid media driving investor meetings, not just clicks',
     period: '/month',
     features: [
-      'Managed Google/LinkedIn',
-      '$1k ad credit included',
+      'TikTok/Google/LinkedIn/Meta Ads',
+      '$0 Set Up Cost',
       'CRE audience modeling',
       'Deal conversion tracking'
     ],
