@@ -9,7 +9,7 @@ const services = [
   {
     id: "linkedin",
     icon: "💼", // LinkedIn emoji
-    title: 'AI-Powered LinkedIn Ghostwriting for CRE',
+    title: 'AI LinkedIn Ghostwriting for CRE',
     description: 'Dominate CRE conversations and attract high-value deals with AI-crafted thought leadership content.',
     details: [
       'Hyper-targeted posts for CRE niches (multifamily, industrial, REITs)',

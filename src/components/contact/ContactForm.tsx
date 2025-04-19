@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
@@ -39,46 +38,46 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (values: ContactFormValues) => {
-  setIsSubmitting(true);
-  try {
-    const response = await fetch('https://hyperscriber-ai.up.railway.app/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    });
+    setIsSubmitting(true);
+    try {
+      const formData = new FormData();
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('message', values.message);
+      
+      // FormSubmit advanced features
+      formData.append('_replyto', values.email); // Auto-reply to sender
+      formData.append('_subject', 'New contact form submission'); // Custom subject
+      formData.append('_next', 'https://yourdomain.com/thanks'); // Redirect after submit
+      formData.append('_template', 'table'); // Use table template
+      formData.append('_captcha', 'false'); // Disable captcha (not recommended)
+      
+      const response = await fetch('https://formsubmit.co/ajax/your@email.com', {
+        method: 'POST',
+        body: formData,
+      });
 
-    if (!response.ok) {
-      let errorText = await response.text();
-      let errorMessage = 'Failed to send message. Please try again.';
-      try {
-        const errorData = JSON.parse(errorText);
-        errorMessage = errorData.message || errorText || errorMessage;
-      } catch {
-        if (errorText) errorMessage = errorText;
+      if (!response.ok) {
+        throw new Error('Failed to send message. Please try again.');
       }
-      console.error('Server error response:', errorText);
-      throw new Error(errorMessage);
-    }
 
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you as soon as possible.",
-      duration: 5000,
-    });
-    form.reset();
-  } catch (error) {
-    console.error('Contact Form Error:', error);
-    toast({
-      title: "Error",
-      description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you as soon as possible.",
+        duration: 5000,
+      });
+      form.reset();
+    } catch (error) {
+      console.error('Contact Form Error:', error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <motion.div 
@@ -90,6 +89,11 @@ const ContactForm = () => {
       <h2 className="text-2xl font-semibold mb-6 tracking-tight">Send us a message</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-grow flex flex-col">
+          {/* Hidden fields for FormSubmit features */}
+          <input type="hidden" name="_next" value="https://yourdomain.com/thanks" />
+          <input type="hidden" name="_subject" value="New contact form submission" />
+          <input type="hidden" name="_template" value="table" />
+          
           <FormField 
             control={form.control} 
             name="name" 

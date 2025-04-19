@@ -9,7 +9,7 @@ const services = [
   {
     id: "linkedin",
     icon: "💼",
-    title: 'AI-Powered LinkedIn Ghostwriting',
+    title: 'AI LinkedIn Ghostwriting',
     description: 'Dominate CRE conversations and attract high-value deals with AI-crafted content',
     period: '/month',
     features: [
