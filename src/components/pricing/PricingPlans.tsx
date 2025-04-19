@@ -23,6 +23,7 @@ const plans = [
     links: {
       monthly: 'https://buy.stripe.com/fZe3dx5hR1jefOo28X',
       annually: 'https://buy.stripe.com/aEU29tbGfbXSgSscNC'
+    }
   },
   {
     name: 'Portfolio Accelerator',
