@@ -7,45 +7,64 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'LinkedIn Ghostwriting',
-    description: 'Build thought leadership and generate leads with professionally crafted LinkedIn content.',
-    icon: <MessageSquare className="h-8 w-8" />,
+    id: "linkedin",
+    icon: "💼",
+    title: 'AI-Powered LinkedIn Ghostwriting',
+    description: 'Dominate CRE conversations and attract high-value deals with AI-crafted content',
     period: '/month',
-    features: ['Daily posts', 'Audience growth', 'Performance metrics', 'Strategic planning'],
-    color: 'from-blue-500 to-indigo-600',
+    features: [
+      '8 hyper-targeted CRE posts',
+      'Investor engagement scripts',
+      'Deal-focused CTAs',
+      'Lead quality dashboard'
+    ],
+    color: 'from-blue-600 to-sky-500',
     bgLight: 'bg-blue-50'
   },
   {
-    title: 'SEO Blog Articles',
-    description: 'Rank higher and drive more organic traffic with SEO-optimized blog content.',
-    icon: <FileText className="h-8 w-8" />,
+    id: "blog",
+    icon: "📝",
+    title: 'AI CRE Blog Engine', 
+    description: 'Rank for commercial real estate keywords and attract qualified leads',
     period: '/month',
-    features: ['Monthly articles', 'Keyword research', 'Competitive analysis', 'Internal linking'],
-    color: 'from-purple-500 to-indigo-600',
+    features: [
+      '4 data-driven articles',
+      '2,000+ word pillar content',
+      'Market data visualizations',
+      'Investor conversion tracking'
+    ],
+    color: 'from-emerald-500 to-teal-600',
+    bgLight: 'bg-emerald-50'
+  },
+  {
+    id: "video",
+    icon: "🎥",
+    title: 'AI Property Videos',
+    description: 'Showcase listings with AI-generated tours that convert 10x faster',
+    period: '/project',
+    features: [
+      'Script-to-video in 48hrs',
+      'Virtual staging included',
+      'Platform-optimized formats',
+      'Heatmap analytics'
+    ],
+    color: 'from-purple-500 to-fuchsia-500',
     bgLight: 'bg-purple-50'
   },
   {
-    title: 'Website & Ad Copywriting', 
-    description: 'Convert more with persuasive website and ad copy that clearly communicates your value.',
-    icon: <Laptop className="h-8 w-8" />,
-    period: '/project',
-    features: [
-      'Conversion-Focused Copy', 
-      'Landing Page Copy', 
-      'SEO Optimized Pages', 
-      'Brand Voice Consistency',
-    ],
-    color: 'from-teal-500 to-blue-500',
-    bgLight: 'bg-teal-50'
-  },
-  {
-    title: 'Newsletter Creation',
-    description: 'AI-assisted newsletters for SaaS brands to nurture leads and maintain customer engagement.',
-    icon: <Mail className="h-8 w-8" />,
+    id: "ppc",
+    icon: "🎯",
+    title: 'AI CRE Ad Campaigns',
+    description: 'Hyper-targeted paid media driving investor meetings, not just clicks',
     period: '/month',
-    features: ['Weekly newsletters', 'Audience segmentation', 'Analytics tracking', 'Strategic content planning'],
-    color: 'from-blue-500 to-sky-400',
-    bgLight: 'bg-sky-50'
+    features: [
+      'Managed Google/LinkedIn',
+      '$1k ad credit included',
+      'CRE audience modeling',
+      'Deal conversion tracking'
+    ],
+    color: 'from-red-500 to-orange-500',
+    bgLight: 'bg-red-50'
   }
 ];
 
@@ -79,7 +98,7 @@ const ServicesSection = () => {
             OUR SERVICES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Content Solutions for Every SaaS Need
+            AI Content Solutions for Every CRE Need
           </h2>
           <p className="text-muted-foreground text-lg">
             We blend AI efficiency with human creativity to deliver content that connects with your audience and drives business results.

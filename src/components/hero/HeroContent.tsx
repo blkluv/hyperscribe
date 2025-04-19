@@ -34,7 +34,7 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl mx-auto backdrop-blur-sm bg-white/30 rounded-lg p-3"
       >
-        AI-powered, human-refined content for SaaS businesses — LinkedIn, SEO , Video content, PPC, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
+        AI-powered, human-refined ad + content for CRE businesses — LinkedIn, SEO , Video content, PPC, and more. <br/> Strategy, quality, and speed—without compromise. 🤖 🧠 🚀
       </motion.p>
 
       {/* Social proof element with improved spacing */}
