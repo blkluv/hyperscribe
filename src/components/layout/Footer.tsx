@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, MapPin, Phone, Tiktok, Linkedin, ExternalLink } from 'lucide-react';
+import { SiTiktok } from 'react-icons/si';
+import { Mail, MapPin, Phone, Linkedin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
@@ -40,7 +40,7 @@ const Footer = () => {
                 className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
                 aria-label="Tiktok"
               >
-                <Tiktok size={20} />
+              <SiTiktok size={20} />
               </a>
             </div>
           </div>
@@ -134,11 +134,6 @@ const Footer = () => {
         {/* Copyright with improved styling */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} CREAI.DIGITAL. All rights reserved.</p> 
-          <p className="mt-2 md:mt-0">
-            Follow us on TikTok <a href="https://tiktok.com/@creaidigital" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-              (@creaidigital) <ExternalLink className="h-3 w-3" />
-            </a>
-          </p>
         </div>
       </div>
     </footer>
