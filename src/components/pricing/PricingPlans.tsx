@@ -7,55 +7,57 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const plans = [
   {
-    name: 'Starter',
-    description: 'Perfect for early-stage SaaS startups looking to establish their content foundation.',
-    monthlyPrice: '$1,599',
-    yearlyPrice: '$1,359',
-    features: [
-      '2 LinkedIn posts per week',
-      '2 Blog articles per month',
+    name: 'Deal Starter',
+    description: 'For individual brokers and small teams needing basic AI-powered lead generation.',
+    monthlyPrice: '$2,500',
+    yearlyPrice: '$2,000',
+    features: [      
+      '8 LinkedIn posts',
+      '2 Blog articles',
       'Standard SEO optimization',
-      'Monthly performance report',
-      'Email support',
-      '1 Monthly call'
+      'Basic PPC ad campaign setup',
+      'Monthly SEO performance report',
+      '12-hour support response',
+      'Email support'
     ],
-    highlighted: false
+    highlighted: false,
+    link: 'https://buy.stripe.com/test_dealstarter' // Replace with your actual Stripe link
   },
   {
-    name: 'Growth',
-    description: 'Ideal for scaling SaaS startups ready to accelerate their content marketing efforts.',
-    monthlyPrice: '$2,999',
-    yearlyPrice: '$2,549',
+    name: 'Portfolio Accelerator',
+    description: 'Perfect for REITs and developers with 50+ properties needing consistent deal flow.',
+    monthlyPrice: '$5,500',
+    yearlyPrice: '$4,400',
     features: [
-      'Daily LinkedIn posts',
-      '4 Blog articles per month',
-      '1 Newsletter per month',
-      '1 Landing Page Copy',
-      'Standard SEO optimization',
-      'Biweekly strategy calls',
+      '20 AI-powered LinkedIn posts',
+      '4 data-driven CRE blogs',
+      '2 AI video property reels',
+      'Managed PPC campaigns ($1k ad credit)',
+      'Weekly performance optimizations',
+      '24-hour priority support',
       'Dedicated content specialist',
       'Priority support'
     ],
-    highlighted: true
+    highlighted: true,
+    link: 'https://buy.stripe.com/test_portfolio' 
   },
   {
-    name: 'Enterprise',
-    description: 'Comprehensive solution for established SaaS companies with advanced content needs.',
-    monthlyPrice: '$6,000',
-    yearlyPrice: '$5,500',
+    name: 'Enterprise Growth',
+    description: 'For institutional investors and national brokerages needing full-funnel dominance.',
+    monthlyPrice: '$9,500',
+    yearlyPrice: '$7,600',
     features: [
-      'Multichannel content strategy',
-      'Unlimited Blog articles per month',
-      'Unlimited Newsletter per month',
-      'Unlimited Landing Page Copy',
-      'Premium SEO optimization',
-      'Weekly strategy calls',
-      'Dedicated content manager',
-      'Priority support'
+      '25 LinkedIn ghostwriting posts',
+      '8 premium CRE research reports/month',
+      '4 AI video short 1 minute property reels',
+      'Dedicated PPC ad campaign strategist',
+      'Biweekly Wizard of Hahz strategy sessions',
+      'Same-day VIP support',
+      'Multichannel content strategy'
     ],
-    highlighted: false
+    highlighted: false,
+    link: 'https://buy.stripe.com/test_enterprise'
   }
-];
 
 const PricingPlans = () => {
   const [annually, setAnnually] = useState(true);
@@ -148,7 +150,7 @@ const PricingPlans = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-8">
-                  <a href="/contact" className="w-full">
+                <a href={plan.link} target="_blank" rel="noopener noreferrer" className="w-full">
                     <Button 
                       variant={plan.highlighted ? "default" : "outline"} 
                       className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} 

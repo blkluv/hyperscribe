@@ -14,7 +14,7 @@ const plans = [
     features: [
       '8 AI-crafted LinkedIn posts/month',
       '1 CRE market blog post/month',
-      'Basic PPC campaign setup',
+      'Basic PPC ad campaign setup',
       'Monthly performance dashboard',
       '48-hour support response'
     ],
@@ -28,12 +28,14 @@ const plans = [
     monthlyPrice: '$5,500',
     yearlyPrice: '$4,400', // 20% discount
     features: [
-      '20 AI-powered LinkedIn posts/month',
-      '4 data-driven CRE blogs/month',
-      '2 AI video property showcases/month',
+      '20 AI-powered LinkedIn posts',
+      '4 data-driven CRE blogs',
+      '2 AI video short 1 minute property reels',
       'Managed PPC campaigns ($1k ad credit)',
       'Weekly performance optimizations',
-      '24-hour priority support'
+      '24-hour priority support',
+      'Dedicated content specialist',
+      'Priority support'
     ],
     highlighted: true,
     color: 'from-purple-500 to-fuchsia-600',
@@ -45,12 +47,13 @@ const plans = [
     monthlyPrice: '$9,500',
     yearlyPrice: '$7,600', // 20% discount
     features: [
-      'Unlimited LinkedIn ghostwriting',
+      '25 LinkedIn ghostwriting posts',
       '8 premium CRE research reports/month',
-      '4 AI video tours with virtual staging',
-      'Dedicated PPC strategist ($5k ad credit)',
-      'Biweekly CMO strategy sessions',
-      'Same-day VIP support'
+      '4 AI video short 1 minute property reels',
+      'Dedicated PPC ad campaign strategist',
+      'Biweekly Wizard of Hahz strategy sessions',
+      'Same-day VIP support',
+      'Multichannel content strategy'
     ],
     highlighted: false,
     color: 'from-emerald-500 to-teal-600',

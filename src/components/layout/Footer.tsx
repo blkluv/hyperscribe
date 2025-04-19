@@ -77,9 +77,9 @@ const Footer = () => {
             <ul className="space-y-4">
               {[
                 'LinkedIn Ghostwriting',
-                'SEO Blog Articles',
-                'Website Copywriting',
-                'Newsletter Creation'
+                'AI CRE Blog Engine',
+                'AI Property Videos',
+                'AI CRE Ad Campaigns'
               ].map((service) => (
                 <li key={service}>
                   <Link 
