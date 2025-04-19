@@ -12,7 +12,7 @@
 - **Animations:** Framer Motion
 
 ```
-hyperscriber-ui/
+creai.digital-ui/
 ├── src/
 │   ├── assets/        # Static assets (images, fonts)
 │   ├── components/    # Reusable UI components

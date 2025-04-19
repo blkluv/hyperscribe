@@ -18,9 +18,9 @@ const PrivacyPolicy = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HyperScriber | Privacy Policy</title>
-        <meta name="description" content="Privacy policy for HyperScriber services." />
-        <link rel="canonical" href="https://hyperscriber.com/privacy-policy" />
+        <title>CREAI.DIGITAL | Privacy Policy</title>
+        <meta name="description" content="Privacy policy for CREAI.DIGITAL services." />
+        <link rel="canonical" href="https://creai.digital/privacy-policy" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
@@ -82,7 +82,7 @@ const PrivacyPolicy = () => {
 
               <h2 className="text-xl font-semibold mt-8 mb-4">9. Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at privacy@hyperscriber.com.
+                If you have any questions about this Privacy Policy, please contact us at contact@creai.digital.
               </p>
             </div>
           </div>

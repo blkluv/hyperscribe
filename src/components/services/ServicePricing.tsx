@@ -7,48 +7,54 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const plans = [
   {
-    name: 'Starter',
-    description: 'Perfect for early-stage startups looking to establish their content foundation.',
-    monthlyPrice: '$1,500',
-    yearlyPrice: '$1,200',
+    name: 'Deal Starter',
+    description: 'For individual brokers and small teams needing basic AI-powered lead generation.',
+    monthlyPrice: '$2,500',
+    yearlyPrice: '$2,000', // 20% discount
     features: [
-      '2 LinkedIn posts per week',
-      '2 Blog articles per month',
-      'Basic SEO optimization',
-      'Monthly performance report',
-      'Email support'
+      '8 AI-crafted LinkedIn posts/month',
+      '1 CRE market blog post/month',
+      'Basic PPC campaign setup',
+      'Monthly performance dashboard',
+      '48-hour support response'
     ],
-    highlighted: false
+    highlighted: false,
+    color: 'from-blue-500 to-blue-600',
+    annualSavings: '$6,000' // 2,500 x 12 = 30,000 vs 2,000 x 12 = 24,000
   },
   {
-    name: 'Growth',
-    description: 'Ideal for scaling startups ready to accelerate their content marketing efforts.',
-    monthlyPrice: '$3,500',
-    yearlyPrice: '$2,800',
+    name: 'Portfolio Accelerator',
+    description: 'Perfect for REITs and developers with 50+ properties needing consistent deal flow.',
+    monthlyPrice: '$5,500',
+    yearlyPrice: '$4,400', // 20% discount
     features: [
-      'Daily LinkedIn posts',
-      '4 Blog articles per month',
-      'Advanced SEO optimization',
-      'Biweekly strategy calls',
-      '1 Case study per month',
-      'Priority support'
+      '20 AI-powered LinkedIn posts/month',
+      '4 data-driven CRE blogs/month',
+      '2 AI video property showcases/month',
+      'Managed PPC campaigns ($1k ad credit)',
+      'Weekly performance optimizations',
+      '24-hour priority support'
     ],
-    highlighted: true
+    highlighted: true,
+    color: 'from-purple-500 to-fuchsia-600',
+    annualSavings: '$13,200' // 5,500 x 12 = 66,000 vs 4,400 x 12 = 52,800
   },
   {
-    name: 'Enterprise',
-    description: 'Comprehensive solution for established SaaS companies with advanced content needs.',
-    monthlyPrice: '$6,000',
-    yearlyPrice: '$4,800',
+    name: 'Enterprise Growth',
+    description: 'For institutional investors and national brokerages needing full-funnel dominance.',
+    monthlyPrice: '$9,500',
+    yearlyPrice: '$7,600', // 20% discount
     features: [
-      'Multichannel content strategy',
-      '8 Blog articles per month',
-      'Premium SEO optimization',
-      'Weekly strategy calls',
-      '2 Case studies per month',
-      'Dedicated content manager'
+      'Unlimited LinkedIn ghostwriting',
+      '8 premium CRE research reports/month',
+      '4 AI video tours with virtual staging',
+      'Dedicated PPC strategist ($5k ad credit)',
+      'Biweekly CMO strategy sessions',
+      'Same-day VIP support'
     ],
-    highlighted: false
+    highlighted: false,
+    color: 'from-emerald-500 to-teal-600',
+    annualSavings: '$22,800' // 9,500 x 12 = 114,000 vs 7,600 x 12 = 91,200
   }
 ];
 

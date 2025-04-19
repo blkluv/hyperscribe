@@ -11,7 +11,7 @@ const MAX_CONTEXT_MESSAGES = 10;
 
 // Predefined questions and answers to simulate a team agent
 const predefinedQA = {
-  "what services do you offer": "HyperScriber offers AI-powered content creation services including blog writing, email campaigns, social media content, and SEO optimization. We specialize in creating high-converting content for SaaS companies.",
+  "what services do you offer": "CREAI.DIGITAL offers AI-powered content creation services including blog writing, email campaigns, social media content, and SEO optimization. We specialize in creating high-converting content for SaaS companies.",
   "how much do your services cost": "Our pricing starts at $499/month for our basic package, which includes 4 blog posts per month. We also offer custom pricing for enterprise clients with specific needs. Check out our pricing page for more details.",
   "what is your turnaround time": "For standard blog posts, our turnaround time is 2-3 business days. For more complex projects, it may take 4-5 business days. We also offer rush delivery options for an additional fee.",
   "do you offer revisions": "Yes, we offer unlimited revisions until you're satisfied with the content. We want to make sure the content we create matches your brand voice and meets your expectations.",
@@ -20,7 +20,7 @@ const predefinedQA = {
   "can you help with seo": "Absolutely! SEO is at the core of our content strategy. We conduct keyword research, optimize meta descriptions and titles, ensure proper heading structure, and create content that both search engines and humans love.",
   "do you write in different languages": "Currently, we primarily create content in English, but we can accommodate requests for content in Spanish, French, and German for an additional fee.",
   "what makes you different from other content agencies": "Unlike traditional content agencies, we leverage AI to create content at scale without sacrificing quality. Our approach combines the efficiency of AI with human expertise to ensure content that converts and drives growth.",
-  "can i see samples of your work": "Yes, we'd be happy to share samples of our work. Please contact our team at samples@hyperscriber.com, and we'll send you relevant samples based on your industry and content needs."
+  "can i see samples of your work": "Yes, we'd be happy to share samples of our work. Please contact our team at contact@creai.digital, and we'll send you relevant samples based on your industry and content needs."
 };
 
 function findBestMatch(query, predefinedQuestions) {
@@ -114,7 +114,7 @@ serve(async (req) => {
       messages: [
         {
           role: 'system',
-          content: 'You are a friendly customer support agent for HyperScriber, an AI-powered content agency that creates high-converting content for SaaS companies. You provide concise, helpful answers about our services, pricing, and process. Be professional but conversational. If you don\'t know the answer to a specific question, recommend that the user contact our team directly at support@hyperscriber.com.'
+          content: 'You are a friendly customer support agent for CREAI.DIGITAL, an AI-powered ad + content agency that creates high-converting content for real estate companies. You provide concise, helpful answers about our services, pricing, and process. Be professional but conversational. If you don\'t know the answer to a specific question, recommend that the user contact our team directly at contact@creai.digital.'
         },
         ...conversationHistory,
         {

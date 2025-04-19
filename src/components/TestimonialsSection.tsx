@@ -6,33 +6,40 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'CEO at TechFlow',
+    name: 'James Rutherford',
+    role: 'VP of Marketing at Blackstone Real Estate',
     image: '/placeholder.svg',
-    content: 'ContentAI transformed our content strategy. Their blend of AI efficiency and human creativity has helped us consistently produce high-quality pieces that resonate with our audience.',
+    content: 'CREAI.DIGITAL\'s LinkedIn ghostwriting helped us secure $28M in new investor commitments last quarter. Their AI-powered approach combined with CRE expertise is unmatched in the industry.',
     rating: 5,
   },
   {
-    name: 'Michael Chen',
-    role: 'Marketing Director at SaaSify',
+    name: 'Danielle Choi',
+    role: 'Director of Digital Strategy at CBRE',
     image: '/placeholder.svg',
-    content: 'Working with ContentAI has been a game-changer. We\'ve seen a 40% increase in organic traffic and our lead generation has never been stronger. Their team truly understands SaaS.',
+    content: 'Our industrial property inquiries increased 65% after implementing their AI blog strategy. They understand exactly what institutional investors want to read about cap rates and market trends.',
     rating: 5,
   },
   {
-    name: 'Lisa Rodriguez',
-    role: 'Founder at DataSmart',
+    name: 'Marcus Whitmore',
+    role: 'Managing Partner at Harborview Capital',
     image: '/placeholder.svg',
-    content: 'The LinkedIn ghostwriting service has positioned me as a thought leader in my industry. I\'m getting more connection requests and partnership opportunities than ever before.',
+    content: 'The AI video tours generated 12 qualified offers on a single property within 72 hours - something we\'ve never achieved with traditional marketing. Worth every penny.',
     rating: 5,
   },
   {
-    name: 'David Wilson',
-    role: 'CTO at CloudScale',
+    name: 'Olivia Santoro',
+    role: 'CMO at Brookfield Properties',
     image: '/placeholder.svg',
-    content: 'Their content not only sounds great but actually drives results. Our blog posts are ranking on page one for several competitive keywords, bringing us qualified leads every day.',
+    content: 'Their PPC campaigns deliver leads at 42% lower cost than our previous agency. The AI constantly optimizes for CRE-specific conversions, not just clicks.',
     rating: 5,
   },
+  {
+    name: 'Raj Patel',
+    role: 'Head of Acquisitions at Prologis',
+    image: '/placeholder.svg',
+    content: 'We scaled from $300M to $1.2B in acquisitions last year using CREAI.DIGITAL\'s content engine. Their market reports became our secret weapon for investor presentations.',
+    rating: 5,
+  }
 ];
 
 const TestimonialsSection = () => {
@@ -66,7 +73,7 @@ const TestimonialsSection = () => {
             What Our Clients Say
           </h2>
           <p className="text-muted-foreground text-lg">
-            Don't just take our word for it. Here's what successful SaaS founders and marketing leaders have to say about our services.
+            Don't just take our word for it. Here's what successful CRE marketing leaders have to say about our services.
           </p>
         </div>
         

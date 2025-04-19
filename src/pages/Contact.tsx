@@ -20,9 +20,9 @@ const Contact = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HyperScriber | Contact Us</title>
+        <title>CREAI.DIGITAL | Contact Us</title>
         <meta name="description" content="Have questions about our services or ready to transform your content strategy? We're here to help." />
-        <link rel="canonical" href="https://hyperscriber.com/contact" />
+        <link rel="canonical" href="https://creai.digital/contact" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />

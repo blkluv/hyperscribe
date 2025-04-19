@@ -27,7 +27,7 @@ const CTASection = () => {
               GET IN TOUCH
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white max-w-3xl mx-auto leading-tight tracking-tight">
-              Ready to Transform Your SaaS Content Strategy?
+              Ready to Transform Your CRE Content Strategy?
             </h2>
             <p className="text-white/90 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
               Book a free consultation today to discuss your business needs.
@@ -51,7 +51,7 @@ const CTASection = () => {
             
             {/* Made button responsive */}
             <div className="flex justify-center">
-              <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://calendly.com/contact-creai/30min" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto bg-white text-blue-700 hover:bg-blue-50 rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base shadow-lg group transition-all duration-300">
                   Book Your Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />

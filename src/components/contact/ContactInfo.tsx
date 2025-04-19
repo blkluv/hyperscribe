@@ -20,7 +20,7 @@ const ContactInfo = () => {
           <p className="text-blue-50 mb-6">
             Ready to discuss your content needs? Schedule a free 15-minute consultation with our team.
           </p>
-          <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendly.com/contact-creai/30min" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="default"
               className="w-full rounded-full py-6 bg-white hover:bg-blue-50 text-blue-700 transition-colors shadow-md hover:shadow-lg"
@@ -43,8 +43,8 @@ const ContactInfo = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500 font-medium">Email</p>
-                <a href="mailto:info@hyperscriber.com" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
-                  info@hyperscriber.com
+                <a href="mailto:contact@creai.digital" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                  contact@creai.digital
                 </a>
               </div>
             </div>
@@ -56,7 +56,7 @@ const ContactInfo = () => {
               <div>
                 <p className="text-sm text-gray-500 font-medium">Phone</p>
                 <a href="tel:+447543469409" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
-                  UK +44 7543 469409 (WhatsApp Available)
+                  404-889-5545 (Text)
                 </a>
               </div>
             </div>
@@ -67,7 +67,7 @@ const ContactInfo = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500 font-medium">Location</p>
-                <span className="text-blue-600 font-medium">London, UK</span>
+                <span className="text-blue-600 font-medium">100% Remote</span>
               </div>
             </div>
           </div>

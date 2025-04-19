@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "What's your turnaround time for content creation?",
-    answer: "Turnaround times vary by service type. LinkedIn posts typically take 2-3 business days, blog articles 5-7 business days, and  website copywriting depends on the amounts of content needed. Rush delivery is available for an additional fee."
+    answer: "Turnaround times vary by service type. LinkedIn posts typically take 1-2 business days, blog articles 1-2 business days, and  website copywriting depends on the amounts of content needed. Rush delivery is available for an additional fee."
   },
   {
     question: "How do you measure content performance?",
@@ -26,8 +26,8 @@ const faqs = [
     answer: "Absolutely! All our service packages include up to two rounds of revisions to ensure you're completely satisfied with the final content. For extensive revisions beyond the scope of the original brief, additional charges may apply. Our collaborative review process ensures we capture your feedback effectively."
   },
   {
-    question: "How do you research our industry to create expert content?",
-    answer: "Our process includes in-depth research of your industry, competitors, and target audience."
+    question: "How do you off a 100% money back guarentee on paid ads growth?",
+    answer: "The Wizard of Hahz is 20+ year marketing industry expert that trained AI to process includes in-depth research of your industry, competitors, and target audience."
   },
 ];
 

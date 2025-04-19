@@ -67,7 +67,7 @@ const PricingBenefits = () => {
             WHY CHOOSE US
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Benefits of HyperScriber
+            Benefits of CREAI.DIGITAL
           </h2>
           <p className="text-lg text-muted-foreground">
             We combine cutting-edge AI technology with human creativity to deliver exceptional content that drives real business results.

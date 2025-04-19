@@ -25,9 +25,9 @@ const WhyUs = () => {
         <section className="pt-32 pb-16 bg-white">
           <Helmet>
             <meta charSet="utf-8" />
-            <title>HyperScriber | Why Us</title>
+            <title>CREAI.DIGITAL | Why Us</title>
             <meta name="description" content="Our streamlined AI + human workflow delivers exceptional content that drives real business results." />
-            <link rel="canonical" href="https://hyperscriber.com/why-us" />
+            <link rel="canonical" href="https://creai.digital/why-us" />
             <link rel="icon" href="/favicon.ico" />
           </Helmet>
           <div className="container mx-auto px-6">
@@ -41,7 +41,7 @@ const WhyUs = () => {
                 OUR PROCESS
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                How <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">HyperScriber</span> Works
+                How <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">CREAI.DIGITAL</span> Works
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-10">
                 Our streamlined AI + human workflow delivers exceptional content that drives real business results.

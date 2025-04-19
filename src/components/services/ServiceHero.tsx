@@ -17,7 +17,7 @@ const ServiceHero = () => {
             OUR SERVICES
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            AI-Powered Content Solutions for <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">SaaS Growth</span>
+            AI-Powered Content Solutions for <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">CRE Growth</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6">
             We combine AI efficiency with human creativity to deliver high-converting content that drives growth, engages audiences, and establishes thought leadership.
@@ -32,7 +32,7 @@ const ServiceHero = () => {
           >
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <CheckCircle size={18} className="text-blue-500" />
-              <span className="text-sm font-medium">Trusted by 30+ SaaS companies</span>
+              <span className="text-sm font-medium">Trusted by 30+ CRE companies</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <CheckCircle size={18} className="text-blue-500" />
@@ -45,7 +45,7 @@ const ServiceHero = () => {
           </motion.div>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-            <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/contact-creai/30min" target="_blank" rel="noopener noreferrer">
               <Button className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 relative overflow-hidden group">
                 <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Book a Free Consultation Call

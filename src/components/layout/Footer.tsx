@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, MapPin, Phone, Instagram, Linkedin, Twitter, ExternalLink } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone, Tiktok, Linkedin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
@@ -14,18 +14,18 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <div className="mb-6">
               <div className="flex items-center gap-3">
-                <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
+                <img src="https://i.imgur.com/obkZl8f.png" alt="CREAI.DIGITAL Logo" className="h-10 w-10 object-contain" />
                 <span className="text-xl md:text-2xl font-bold bg-clip-text">
-                  HyperScriber
+                  CREAI.DIGITAL
                 </span>
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-              AI-powered content agency for SaaS startups that delivers measurable growth and engagement.
+              AI-powered ad + content agency for the CRE industry that delivers measurable growth and engagement.
             </p>
             <div className="flex items-center space-x-4 mb-6">
               <a 
-                href="https://www.linkedin.com/company/hyperscriber" 
+                href="https://www.linkedin.com/company/creai-digital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
@@ -34,13 +34,13 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://x.com/hyperscriber" 
+                href="https://tiktok.com/@creaidigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
-                aria-label="Twitter"
+                aria-label="Tiktok"
               >
-                <Twitter size={20} />
+                <Tiktok size={20} />
               </a>
             </div>
           </div>
@@ -101,25 +101,25 @@ const Footer = () => {
               <li className="flex items-start group">
                 <Mail className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <a 
-                  href="mailto:info@hyperscriber.com" 
+                  href="mailto:contact@creai.digital" 
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                info@hyperscriber.com
+                contact@creai.digital
                 </a>
               </li>
               <li className="flex items-start group">
                 <Phone className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <a 
-                  href="tel:+447543469409" 
+                  href="tel:+14048895545" 
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  +44 7543 469409
+                  Text 404-889-5545
                 </a>
               </li>
               <li className="flex items-start group">
                 <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span className="text-muted-foreground">
-                  London, UK
+                  100% Remote
                 </span>
               </li>
             </ul>
@@ -133,10 +133,10 @@ const Footer = () => {
 
         {/* Copyright with improved styling */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} HyperScriber AI. All rights reserved.</p> 
+          <p>© {new Date().getFullYear()} CREAI.DIGITAL. All rights reserved.</p> 
           <p className="mt-2 md:mt-0">
-            Website by Lorenzo Filips <a href="https://github.com/Desk888" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-              (Desk888) <ExternalLink className="h-3 w-3" />
+            Follow us on TikTok <a href="https://tiktok.com/@creaidigital" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+              (@creaidigital) <ExternalLink className="h-3 w-3" />
             </a>
           </p>
         </div>

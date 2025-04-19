@@ -20,37 +20,37 @@ import {
 const comparisonData = [
   {
     aspect: "Time to Market",
-    hyperscriber: "3-5x faster content delivery",
+    creai.digital: "3-5x faster content delivery",
     internal: "Slow ramp-up time, high training costs",
     agency: "Variable timelines, often delayed by approval cycles"
   },
   {
     aspect: "Cost Efficiency",
-    hyperscriber: "Fixed monthly cost, predictable ROI",
+    creai.digital: "Fixed monthly cost, predictable ROI",
     internal: "High overhead (salary, benefits, tools, training)",
     agency: "High markups, frequent scope creep costs"
   },
   {
     aspect: "Quality Control",
-    hyperscriber: "AI efficiency + human expertise ensures consistency",
+    creai.digital: "AI efficiency + human expertise ensures consistency",
     internal: "Variable quality based on employee skills",
     agency: "Inconsistent quality due to multiple writers"
   },
   {
     aspect: "Scalability",
-    hyperscriber: "Easily scale volume up/down as needed",
+    creai.digital: "Easily scale volume up/down as needed",
     internal: "Limited by employee capacity, costly to scale",
     agency: "Can scale but at premium cost increases"
   },
   {
     aspect: "Industry Expertise",
-    hyperscriber: "Specialized in SaaS & tech content marketing",
+    creai.digital: "Specialized in CRE & tech content marketing",
     internal: "Limited by employee's background",
     agency: "Often generalists across many industries"
   },
   {
     aspect: "Technology",
-    hyperscriber: "Cutting-edge AI + human refinement",
+    creai.digital: "Cutting-edge AI + human refinement",
     internal: "Limited by budget for tools & training",
     agency: "Traditional approach, limited AI integration"
   }
@@ -59,31 +59,31 @@ const comparisonData = [
 const costBreakdown = [
   {
     category: "Monthly Cost",
-    hyperscriber: "$2,549 - $5,500",
+    creai.digital: "$2,500-$9,500/month",
     internal: "$8,000 - $15,000",
-    agency: "$5,000 - $15,000",
-    notes: "HyperScriber's fixed monthly cost includes all services and deliverables with no hidden fees"
+    agency: "$10,000 - $15,000",
+    notes: "CREAI.DIGITAL's fixed monthly cost includes all services and deliverables with no hidden fees"
   },
   {
     category: "Content Volume",
-    hyperscriber: "4-8+ pieces weekly",
+    creai.digital: "4-8+ pieces weekly",
     internal: "Limited by employee capacity",
     agency: "3-6 pieces weekly",
-    notes: "HyperScriber delivers more content at a lower cost due to our AI-powered workflow"
+    notes: "CREAI.DIGITAL delivers more content at a lower cost due to our AI-powered workflow"
   },
   {
     category: "Setup Costs",
-    hyperscriber: "$0",
+    creai.digital: "$0",
     internal: "$15,000+ (hiring)",
     agency: "$2,000-$5,000 onboarding",
-    notes: "Start with HyperScriber immediately with no setup fees or long-term commitments"
+    notes: "Start with CREAI.DIGITAL immediately with no setup fees or long-term commitments"
   },
   {
     category: "Tools & Software",
-    hyperscriber: "Included",
+    creai.digital: "Included",
     internal: "$500-$1,500/month",
     agency: "Limited access",
-    notes: "All premium tools and software included in HyperScriber's monthly rate"
+    notes: "All premium tools and software included in CREAI.DIGITAL's monthly rate"
   }
 ];
 
@@ -123,10 +123,10 @@ const PricingComparison = () => {
             COMPARISON
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why HyperScriber is the Smarter Choice
+            Why CREAI.DIGITAL is the Smarter Choice
           </h2>
           <p className="text-lg text-muted-foreground">
-            See how our AI-powered content solution compares to traditional options for SaaS companies
+            See how our AI-powered ad + content solution compares to traditional options for CRE companies
           </p>
         </motion.div>
         
@@ -142,7 +142,7 @@ const PricingComparison = () => {
               <TableHeader>
                 <TableRow className="bg-slate-50">
                   <TableHead className="w-[250px]">Comparison</TableHead>
-                  <TableHead className="text-center bg-blue-50 text-blue-700">HyperScriber</TableHead>
+                  <TableHead className="text-center bg-blue-50 text-blue-700">CREAI.DIGITAL</TableHead>
                   <TableHead className="text-center">In-House Team</TableHead>
                   <TableHead className="text-center">Traditional Agency</TableHead>
                 </TableRow>
@@ -179,7 +179,7 @@ const PricingComparison = () => {
               <TableHeader>
                 <TableRow className="bg-slate-50">
                   <TableHead className="w-[200px]">Cost Category</TableHead>
-                  <TableHead className="text-center bg-blue-50 text-blue-700">HyperScriber</TableHead>
+                  <TableHead className="text-center bg-blue-50 text-blue-700">CREAI.DIGITAL</TableHead>
                   <TableHead className="text-center">In-House Team</TableHead>
                   <TableHead className="text-center">Traditional Agency</TableHead>
                 </TableRow>

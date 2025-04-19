@@ -25,9 +25,9 @@ const Pricing = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HyperScriber | Pricing</title>
-        <meta name="description" content="Choose from our transparent pricing plans designed to scale with your business. All plans include our AI-powered content creation process." />
-        <link rel="canonical" href="https://hyperscriber.com/pricing" />
+        <title>CREAI.DIGITAL | Pricing</title>
+        <meta name="description" content="Choose from our transparent pricing plans designed to scale with your CRE business. All plans include our AI-powered content creation process." />
+        <link rel="canonical" href="https://creai.digital/pricing" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />

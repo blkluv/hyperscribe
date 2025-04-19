@@ -19,10 +19,10 @@ const Index = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HyperScriber | AI-Powered Content Agency</title>
-        <meta name="description" content="Leveraging AI to create high-converting content that drives growth for SaaS companies. Content that converts, at scale." />
+        <title>CREAI.DIGITAL | AI-Powered Ad + Content CRE Agency</title>
+        <meta name="description" content="Leveraging AI to create high-converting content that drives growth for CRE companies. Content that converts, at scale." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link rel="canonical" href="https://hyperscriber.com/" />
+        <link rel="canonical" href="https://creai.digtial" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />

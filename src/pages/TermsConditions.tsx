@@ -18,9 +18,9 @@ const TermsConditions = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HyperScriber | Terms & Conditions</title>
-        <meta name="description" content="Terms and conditions for using HyperScriber services." />
-        <link rel="canonical" href="https://hyperscriber.com/terms-conditions" />
+        <title>CREAI.DIGITAL | Terms & Conditions</title>
+        <meta name="description" content="Terms and conditions for using CREAI.DIGITAL services." />
+        <link rel="canonical" href="https://creai.digital/terms-conditions" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Navbar />
@@ -37,7 +37,7 @@ const TermsConditions = () => {
 
               <h2 className="text-xl font-semibold mt-8 mb-4">1. Introduction</h2>
               <p>
-                These Terms and Conditions ("Terms") govern your access to and use of HyperScriber's website and services.
+                These Terms and Conditions ("Terms") govern your access to and use of CREAI.DIGITAL's website and services.
                 By accessing or using our services, you agree to be bound by these Terms.
               </p>
 
@@ -56,7 +56,7 @@ const TermsConditions = () => {
               <h2 className="text-xl font-semibold mt-8 mb-4">4. Intellectual Property</h2>
               <p>
                 All content, features, and functionality of our services, including but not limited to text, graphics, logos, and code,
-                are owned by HyperScriber and are protected by copyright, trademark, and other intellectual property laws.
+                are owned by CREAI.DIGITAL and are protected by copyright, trademark, and other intellectual property laws.
               </p>
 
               <h2 className="text-xl font-semibold mt-8 mb-4">5. Disclaimers</h2>
@@ -66,7 +66,7 @@ const TermsConditions = () => {
 
               <h2 className="text-xl font-semibold mt-8 mb-4">6. Limitation of Liability</h2>
               <p>
-                In no event shall HyperScriber be liable for any indirect, incidental, special, consequential, or punitive damages.
+                In no event shall CREAI.DIGITAL be liable for any indirect, incidental, special, consequential, or punitive damages.
               </p>
 
               <h2 className="text-xl font-semibold mt-8 mb-4">7. Changes to Terms</h2>
@@ -76,7 +76,7 @@ const TermsConditions = () => {
 
               <h2 className="text-xl font-semibold mt-8 mb-4">8. Contact Us</h2>
               <p>
-                If you have any questions about these Terms, please contact us at contact@hyperscriber.com.
+                If you have any questions about these Terms, please contact us at contact@creai.digital.
               </p>
             </div>
           </div>
