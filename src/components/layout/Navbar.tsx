@@ -22,7 +22,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Why Us', path: '/why-us' },
+    { name: 'AI Map', path: 'https://map.creai.digital' },
     { name: 'Services', path: '/services' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Contact', path: '/contact' },
